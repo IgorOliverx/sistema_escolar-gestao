@@ -11,6 +11,8 @@ return new class extends Migration
      */
     public function up(): void
     {
+
+
         Schema::create('users', function (Blueprint $table) {
             $table->id();
             $table->string('username')->unique();
@@ -18,6 +20,17 @@ return new class extends Migration
             $table->string('password');
             $table->string('ultimo_login');
         });
+
+        Schema::create('salas', function (Blueprint $table) {
+            $table->id();
+            $table->string('numero_sala');
+            $table->string('bloco_sala');
+            $table->unsignedBigInteger('user_id');
+
+            //relacionando as chaves estrangeiras
+            $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
+        });
+
 
         Schema::create('password_reset_tokens', function (Blueprint $table) {
             $table->string('email')->primary();
@@ -40,6 +53,7 @@ return new class extends Migration
      */
     public function down(): void
     {
+        Schema::dropIfExists('salas');
         Schema::dropIfExists('users');
         Schema::dropIfExists('password_reset_tokens');
         Schema::dropIfExists('sessions');

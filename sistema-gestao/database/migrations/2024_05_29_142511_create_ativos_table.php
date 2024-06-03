@@ -14,7 +14,12 @@ return new class extends Migration
         Schema::create('ativos', function (Blueprint $table) {
             $table->id();
             $table->string('nome');
+            $table->string('categoria_patrimonio');
             $table->unsignedBigInteger('patrimonio');
+            $table->unsignedBigInteger('id_sala');
+
+            //Chaves estrangeiras
+            $table->foreign('id_sala')->references('id')->on('salas')->onDelete('cascade');
         });
     }
 

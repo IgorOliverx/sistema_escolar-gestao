@@ -1,7 +1,6 @@
 <?php
 
-use App\Http\Controllers\AtivoController;
-use Illuminate\Http\Request;
+use App\Http\Controllers\API\AtivoController;
 use Illuminate\Support\Facades\Route;
 
 

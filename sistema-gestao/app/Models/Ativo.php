@@ -2,7 +2,6 @@
 
 namespace App\Models;
 
-use http\Env\Request;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
@@ -20,11 +19,11 @@ class Ativo extends Model
 
     protected $fillable = [
         'nome',
-        'patrimonio'
+        'patrimonio',
+        'categoria_patrimonio'
     ];
 
     /**
-     * Métodos de consulta abstraídos
      * CRUD
      */
     public function retornarAtivos(): \Illuminate\Database\Eloquent\Collection
@@ -41,7 +40,6 @@ class Ativo extends Model
     {
         return $this->where('id', $id)->update($obj);
     }
-
     public function apagarAtivo($id)
     {
         return $this->where('id', $id)->delete();
@@ -49,7 +47,7 @@ class Ativo extends Model
 
 
     /**
-     * Consulta adicionais
+     * Consultas adicionais
     */
     public function retornarAtivo(string $id)
     {

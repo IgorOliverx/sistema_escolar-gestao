@@ -1116,7 +1116,7 @@ const CLASS_NAME_PREV = 'carousel-item-prev';
 const SELECTOR_ACTIVE = '.active';
 const SELECTOR_ITEM = '.carousel-item';
 const SELECTOR_ACTIVE_ITEM = SELECTOR_ACTIVE + SELECTOR_ITEM;
-const SELECTOR_ITEM_IMG = '.carousel-item img';
+const SELECTOR_ITEM_IMG = '.carousel-item images';
 const SELECTOR_INDICATORS = '.carousel-indicators';
 const SELECTOR_DATA_SLIDE = '[data-bs-slide], [data-bs-slide-to]';
 const SELECTOR_DATA_RIDE = '[data-bs-ride="carousel"]';

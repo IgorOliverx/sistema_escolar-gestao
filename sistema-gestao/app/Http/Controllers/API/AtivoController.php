@@ -1,13 +1,12 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\API;
 
+use App\Http\Controllers\Controller;
 use App\Models\Ativo;
 use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Request;
 use Illuminate\Validation\ValidationException;
-use Psy\Util\Json;
-use function PHPUnit\Framework\isEmpty;
 
 class AtivoController extends Controller
 {
@@ -133,7 +132,7 @@ class AtivoController extends Controller
     }
 
     /**
-     *
+     * Atualiza um ativo
      * @param Request $request
      * @param string $id
      * @return JsonResponse

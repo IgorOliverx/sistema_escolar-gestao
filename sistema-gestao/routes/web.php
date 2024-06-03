@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AtivosController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\IndexController;
 use App\Http\Controllers\LoginController;
@@ -19,3 +20,6 @@ Route::post('/login', [LoginController::class, 'store'])->name('autenticar');
 
 //Rota para logout
 Route::post('/logout', [LoginController::class, 'logout'])->name('logout');
+
+
+Route::get('/ativos', [AtivosController::class, 'index'])->name('ativos.index');

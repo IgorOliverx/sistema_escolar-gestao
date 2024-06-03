@@ -3,7 +3,7 @@
 <nav class="navbar navbar-expand-lg pl-5 pr-5">
     <div class="container-fluid">
         <a class="navbar-brand" href="#">
-            <img src="/img/Logo-senai-bw.png" alt="Logo-Senai preto e branco" width="150px" height="40px">
+            <img src="images/Logo-senai-bw.png" alt="Logo-Senai preto e branco" width="150px" height="40px">
             <a href="" class="navbar-brand ml-0" style="position: relative; bottom: -8px" >
                 <p class="text-primary text-light">
                     EDUCAÇÃO <br> ONLINE
