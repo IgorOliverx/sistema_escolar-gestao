@@ -80,7 +80,7 @@
                     <i class="fa-solid fa-desktop fa-3x mb-3 icon"></i>
                     <div class="title">Bloco A</div>
                     <div class="description">Dedicado às tecnologias da informação, com laboratórios modernos e cursos atualizados.</div>
-                    <a href="{{ route('bloco-a') }}">
+                    <a href="{{ route('painelBlocosA') }}">
                         <button class="read-more">Ver Ativos</button>
                     </a>
                 </div>

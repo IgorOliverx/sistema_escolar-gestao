@@ -50,8 +50,15 @@ class User extends Authenticatable
     }
 
 
-    public function salas(): HasOne
+    /**
+     * Cada Professor pode ter várias salas
+     * @return HasMany
+     */
+    public function sala(): HasMany
     {
-      return $this->hasOne(Sala::class);
+      return $this->hasMany(Sala::class);
     }
+
+
+
 }

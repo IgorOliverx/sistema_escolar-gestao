@@ -2,8 +2,11 @@
 
 namespace App\Models;
 
+use Illuminate\Database\Eloquent\Collection;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\BelongsTo;
+use Illuminate\Database\Eloquent\Relations\HasOne;
 
 
 //Lembrar de criar o repositorio desses metodos daqui do modelo
@@ -26,16 +29,16 @@ class Ativo extends Model
     /**
      * CRUD
      */
-    public function retornarAtivos(): \Illuminate\Database\Eloquent\Collection
+    public function retornarAtivos(): Collection
     {
-        return $this->all();
+        return $this
+            ->with('sala')
+                ->get();
     }
-
     public function cadastrarAtivo(array $data)
     {
         return Ativo::create($data);
     }
-
     public function atualizarAtivo($id, $obj)
     {
         return $this->where('id', $id)->update($obj);
@@ -60,5 +63,30 @@ class Ativo extends Model
         return $this->where('id', $id)->exists();
     }
 
+    public function retornaAtivoBloco(string $bloco): Collection|array
+    {
+        return Ativo::with('sala')
+            ->whereHas('sala', function($query) use ($bloco) {
+                $query->where('bloco_sala', '=',  $bloco);
+            })->get();
 
+    }
+
+    public function retornaAtivoSala(string $sala): Collection|array
+    {
+        return Ativo::with('sala')
+            ->whereHas('sala', function($query) use ($sala) {
+                $query->where('numero_sala', '=',  $sala);
+            })->get();
+    }
+
+
+    /**
+     * Cada ativo tem somente 1 sala
+     *
+     */
+    public function sala(): BelongsTo
+    {
+        return $this->belongsTo(Sala::class, 'id_sala');
+    }
 }
