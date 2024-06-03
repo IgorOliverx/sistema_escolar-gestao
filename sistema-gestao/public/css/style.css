@@ -1,0 +1,150 @@
+@font-face {
+    font-family: Fredoka;
+    src: url("../fonts/Fredoka/Fredoka-VariableFont_wdth,wght.ttf");
+}
+
+@font-face {
+    font-family: Philosopher;
+    src: url("../fonts/Philosopher/Philosopher-Regular.ttf");
+}
+
+@font-face {
+    font-family: Philosopher;
+    font-weight: bold;
+    font-style: italic;
+    src: url("../fonts/Philosopher/Philosopher-BoldItalic.ttf");
+}
+
+@font-face {
+    font-family: Philosopher;
+    font-style: italic;
+    src: url("../fonts/Philosopher/Philosopher-Italic.ttf");
+}
+
+@font-face {
+    font-family: Philosopher;
+    font-weight: bold;
+    src: url("../fonts/Philosopher/Philosopher-Bold.ttf");
+}
+
+/*Configurações gerais*/
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Fredoka;
+}
+
+.alternative-font {
+    font-family: Philosopher !important;
+}
+
+.rounded-top-left {
+    border-top-left-radius: 0.75em !important;
+}
+
+.rounded-top-right {
+    border-top-right-radius: 0.75em !important;
+}
+
+.rounded-bottom-right {
+    border-bottom-right-radius: 0.75em !important;
+}
+
+.rounded-bottom-left {
+    border-bottom-left-radius: 0.75em !important;
+}
+
+.bg-blur {
+    backdrop-filter: blur(0.1em);
+}
+
+.vl {
+    width: 1px;
+    height: 30px;
+}
+
+.realty-card {
+    width: 360px;
+    height: 500px;
+    margin-bottom: 4rem;
+}
+
+.realty-card-data {
+    bottom: -15%;
+    transition: 0.5s;
+}
+
+.realty-card-data .price-tag{
+    top: -10%;
+}
+
+.realty-card-data-info {
+    width: 300px;
+    height: 200px;
+    transition: 0.5s;
+}
+
+.realty-card-data-info h3 {
+    font-size: 1.15rem !important;
+}
+
+.realty-card-data-info img {
+    max-height: 30px;
+}
+
+.contato-container {
+    height: 430px;
+}
+
+.contato-container img:first-of-type {
+    left: 0;
+}
+
+.contato-container img:last-of-type {
+    right: 0;
+}
+
+.invert-1 {
+    filter: invert(1);
+}
+
+.card{
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.card:hover{
+    transform: scale(1.05);
+}
+
+.card:hover .realty-card-data{
+    transform: scale(1.05);
+}
+
+.card:hover .realty-card-data-info{
+    box-shadow: 0px 0px 30px white;
+}
+.collapse-btn img{
+    transition: 0.3s;
+}
+
+.collapse-btn:not(:has(+ .show)) img{
+    transform: rotate(180deg);
+}
+
+.w-30{
+    width: 30% !important;
+}
+
+.w-70{
+    width: 70% !important;
+}
+
+.view-realty-data img{
+    height: 50px;
+    object-fit: cover;
+}
+
+textarea{
+    height: 200px !important;
+}
