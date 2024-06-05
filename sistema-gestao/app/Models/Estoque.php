@@ -14,6 +14,10 @@ class Estoque extends Model
     protected $table = 'estoque';
 
     protected $fillable = [
-      ''
+        'nome',
+        'quantidade',
+        'departamento',
+        'data_de_compra',
+        'fornecedor'
     ];
 }

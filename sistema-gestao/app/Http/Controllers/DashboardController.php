@@ -32,18 +32,18 @@ class DashboardController extends Controller
     public function painelBlocoB():View
     {
         $ativosBlocoB = $this->ativo->retornaAtivoBloco('B');
-        return \view('dashboard.painelBlocos');
+        return \view('dashboard.painelBlocoB');
     }
 
     public function painelBlocoC():View
     {
         $ativosBlocoC = $this->ativo->retornaAtivoBloco('C');
-        return \view('dashboard.painelBlocos');
+        return \view('dashboard.painelBlocoC');
     }
 
     public function painelBlocoD():View
     {
         $ativosBlocoD = $this->ativo->retornaAtivoBloco('D');
-        return \view('dashboard.painelBlocos');
+        return \view('dashboard.painelBlocoD');
     }
 }

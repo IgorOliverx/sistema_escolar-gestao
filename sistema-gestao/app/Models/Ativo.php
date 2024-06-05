@@ -66,7 +66,7 @@ class Ativo extends Model
         return Ativo::with('sala')
             ->whereHas('sala', function ($query) use ($sala){
                $query->where('numero_sala', $sala)->exists();
-            })->get();
+            });
     }
 
 

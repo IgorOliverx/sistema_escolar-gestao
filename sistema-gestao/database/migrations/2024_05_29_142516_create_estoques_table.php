@@ -13,7 +13,11 @@ return new class extends Migration
     {
         Schema::create('estoques', function (Blueprint $table) {
             $table->id();
-            $table->timestamps();
+            $table->string('nome');
+            $table->string('departamento');
+            $table->string('fornecedor');
+            $table->unsignedBigInteger('quantidade');
+            $table->date('data_de_compra');
         });
     }
 
