@@ -91,7 +91,10 @@
                     <i class="fa-solid fa-briefcase fa-3x mb-3 icon"></i>
                     <div class="title">Bloco B</div>
                     <div class="description">Focado na administração escolar, finanças, recursos humanos e contato com empresas parceiras.</div>
+                    <a href="{{ route('painelBlocosB') }}">
                     <button class="read-more">Ver Ativos</button>
+                    </a>
+
                 </div>
             </div>
             <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
@@ -100,7 +103,11 @@
                     <i class="fa-solid fa-bolt fa-3x mb-3 icon"></i>
                     <div class="title">Bloco C</div>
                     <div class="description">Voltado para ferramentaria e eletroeletrônica, com cursos técnicos e laboratórios avançados.</div>
+
+                    <a href="{{ route('painelBlocosC') }}">
                     <button class="read-more">Ver Ativos</button>
+                    </a>
+
                 </div>
             </div>
             <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
@@ -109,7 +116,11 @@
                     <i class="fa-solid fa-gear fa-3x mb-3 icon"></i>
                     <div class="title">Bloco D</div>
                     <div class="description">Especializado em ferramentaria, com oficinas equipadas para prática e aprendizado técnico.</div>
+
+                    <a href="{{ route('painelBlocosD') }}">
                     <button class="read-more">Ver Ativos</button>
+                    </a>
+
                 </div>
             </div>
         </div>

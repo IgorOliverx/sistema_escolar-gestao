@@ -63,14 +63,14 @@ class Ativo extends Model
         return $this->where('id', $id)->exists();
     }
 
-    public function retornaAtivoBloco(string $bloco): Collection|array
+    public function salaExiste(string $sala)
     {
         return Ativo::with('sala')
-            ->whereHas('sala', function($query) use ($bloco) {
-                $query->where('bloco_sala', '=',  $bloco);
+            ->whereHas('sala', function ($query) use ($sala){
+               $query->where('numero_sala', $sala)->exists();
             })->get();
-
     }
+
 
     public function retornaAtivoSala(string $sala): Collection|array
     {
@@ -80,8 +80,20 @@ class Ativo extends Model
             })->get();
     }
 
+    public function retornaAtivoBloco(string $bloco): Collection|array
+    {
+        return Ativo::with('sala')
+            ->whereHas('sala', function($query) use ($bloco) {
+                $query->where('bloco_sala', '=',  $bloco);
+            })->get();
+
+    }
+
+
+
 
     /**
+     * CHAVE ESTRANGEIRA
      * Cada ativo tem somente 1 sala
      *
      */

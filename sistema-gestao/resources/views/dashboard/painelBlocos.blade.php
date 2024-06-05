@@ -48,14 +48,15 @@
 
     <div class="main-content">
         <div class="sidebar">
-            <h3 class="mb-4">Ativos - Bloco A</h3>
-            <a href="#" class="room-link" data-room="sala-10a"><i class="fa-solid fa-user"></i> Sala 10-A</a>
-            <a href="#" class="room-link" data-room="sala-8a"><i class="fa-solid fa-users"></i> Sala 8-A</a>
-            <a href="#" class="room-link" data-room="sala-outra"><i class="fa-solid fa-tachometer-alt"></i> ...</a>
+            <h3>Ativos - Bloco A</h3>
+            <a href="#" class="room-link active" data-room="10A"><i class="fa-solid fa-users"></i> Sala 10-A</a>
+            <a href="#" class="room-link" data-room="8A"><i class="fa-solid fa-users"></i> Sala 8-A</a>
+            <a href="#" class="room-link" data-room="6A"><i class="fa-solid fa-users"></i> Sala 6-A</a>
+            <a href="#" class="room-link" data-room="12A"><i class="fa-solid fa-users"></i> Sala 12-A</a>
         </div>
         <div class="content">
-            <div class="d-flex justify-content-between align-items-center mb-4">
-                <h2 id="room-title">Sala 10-A</h2>
+                <div class="d-flex justify-content-between align-items-center mb-4">
+                    <h2>Sala<h2 id="room-title"></h2></h2>
                 <div>
                     <button class="btn btn-primary">Novo Ativo</button>
                     <button class="btn btn-secondary">Alguma Opção</button>
@@ -63,7 +64,8 @@
                 </div>
             </div>
             <div class="table-responsive">
-                <table class="table table-striped">
+
+                <table class="table table-striped" id="room-table">
                     <thead>
                     <tr>
                         <th>Nome</th>
@@ -74,136 +76,58 @@
                     </tr>
                     </thead>
 
-                    @forelse($ativosBlocoA as $ativo)
-                        <tbody id="room-content">
-                        <tr>
-                            <td>{{ $ativo->nome }}</td>
-                            <td>{{ $ativo->patrimonio }}</td>
-                            <td>{{ $ativo->categoria_patrimonio }}</td>
-                            <td><span class="badge bg-success">Ativo</span></td>
-                            <td><button class="btn btn-danger">Excluir</button></td>
-                        </tr>
-                        </tbody>
-                    @empty
-                        <h2 class="text">Nenhum patrimônio encontrado</h2>
-                    @endforelse
+                    <tbody id="room-content">
+
+                    </tbody>
+
+
                 </table>
+
+
             </div>
         </div>
     </div>
 
-    <!-- Incluindo jQuery -->
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script>
-     // $(document).ready(function() {
-     //     $('.room-link').click(function(e) {
-     //         e.preventDefault();
-     //         var room = $(this).data('room');
-     //         loadRoomData(room);
-     //     });
+        <script>
+            const linksSala = document.querySelectorAll('.room-link');
+            const conteudoSala = document.getElementById('room-content');
+            const tituloSala = document.getElementById('room-title');
 
-     //     function loadRoomData(room) {
-     //         // TESTE de titulo
-     //         $('#room-title').text(room.replace('-', ' '));
+            linksSala.forEach(link => {
+                link.addEventListener('click', async (event) => {
+                    event.preventDefault();
 
-     //         // Simulação de dados da sala (substitua isso pela chamada do bd)
-     //         var data = {
-     //             'sala-10a': [
-     //                 { name: 'George Lundeot', patrimonial: '+4 215 25 62', email: 'carlem@random.no', status: 'Ativo' }
-     //             ],
-     //             'sala-8a': [
-     //                 { name: 'Jane Doe', patrimonial: '+1 123 45 67', email: 'jane.doe@example.com', status: 'Ativo' }
-     //             ],
-     //             'sala-outra': [
-     //                 { name: 'John Smith', patrimonial: '+3 987 65 43', email: 'john.smith@example.com', status: 'Inativo' }
-     //             ]
-    //       };
+                    const selectedRoom = link.dataset.room;
+                    tituloSala.textContent = ` ${selectedRoom}`;
+                    link.classList.add('active');
 
-    //       var roomData = data[room] || [];
+                    try {
+                        const request = await fetch(`http://localhost:8000/api/ativos/blocos/${selectedRoom}`);
+                        const response = await request.json();
+                        conteudoSala.innerHTML = JSON.stringify(response); //A resposta é devolvida corretamente.
+                      // conteudoSala.innerHTML = '';
 
-    //       // Limpar o conteúdo atual
-    //       $('#room-content').empty();
+                      // response.forEach(ativo => {
+                      //     const linha = document.createElement('tr');
 
-    //       // Inserir novos dados
-    //       roomData.forEach(function(member) {
-    //           var statusBadge = member.status === 'Ativo' ? 'bg-success' : 'bg-danger';
-    //           var row = `
-    //           <tr>
-    //               <td>${member.name}</td>
-    //               <td>${member.patrimonial}</td>
-    //               <td>${member.email}</td>
-    //               <td><span class="badge ${statusBadge}">${member.status}</span></td>
-    //               <td><button class="btn btn-danger">Excluir</button></td>
-    //           </tr>
-    //       `;
-    //           $('#room-content').append(row);
-    //       });
-    //   }
-    //});
-    </script>
+                      //     linha.innerHTML = `
+                      //     <td>${ativo.nome}</td>
+                      //     <td>${ativo.patrimonio}</td>
+                      //     <td>${ativo.categoria_patrimonio}</td>
+                      //     <td><span class="badge bg-success">Ativo</span></td>
+                      //     <td><button class="btn btn-danger">Excluir</button></td>
+                      //     `;
+                      //     conteudoSala.appendChild(linha);
+
+                      // })
+                    } catch (error) {
+                        console.error('Erro:', error);
+                        conteudoSala.innerHTML = `<tr><td colspan="5">Houve um erro ao realizar a consulta. Entre em contato com os administradores para obter mais respostas</td></tr>`;
+                    } finally {
+                        linksSala.forEach(prevLink => prevLink.classList.remove('active'));
+                    }
+                });
+            });
+        </script>
 
 @endsection
-
-<!-- CODIGO ESTOQUE, NÃO APAGAR POR FAVOR -->
-<!-- @extends('layouts.master')
-
-@section('content')
-    <x-navbar></x-navbar>
-
-    <style>
-        body {
-            display: flex;
-            flex-direction: column;
-            height: 100vh;
-            overflow: hidden;
-        }
-        .main-content {
-            flex: 1;
-            padding: 20px;
-            box-sizing: border-box;
-            overflow-y: auto;
-        }
-        .table-responsive {
-            overflow-y: auto;
-            max-height: calc(100vh - 140px);
-        }
-    </style>
-
-    <div class="main-content">
-        <div class="d-flex justify-content-between align-items-center mb-4">
-            <h2>Estoque</h2>
-            <div>
-                <button class="btn btn-primary">Novo Item</button>
-                <button class="btn btn-secondary">Opção 1</button>
-                <button class="btn btn-secondary">Opção 2</button>
-            </div>
-        </div>
-        <div class="table-responsive">
-            <table class="table table-striped">
-                <thead>
-                    <tr>
-                        <th>Nome do Item</th>
-                        <th>Quantidade</th>
-                        <th>Localização</th>
-                        <th>Data de Adição</th>
-                        <th>Estado</th>
-                        <th>Ação</th>
-                    </tr>
-                </thead>
-                <tbody id="stock-content">
-
-                Conteúdo inicial do estoque -->
-    <!-- <tr>
-                    <td>Item Exemplo 1</td>
-                    <td>50</td>
-                    <td>Armazém A</td>
-                    <td>2023-06-01</td>
-                    <td><span class="badge bg-success">Disponível</span></td>
-                    <td><button class="btn btn-danger">Excluir</button></td>
-                </tr>
-            </tbody>
-        </table>
-    </div>
-</div>
-
-@endsection -->

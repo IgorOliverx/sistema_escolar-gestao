@@ -52,6 +52,45 @@ class AtivoSeeder extends Seeder
         ]);
 
 
+        //seed 2x
+        DB::table('salas')->insert([
+            'numero_sala' => '12A',
+            'bloco_sala' => 'A',
+            'user_id' => DB::table('users')->inRandomOrder()->first()->id,
+        ]);
+
+        DB::table('salas')->insert([
+            'numero_sala' => '6A',
+            'bloco_sala' => 'A',
+            'user_id' => DB::table('users')->inRandomOrder()->first()->id,
+        ]);
+
+        DB::table('salas')->insert([
+            'numero_sala' => '6D',
+            'bloco_sala' => 'D',
+            'user_id' => DB::table('users')->inRandomOrder()->first()->id,
+        ]);
+
+        DB::table('salas')->insert([
+            'numero_sala' => '7B',
+            'bloco_sala' => 'B',
+            'user_id' => DB::table('users')->inRandomOrder()->first()->id,
+        ]);
+
+        DB::table('salas')->insert([
+            'numero_sala' => '1A',
+            'bloco_sala' => 'A',
+            'user_id' => DB::table('users')->inRandomOrder()->first()->id,
+        ]);
+
+        DB::table('salas')->insert([
+            'numero_sala' => '19C',
+            'bloco_sala' => 'C',
+            'user_id' => DB::table('users')->inRandomOrder()->first()->id,
+        ]);
+
+
+
 
 
         //Seeders de ativos
@@ -106,6 +145,64 @@ class AtivoSeeder extends Seeder
 
         DB::table('ativos')->insert([
             'nome' => 'notebook DELL',
+            'categoria_patrimonio' => 'INFORMÁTICA',
+            'patrimonio' => rand(0,10000),
+            'id_sala' => DB::table('salas')->inRandomOrder()->first()->id,
+        ]);
+
+
+        //seed 2x ativos
+        DB::table('ativos')->insert([
+            'nome' => 'computador POSITIVO',
+            'categoria_patrimonio' => 'INFORMÁTICA',
+            'patrimonio' => rand(0,10000),
+            'id_sala' => DB::table('salas')->inRandomOrder()->first()->id,
+        ]);
+
+        DB::table('ativos')->insert([
+            'nome' => 'Mesa',
+            'categoria_patrimonio' => 'GERAL',
+            'patrimonio' => rand(0,10000),
+            'id_sala' => DB::table('salas')->inRandomOrder()->first()->id,
+        ]);
+
+        DB::table('ativos')->insert([
+            'nome' => 'Cabo HDMI',
+            'categoria_patrimonio' => 'INFORMÁTICA',
+            'patrimonio' => rand(0,10000),
+            'id_sala' => DB::table('salas')->inRandomOrder()->first()->id,
+        ]);
+
+        DB::table('ativos')->insert([
+            'nome' => 'Cabo VGA',
+            'categoria_patrimonio' => 'INFORMÁTICA',
+            'patrimonio' => rand(0,10000),
+            'id_sala' => DB::table('salas')->inRandomOrder()->first()->id,
+        ]);
+
+        DB::table('ativos')->insert([
+            'nome' => 'Mesa DELL',
+            'categoria_patrimonio' => 'INFORMÁTICA',
+            'patrimonio' => rand(0,10000),
+            'id_sala' => DB::table('salas')->inRandomOrder()->first()->id,
+        ]);
+
+        DB::table('ativos')->insert([
+            'nome' => 'Adaptador wireless',
+            'categoria_patrimonio' => 'INFORMÁTICA',
+            'patrimonio' => rand(0,10000),
+            'id_sala' => DB::table('salas')->inRandomOrder()->first()->id,
+        ]);
+
+        DB::table('ativos')->insert([
+            'nome' => 'Mouse Positivo',
+            'categoria_patrimonio' => 'INFORMÁTICA',
+            'patrimonio' => rand(0,10000),
+            'id_sala' => DB::table('salas')->inRandomOrder()->first()->id,
+        ]);
+
+        DB::table('ativos')->insert([
+            'nome' => 'Teclado microsoft',
             'categoria_patrimonio' => 'INFORMÁTICA',
             'patrimonio' => rand(0,10000),
             'id_sala' => DB::table('salas')->inRandomOrder()->first()->id,

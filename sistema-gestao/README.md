@@ -21,4 +21,27 @@
 9. Rode o comando ``php artisan db:seed AtivoSeeder``
 10. Rode o comando ``php artisan serve``
 
-PRONTO
+
+
+
+## Dividindo responsabilidades.
+
+### Aloisio boi bandido
+
+ - Criar mascára para o campo de password e cpf na pagina de login.
+Como possibilidade, você pode usar o Jquery ou qualquer lib js que faça esse trabalho, ou vanilla bruto na mão.
+
+ - Ajeitar a responsividade das telas
+
+ - Dar idéia de como criar a parte de estoque
+
+
+### Ezequiel
+
+ - ElequizelZZ você é foda
+
+
+### Iguinho jobs
+
+ - Terminar api de single-responsability
+ - tentar usar somente uma pagina para todo o conteúdo de ativos (por blocos e por salas)

@@ -18,20 +18,6 @@ class AtivoController extends Controller
     }
 
     /**
-     * Método para padronização de respostas (luigi vai fazer pra exercitar o cérebro)
-     *
-     * @param $m1
-     * @param $m2
-     * @return JsonResponse
-     */
-    public function respostaOk($m1, $m2):JsonResponse
-    {
-        return response()->json([
-
-        ]);
-    }
-
-    /**
      * Lista os Ativos
      *
      * @return JsonResponse
@@ -200,6 +186,35 @@ class AtivoController extends Controller
                 'error' => 'Ocorreu um erro inesperado',
                 'details' => $e->getMessage(),
             ], 500);
+        }
+    }
+
+
+    /**
+     * Listar ativos individuais
+     */
+    public function retornaAtivoSala(String $sala): JsonResponse
+    {
+        try{
+            if(!$this->ativo->salaExiste($sala)){
+                return response()->json([
+                    'message' => false,
+                    'error' => 'A sala informada não existe'
+                ], 400);
+            }
+            $ativoSalas = $this->ativo->retornaAtivoSala($sala);
+            return response()->json([
+                'status' => true,
+                'dados' => $ativoSalas,
+            ], 200);
+
+        }catch(\Exception $e){
+
+            return response()->json([
+                'message' => false,
+                'error' => 'erro do catch.' . $e->getMessage(),
+            ], 500);
+
         }
     }
 }

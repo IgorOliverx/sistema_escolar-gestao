@@ -27,6 +27,7 @@
             @endif
             <label for="password">Senha</label>
             <input type="password" name="password" id="password" class="form-control" placeholder="Insira sua password" required>
+            <i class="bi bi-eye" id="btnMostrarSenha" onclick="mostrarSenha()"></i>
             @if($errors->has('password'))
                 <div class="alert alert-danger d-flex align-items-center position-relative" style="height: 20px">
                   <p class="mt-3">  {{$errors->first('password')}}</p>
@@ -41,5 +42,19 @@
 </div>
 
 <script>
+
+    function mostrarSenha(){
+    var input = document.getElementById('password');
+    var btnMostrarSenha = document.getElementById('btnMostrarSenha')
+
+        if(input.type === 'password'){
+            input.setAttribute('type','text')
+            btnMostrarSenha.classList.replace('bi-eye-fill', 'bi-eye-slash-fill')
+        }else {
+            input.setAttribute('type','password')
+            btnMostrarSenha.classList.replace('bi-eye-slash-fill', 'bi-eye-fill')
+        }
+
+    }
 
 </script>

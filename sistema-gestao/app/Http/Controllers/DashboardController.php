@@ -23,11 +23,8 @@ class DashboardController extends Controller
     public function painelBlocoA():View
     {
 
-        //Esses são os ativos do blocoA
         $ativosBlocoA = $this->ativo->retornaAtivoBloco('A');
 
-        //Agora precisamos extrair os ativos do blocoA mas concomitante as suas salas
-        //o método ja está criado, precisa da lógica de negócio agora
 
         return view('dashboard.painelBlocos', ['ativosBlocoA' => $ativosBlocoA]);
     }
