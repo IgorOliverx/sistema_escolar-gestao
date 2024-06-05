@@ -49,10 +49,10 @@
 
         if(input.type === 'password'){
             input.setAttribute('type','text')
-            btnMostrarSenha.classList.replace('bi-eye-fill', 'bi-eye-slash-fill')
+            btnMostrarSenha.classList.replace('bi-eye-fill', 'bi bi-eye-slash')
         }else {
             input.setAttribute('type','password')
-            btnMostrarSenha.classList.replace('bi-eye-slash-fill', 'bi-eye-fill')
+            btnMostrarSenha.classList.replace('bi bi-eye-slash', 'bi-eye-fill')
         }
 
     }

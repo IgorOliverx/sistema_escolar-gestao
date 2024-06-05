@@ -9,8 +9,6 @@ use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\Relations\HasOne;
 
 
-//Lembrar de criar o repositorio desses metodos daqui do modelo
-
 class Ativo extends Model
 {
 
