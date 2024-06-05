@@ -2,9 +2,6 @@
 
 
 @section('content')
-    <x-navbar></x-navbar>
-    pagina interna de administrador
-
     <style>
         body {
             background-image: url('/img/background-dot.png');
@@ -79,6 +76,11 @@
             from{}to{scale: 1.1}
         }
     </style>
+    <x-navbar></x-navbar>
+
+    @if(session()->has('message'))
+        <span class="position-fixed top-50 z-3 w-100 alert alert-success">{{$msg}}</span>
+    @endif
 
     <div class="container mt-5">
         <div class="row">

@@ -130,6 +130,9 @@ class AtivoController extends Controller
      */
     public function update(Request $request, string $id): JsonResponse
     {
+        if(Gate::denies('manage-tasks')){
+            abort(403, 'Acesso Negado');
+        }
         try {
             $data = $request->validate([
                 'nome' => ['string', 'required', 'max:255'],
