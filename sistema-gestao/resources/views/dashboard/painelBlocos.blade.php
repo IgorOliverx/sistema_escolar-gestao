@@ -49,10 +49,11 @@
     <div class="main-content">
         <div class="sidebar">
             <h3>Ativos - Bloco A</h3>
-            <a href="#" class="room-link active" data-room="10A"><i class="fa-solid fa-users"></i> Sala 10-A</a>
-            <a href="#" class="room-link" data-room="8A"><i class="fa-solid fa-users"></i> Sala 8-A</a>
-            <a href="#" class="room-link" data-room="6A"><i class="fa-solid fa-users"></i> Sala 6-A</a>
-            <a href="#" class="room-link" data-room="12A"><i class="fa-solid fa-users"></i> Sala 12-A</a>
+            <a href="#" class="room-link" data-room="05A"><i class="fa-solid fa-users"></i> Sala 05-A</a>
+            <a href="#" class="room-link" data-room="07A"><i class="fa-solid fa-users"></i> Sala 07-A</a>
+            <a href="#" class="room-link" data-room="08A"><i class="fa-solid fa-users"></i> Sala 08-A</a>
+            <a href="#" class="room-link" data-room="10A"><i class="fa-solid fa-users"></i> Sala 10-A</a>
+            <a href="#" class="room-link" data-room="15A"><i class="fa-solid fa-users"></i> Sala 15-A</a>
         </div>
         <div class="content">
                 <div class="d-flex justify-content-between align-items-center mb-4">
