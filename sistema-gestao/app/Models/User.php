@@ -3,6 +3,7 @@
 namespace App\Models;
 
 // use Illuminate\Contracts\Auth\MustVerifyEmail;
+use Illuminate\Database\Eloquent\Casts\Attribute;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Relations\HasMany;
 use Illuminate\Database\Eloquent\Relations\HasOne;
@@ -24,7 +25,8 @@ class User extends Authenticatable
         'username',
         'password',
         'nome',
-        'ultimo_login'
+        'ultimo_login',
+        'is_admin',
     ];
 
     /**
@@ -59,6 +61,14 @@ class User extends Authenticatable
       return $this->hasMany(Sala::class);
     }
 
+
+    public function is_admin(): Attribute
+    {
+        return new Attribute(
+            get: fn($value) => $value == 1 ? 'Yes' : 'No',
+            set: fn($value) => $value == 'Yes' ? 1 : 0,
+        );
+    }
 
 
 }

@@ -15,7 +15,8 @@ return new class extends Migration
             $table->id();
             $table->string('nome');
             $table->string('categoria_patrimonio');
-            $table->unsignedBigInteger('patrimonio');
+            $table->date('data_compra');
+            $table->unsignedBigInteger('patrimonio')->unique();
             $table->unsignedBigInteger('id_sala');
 
             //Chaves estrangeiras

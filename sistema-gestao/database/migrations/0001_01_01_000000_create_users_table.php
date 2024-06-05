@@ -19,6 +19,7 @@ return new class extends Migration
             $table->string('nome');
             $table->string('password');
             $table->string('ultimo_login');
+            $table->boolean('is_admin');
         });
 
         Schema::create('salas', function (Blueprint $table) {

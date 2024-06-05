@@ -70,6 +70,14 @@
             width: 45px;
             height: 8px;
         }
+
+        .read-more:hover {
+            animation: anm 0.5s ease-in-out forwards;
+        }
+
+        @keyframes anm {
+            from{}to{scale: 1.1}
+        }
     </style>
 
     <div class="container mt-5">

@@ -2,6 +2,7 @@
 
 namespace Database\Seeders;
 
+use Carbon\Carbon;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
@@ -97,56 +98,64 @@ class AtivoSeeder extends Seeder
         DB::table('ativos')->insert([
             'nome' => 'computador DELL',
             'categoria_patrimonio' => 'INFORMÁTICA',
-            'patrimonio' => rand(0,10000),
+            'patrimonio' => rand(100000, 999999),
+            'data_compra' => Carbon::now(),
             'id_sala' => DB::table('salas')->inRandomOrder()->first()->id,
         ]);
 
         DB::table('ativos')->insert([
             'nome' => 'Cadeira',
             'categoria_patrimonio' => 'GERAL',
-            'patrimonio' => rand(0,10000),
+            'patrimonio' => rand(100000, 999999),
+            'data_compra' => Carbon::now(),
             'id_sala' => DB::table('salas')->inRandomOrder()->first()->id,
         ]);
 
         DB::table('ativos')->insert([
             'nome' => 'impressora',
             'categoria_patrimonio' => 'INFORMÁTICA',
-            'patrimonio' => rand(0,10000),
+            'patrimonio' => rand(100000, 999999),
+            'data_compra' => Carbon::now(),
             'id_sala' => DB::table('salas')->inRandomOrder()->first()->id,
         ]);
 
         DB::table('ativos')->insert([
             'nome' => 'Monitor Dell',
             'categoria_patrimonio' => 'INFORMÁTICA',
-            'patrimonio' => rand(0,10000),
+            'patrimonio' => rand(100000, 999999),
+            'data_compra' => Carbon::now(),
             'id_sala' => DB::table('salas')->inRandomOrder()->first()->id,
         ]);
 
         DB::table('ativos')->insert([
             'nome' => 'mouse DELL',
             'categoria_patrimonio' => 'INFORMÁTICA',
-            'patrimonio' => rand(0,10000),
+            'patrimonio' => rand(100000, 999999),
+            'data_compra' => Carbon::now(),
             'id_sala' => DB::table('salas')->inRandomOrder()->first()->id,
         ]);
 
         DB::table('ativos')->insert([
             'nome' => 'teclado DELL',
             'categoria_patrimonio' => 'INFORMÁTICA',
-            'patrimonio' => rand(0,10000),
+            'patrimonio' => rand(100000, 999999),
+            'data_compra' => Carbon::now(),
             'id_sala' => DB::table('salas')->inRandomOrder()->first()->id,
         ]);
 
         DB::table('ativos')->insert([
             'nome' => 'fonte DELL',
             'categoria_patrimonio' => 'INFORMÁTICA',
-            'patrimonio' => rand(0,10000),
+            'patrimonio' => rand(100000, 999999),
+            'data_compra' => Carbon::now(),
             'id_sala' => DB::table('salas')->inRandomOrder()->first()->id,
         ]);
 
         DB::table('ativos')->insert([
             'nome' => 'notebook DELL',
             'categoria_patrimonio' => 'INFORMÁTICA',
-            'patrimonio' => rand(0,10000),
+            'patrimonio' => rand(100000, 999999),
+            'data_compra' => Carbon::now(),
             'id_sala' => DB::table('salas')->inRandomOrder()->first()->id,
         ]);
 
@@ -155,56 +164,127 @@ class AtivoSeeder extends Seeder
         DB::table('ativos')->insert([
             'nome' => 'computador POSITIVO',
             'categoria_patrimonio' => 'INFORMÁTICA',
-            'patrimonio' => rand(0,10000),
+            'patrimonio' => rand(100000, 999999),
+            'data_compra' => Carbon::now(),
             'id_sala' => DB::table('salas')->inRandomOrder()->first()->id,
         ]);
 
         DB::table('ativos')->insert([
             'nome' => 'Mesa',
             'categoria_patrimonio' => 'GERAL',
-            'patrimonio' => rand(0,10000),
+            'patrimonio' => rand(100000, 999999),
+            'data_compra' => Carbon::now(),
             'id_sala' => DB::table('salas')->inRandomOrder()->first()->id,
         ]);
 
         DB::table('ativos')->insert([
             'nome' => 'Cabo HDMI',
             'categoria_patrimonio' => 'INFORMÁTICA',
-            'patrimonio' => rand(0,10000),
+            'patrimonio' => rand(100000, 999999),
+            'data_compra' => Carbon::now(),
             'id_sala' => DB::table('salas')->inRandomOrder()->first()->id,
         ]);
 
         DB::table('ativos')->insert([
             'nome' => 'Cabo VGA',
             'categoria_patrimonio' => 'INFORMÁTICA',
-            'patrimonio' => rand(0,10000),
+            'patrimonio' => rand(100000, 999999),
+            'data_compra' => Carbon::now(),
             'id_sala' => DB::table('salas')->inRandomOrder()->first()->id,
         ]);
 
         DB::table('ativos')->insert([
             'nome' => 'Mesa DELL',
             'categoria_patrimonio' => 'INFORMÁTICA',
-            'patrimonio' => rand(0,10000),
+            'patrimonio' => rand(100000, 999999),
+            'data_compra' => Carbon::now(),
             'id_sala' => DB::table('salas')->inRandomOrder()->first()->id,
         ]);
 
         DB::table('ativos')->insert([
             'nome' => 'Adaptador wireless',
             'categoria_patrimonio' => 'INFORMÁTICA',
-            'patrimonio' => rand(0,10000),
+            'patrimonio' => rand(100000, 999999),
+            'data_compra' => Carbon::now(),
             'id_sala' => DB::table('salas')->inRandomOrder()->first()->id,
         ]);
 
         DB::table('ativos')->insert([
             'nome' => 'Mouse Positivo',
             'categoria_patrimonio' => 'INFORMÁTICA',
-            'patrimonio' => rand(0,10000),
+            'patrimonio' => rand(100000, 999999),
+            'data_compra' => Carbon::now(),
             'id_sala' => DB::table('salas')->inRandomOrder()->first()->id,
         ]);
 
         DB::table('ativos')->insert([
             'nome' => 'Teclado microsoft',
             'categoria_patrimonio' => 'INFORMÁTICA',
-            'patrimonio' => rand(0,10000),
+            'patrimonio' => rand(100000, 999999),
+            'data_compra' => Carbon::now(),
+            'id_sala' => DB::table('salas')->inRandomOrder()->first()->id,
+        ]);
+        DB::table('ativos')->insert([
+            'nome' => 'computador POSITIVO',
+            'categoria_patrimonio' => 'INFORMÁTICA',
+            'patrimonio' => rand(100000, 999999),
+            'data_compra' => Carbon::now(),
+            'id_sala' => DB::table('salas')->inRandomOrder()->first()->id,
+        ]);
+
+        DB::table('ativos')->insert([
+            'nome' => 'Mesa',
+            'categoria_patrimonio' => 'GERAL',
+            'patrimonio' => rand(100000, 999999),
+            'data_compra' => Carbon::now(),
+            'id_sala' => DB::table('salas')->inRandomOrder()->first()->id,
+        ]);
+
+        DB::table('ativos')->insert([
+            'nome' => 'Cabo HDMI',
+            'categoria_patrimonio' => 'INFORMÁTICA',
+            'patrimonio' => rand(100000, 999999),
+            'data_compra' => Carbon::now(),
+            'id_sala' => DB::table('salas')->inRandomOrder()->first()->id,
+        ]);
+
+        DB::table('ativos')->insert([
+            'nome' => 'Cabo VGA',
+            'categoria_patrimonio' => 'INFORMÁTICA',
+            'patrimonio' => rand(100000, 999999),
+            'data_compra' => Carbon::now(),
+            'id_sala' => DB::table('salas')->inRandomOrder()->first()->id,
+        ]);
+
+        DB::table('ativos')->insert([
+            'nome' => 'Mesa DELL',
+            'categoria_patrimonio' => 'INFORMÁTICA',
+            'patrimonio' => rand(100000, 999999),
+            'data_compra' => Carbon::now(),
+            'id_sala' => DB::table('salas')->inRandomOrder()->first()->id,
+        ]);
+
+        DB::table('ativos')->insert([
+            'nome' => 'Adaptador wireless',
+            'categoria_patrimonio' => 'INFORMÁTICA',
+            'patrimonio' => rand(100000, 999999),
+            'data_compra' => Carbon::now(),
+            'id_sala' => DB::table('salas')->inRandomOrder()->first()->id,
+        ]);
+
+        DB::table('ativos')->insert([
+            'nome' => 'Mouse Positivo',
+            'categoria_patrimonio' => 'INFORMÁTICA',
+            'patrimonio' => rand(100000, 999999),
+            'data_compra' => Carbon::now(),
+            'id_sala' => DB::table('salas')->inRandomOrder()->first()->id,
+        ]);
+
+        DB::table('ativos')->insert([
+            'nome' => 'Teclado microsoft',
+            'categoria_patrimonio' => 'INFORMÁTICA',
+            'patrimonio' => rand(100000, 999999),
+            'data_compra' => Carbon::now(),
             'id_sala' => DB::table('salas')->inRandomOrder()->first()->id,
         ]);
 

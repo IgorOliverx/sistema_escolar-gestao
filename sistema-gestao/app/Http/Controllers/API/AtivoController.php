@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Models\Ativo;
 use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Gate;
 use Illuminate\Validation\ValidationException;
 
 class AtivoController extends Controller
@@ -86,11 +87,15 @@ class AtivoController extends Controller
      */
     public function store(Request $request): JsonResponse
     {
+        if(Gate::denies('manage-tasks')){
+            abort(403, 'Acesso Negado');
+        }
         try {
             $data = $request->validate([
                 'nome' => ['string', 'required', 'max:255'],
                 'patrimonio' => ['integer']
             ]);
+
 
             $novoAtivo = $this->ativo->cadastrarAtivo($data);
 
@@ -164,6 +169,9 @@ class AtivoController extends Controller
      */
     public function destroy(string $id)
     {
+        if(Gate::denies('manage-tasks')){
+            abort(403, 'Acesso Negado');
+        }
         try{
 
             if(!$this->ativo->idExiste($id))
@@ -193,7 +201,7 @@ class AtivoController extends Controller
     /**
      * Listar ativos individuais
      */
-    public function retornaAtivoSala(String $sala): JsonResponse
+    public function  retornaAtivoSala(String $sala): JsonResponse
     {
         try{
             //Arrumar este metodo no Model
