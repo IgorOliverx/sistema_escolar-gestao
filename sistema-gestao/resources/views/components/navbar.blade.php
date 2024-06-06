@@ -1,3 +1,5 @@
+@extends('layouts.master')
+
 <style>
     .navbar-nav .nav-item:not(:last-child) {
         margin-right: 20px;

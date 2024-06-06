@@ -1,14 +1,11 @@
 @extends('layouts.master')
 
-
 @section('content')
     <x-navbar></x-navbar>
-    pagina interna de administrador
 
     <style>
         body {
-            background-image: url('/img/background-dot.png');
-            background-repeat: repeat;
+            margin: 0;
         }
 
         .card-custom {
@@ -16,7 +13,6 @@
             flex-direction: column;
             justify-content: space-around;
             width: 100%;
-            /* Updated for better responsiveness */
             max-width: 300px;
             height: 390px;
             border: 1px solid #ddd;
@@ -26,9 +22,7 @@
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
             position: relative;
             margin: 15px auto;
-            /* Center cards on smaller screens */
             background-color: white;
-            /* Ensure cards have a white background */
         }
 
         .card-custom .icon {
@@ -70,9 +64,38 @@
             width: 45px;
             height: 8px;
         }
+
+        .title-section {
+            text-align: center;
+            margin-bottom: 20px;
+            font-family: "Archivo Black", sans-serif;
+            font-size: 36px;
+            color: #000;
+            position: relative;
+        }
+
+        .title-section::after {
+            content: '';
+            display: block;
+            width: 24px;
+            height: 24px;
+            border: 2px solid red;
+            border-width: 0 2px 2px 0;
+            transform: rotate(45deg);
+            margin: 10px auto 0;
+        }
+
+        .container-custom {
+            padding-bottom: 30px;
+        }
+
+        body {
+            overflow-x: hidden;
+        }
     </style>
 
-    <div class="container mt-5">
+    <div class="container mt-5 container-custom">
+        <div class="title-section">Cursos</div>
         <div class="row">
             <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
                 <div class="card-custom">
@@ -92,9 +115,8 @@
                     <div class="title">Bloco B</div>
                     <div class="description">Focado na administração escolar, finanças, recursos humanos e contato com empresas parceiras.</div>
                     <a href="{{ route('painelBlocosB') }}">
-                    <button class="read-more">Ver Ativos</button>
+                        <button class="read-more">Ver Ativos</button>
                     </a>
-
                 </div>
             </div>
             <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
@@ -103,11 +125,9 @@
                     <i class="fa-solid fa-bolt fa-3x mb-3 icon"></i>
                     <div class="title">Bloco C</div>
                     <div class="description">Voltado para ferramentaria e eletroeletrônica, com cursos técnicos e laboratórios avançados.</div>
-
                     <a href="{{ route('painelBlocosC') }}">
-                    <button class="read-more">Ver Ativos</button>
+                        <button class="read-more">Ver Ativos</button>
                     </a>
-
                 </div>
             </div>
             <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
@@ -116,11 +136,9 @@
                     <i class="fa-solid fa-gear fa-3x mb-3 icon"></i>
                     <div class="title">Bloco D</div>
                     <div class="description">Especializado em ferramentaria, com oficinas equipadas para prática e aprendizado técnico.</div>
-
                     <a href="{{ route('painelBlocosD') }}">
-                    <button class="read-more">Ver Ativos</button>
+                        <button class="read-more">Ver Ativos</button>
                     </a>
-
                 </div>
             </div>
         </div>
