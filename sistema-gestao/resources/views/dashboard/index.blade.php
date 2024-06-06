@@ -2,90 +2,16 @@
 
 
 @section('content')
-    <style>
-        body {
-            background-image: url('/img/background-dot.png');
-            background-repeat: repeat;
-        }
-
-        .card-custom {
-            display: flex;
-            flex-direction: column;
-            justify-content: space-around;
-            width: 100%;
-            /* Updated for better responsiveness */
-            max-width: 300px;
-            height: 390px;
-            border: 1px solid #ddd;
-            border-radius: 10px;
-            text-align: center;
-            padding: 20px;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-            position: relative;
-            margin: 15px auto;
-            /* Center cards on smaller screens */
-            background-color: white;
-            /* Ensure cards have a white background */
-        }
-
-        .card-custom .icon {
-            font-size: 50px;
-            color: #333;
-            margin-bottom: 15px;
-        }
-
-        .card-custom .title,
-        .card-custom .read-more {
-            font-family: "Archivo Black", sans-serif;
-            font-size: 24px;
-            font-weight: 400;
-            color: #000;
-            margin-bottom: 10px;
-        }
-
-        .card-custom .description {
-            font-size: 14px;
-            color: #666;
-            margin-bottom: 20px;
-        }
-
-        .card-custom .read-more {
-            background-color: red;
-            color: #fff;
-            font-size: 17px;
-            padding: 10px 20px;
-            border: none;
-            border-radius: 5px;
-            text-transform: uppercase;
-        }
-
-        .card-custom .top-right-corner {
-            position: absolute;
-            top: 10px;
-            right: 0px;
-            background-color: red;
-            width: 45px;
-            height: 8px;
-        }
-
-        .read-more:hover {
-            animation: anm 0.5s ease-in-out forwards;
-        }
-
-        @keyframes anm {
-            from{}to{scale: 1.1}
-        }
-    </style>
     <x-navbar></x-navbar>
 
-    @if(session()->has('message'))
+    @if(session()->has('msg'))
         <span class="position-fixed top-50 z-3 w-100 alert alert-success">{{$msg}}</span>
     @endif
 
     <div class="container mt-5">
         <div class="row">
             <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
-                <div class="card-custom">
+                <div class="card-custom" id="card-custom">
                     <div class="top-right-corner"></div>
                     <i class="fa-solid fa-desktop fa-3x mb-3 icon"></i>
                     <div class="title">Bloco A</div>
@@ -96,7 +22,7 @@
                 </div>
             </div>
             <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
-                <div class="card-custom">
+                <div class="card-custom" id="card-custom">
                     <div class="top-right-corner"></div>
                     <i class="fa-solid fa-briefcase fa-3x mb-3 icon"></i>
                     <div class="title">Bloco B</div>
@@ -108,12 +34,11 @@
                 </div>
             </div>
             <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
-                <div class="card-custom">
+                <div class="card-custom" id="card-custom">
                     <div class="top-right-corner"></div>
                     <i class="fa-solid fa-bolt fa-3x mb-3 icon"></i>
                     <div class="title">Bloco C</div>
                     <div class="description">Voltado para ferramentaria e eletroeletrônica, com cursos técnicos e laboratórios avançados.</div>
-
                     <a href="{{ route('painelBlocosC') }}">
                     <button class="read-more">Ver Ativos</button>
                     </a>
@@ -121,7 +46,7 @@
                 </div>
             </div>
             <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
-                <div class="card-custom">
+                <div class="card-custom" id="card-custom">
                     <div class="top-right-corner"></div>
                     <i class="fa-solid fa-gear fa-3x mb-3 icon"></i>
                     <div class="title">Bloco D</div>
@@ -136,6 +61,23 @@
         </div>
     </div>
 
-    <x-footer></x-footer>
 
+    <h3 class="text-black font-weight-bold">Minhas salas</h3>
+
+    @foreach($sala as $s)
+    <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
+        <div class="card-custom" id="card-custom">
+            <div class="top-right-corner"></div>
+            <i class="fa-solid fa-bolt fa-3x mb-3 icon"></i>
+            <div class="title">{{$s->sala['numero_sala']}}</div>
+            <div class="description"></div>
+            <a href="{{ route('painelBlocosC') }}">
+                <button class="read-more">Ver Ativos</button>
+            </a>
+
+        </div>
+    </div>
+    @endforeach
+
+    <x-footer></x-footer>
 @endsection

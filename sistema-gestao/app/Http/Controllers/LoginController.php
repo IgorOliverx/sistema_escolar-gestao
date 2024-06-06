@@ -22,7 +22,7 @@ class LoginController extends Controller
         $request->session()->regenerate();
 
         $msg = 'Bem vindo'. Auth::user()->username;
-        session()->flash('message', $msg);
+        session()->flash('msg', $msg);
 
         return redirect('/dashboard/');
     }

@@ -7,6 +7,8 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\Relations\HasOne;
+use Laravel\SerializableClosure\UnsignedSerializableClosure;
+use PhpParser\Node\Stmt\Return_;
 
 
 class Ativo extends Model
@@ -25,7 +27,7 @@ class Ativo extends Model
     ];
 
     /**
-     * CRUD
+     * LISTA TODOS OS ATIVOS
      */
     public function retornarAtivos(): Collection
     {
@@ -33,14 +35,28 @@ class Ativo extends Model
             ->with('sala')
                 ->get();
     }
+
+    /**
+     * CADASTRA ATIVOS
+     * @param array $data
+     * @return mixed
+     */
     public function cadastrarAtivo(array $data)
     {
         return Ativo::create($data);
     }
+
+    /**
+     * ATUALIZA O ATIVO
+    */
     public function atualizarAtivo($id, $obj)
     {
         return $this->where('id', $id)->update($obj);
     }
+
+    /**
+     * APAGA O ATIVO
+    */
     public function apagarAtivo($id)
     {
         return $this->where('id', $id)->delete();
@@ -48,7 +64,7 @@ class Ativo extends Model
 
 
     /**
-     * Consultas adicionais
+     * RETORNA ATIVO PELO ID
     */
     public function retornarAtivo(string $id)
     {
@@ -56,20 +72,17 @@ class Ativo extends Model
 
     }
 
+    /**
+     * VERIFICA SE O ID DO ATIVO EXISTE
+    */
     public function idExiste(string $id)
     {
         return $this->where('id', $id)->exists();
     }
 
-    public function salaExiste(string $sala)
-    {
-        return Ativo::with('sala')
-            ->whereHas('sala', function ($query) use ($sala){
-               $query->where('numero_sala', $sala)->exists();
-            });
-    }
-
-
+    /**
+     * RETORNA ATIVO POR SALA
+    */
     public function retornaAtivoSala(string $sala): Collection|array
     {
         return Ativo::with('sala')
@@ -78,6 +91,9 @@ class Ativo extends Model
             })->get();
     }
 
+    /**
+     * RETORNA ATIVO POR BLOCO
+    */
     public function retornaAtivoBloco(string $bloco): Collection|array
     {
         return Ativo::with('sala')
@@ -85,6 +101,16 @@ class Ativo extends Model
                 $query->where('bloco_sala', '=',  $bloco);
             })->get();
 
+    }
+
+    /**
+     * RETORNA ATIVO POR USUÁRIO->SALA
+    */
+    public function retornaAtivoUser(string $sala)
+    {
+        //preciso buscar quais salas esse user é dono
+       // return
+        //deepois retornar os ativos dessa sala
     }
 
 

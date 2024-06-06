@@ -148,3 +148,107 @@
 textarea{
     height: 200px !important;
 }
+
+#card-custom{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 100%;
+    /* Updated for better responsiveness */
+    max-width: 300px;
+    height: 390px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    text-align: center;
+    padding: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    position: relative;
+    margin: 15px auto;
+    /* Center cards on smaller screens */
+    background-color: white;
+    /* Ensure cards have a white background */
+}
+
+#card-custom .icon{
+    font-size: 50px;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+
+#card-custom .title,
+#card-custom .read-more {
+    font-family: "Archivo Black", sans-serif;
+    font-size: 24px;
+    font-weight: 400;
+    color: #000;
+    margin-bottom: 10px;
+}
+
+#card-custom .description {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+#card-custom .read-more {
+    background-color: red;
+    color: #fff;
+    font-size: 17px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    text-transform: uppercase;
+}
+
+#card-custom .top-right-corner {
+    position: absolute;
+    top: 10px;
+    right: 0px;
+    background-color: red;
+    width: 45px;
+    height: 8px;
+}
+
+.read-more:hover {
+    animation: anm 0.5s ease-in-out forwards;
+}
+
+@keyframes anm {
+    from{}to{scale: 1.1}
+}
+#main-content {
+    display: flex;
+    flex: 1;
+    overflow: hidden;
+}
+#sidebar {
+    min-width: 250px;
+    max-width: 250px;
+    background: #e82e2e;
+    color: white;
+    padding: 20px;
+    box-sizing: border-box;
+    height: 100vh;
+}
+#sidebar a {
+    color: white;
+    text-decoration: none;
+    display: block;
+    padding: 10px 0;
+    cursor: pointer;
+}
+#sidebar a:hover {
+    background: #cd1b1b;
+}
+#content {
+    flex: 1;
+    padding: 20px;
+    box-sizing: border-box;
+    overflow-y: auto;
+}
+#table-responsive {
+    overflow-y: auto;
+    max-height: calc(100vh - 140px);
+}
+

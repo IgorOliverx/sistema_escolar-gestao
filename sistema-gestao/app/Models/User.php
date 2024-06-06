@@ -4,11 +4,13 @@ namespace App\Models;
 
 // use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Database\Eloquent\Casts\Attribute;
+use Illuminate\Database\Eloquent\Collection;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Relations\HasMany;
 use Illuminate\Database\Eloquent\Relations\HasOne;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
+use Illuminate\Support\Facades\Auth;
 
 class User extends Authenticatable
 {
@@ -17,7 +19,7 @@ class User extends Authenticatable
     public $timestamps = false;
 
     /**
-     * The attributes that are mass assignable.
+     * ATRIBUTOS ATRIBUÍDOS EM MASSA.
      *
      * @var array<int, string>
      */
@@ -30,7 +32,7 @@ class User extends Authenticatable
     ];
 
     /**
-     * The attributes that should be hidden for serialization.
+     * ATRIBUTOS QUE PRECISAM DE SERIALIZAÇÃO
      *
      * @var array<int, string>
      */
@@ -39,7 +41,7 @@ class User extends Authenticatable
     ];
 
     /**
-     * Get the attributes that should be cast.
+     * ATRIBUTOS QUE PRECISAM DE CAST
      *
      * @return array<string, string>
      */
@@ -62,13 +64,23 @@ class User extends Authenticatable
     }
 
 
-    public function is_admin(): Attribute
-    {
-        return new Attribute(
-            get: fn($value) => $value == 1 ? 'Yes' : 'No',
-            set: fn($value) => $value == 'Yes' ? 1 : 0,
-        );
-    }
+    /**
+     * GATE ROLE IS_ADMIN
+    */
+ //   public function is_admin(): Attribute
+ //   {
+ //       return new Attribute(
+ //           get: fn($value) => $value == 1 ? 'Yes' : 'No',
+ //           set: fn($value) => $value == 'Yes' ? 1 : 0,
+ //       );
+ //   }
 
+
+    public function retornarSala(string $id)
+    {
+        return $this->with('sala')
+            ->where('id', $id)
+             ->first();
+    }
 
 }

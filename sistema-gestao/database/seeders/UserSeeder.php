@@ -16,9 +16,9 @@ class UserSeeder extends Seeder
     public function run(): void
     {
         DB::table('users')->insert([
-            'nome' => 'Eduardo Ananias',
-            'username' => '12312312312',
-            'password' => Hash::make('senai123'),
+            'nome' => 'Eduardo Furlanetti',
+            'username' => '123.123.123-12',
+            'password' => Hash::make('senai@2024'),
             'ultimo_login' => Carbon::now(),
             'is_admin' => false,
         ]);
@@ -40,16 +40,24 @@ class UserSeeder extends Seeder
         ]);
 
         DB::table('users')->insert([
-            'nome' => 'Bruno Oliveira',
+            'nome' => 'Bruno A. Moraes',
             'username' => '109.876.263-23',
             'password' => Hash::make('senai@2024'),
             'ultimo_login' => Carbon::now(),
             'is_admin' => false,
         ]);
         DB::table('users')->insert([
-            'nome' => 'Igor Oliveira',
-            'username' => '1',
-            'password' => Hash::make('senai'),
+            'nome' => 'Renata',
+            'username' => '342.564.235-32',
+            'password' => Hash::make('senai@2024'),
+            'ultimo_login' => Carbon::now(),
+            'is_admin' => false,
+        ]);
+
+        DB::table('users')->insert([
+            'nome' => 'Thiago Barbosa',
+            'username' => '478.460.858-32',
+            'password' => Hash::make('senai@2024'),
             'ultimo_login' => Carbon::now(),
             'is_admin' => false,
         ]);

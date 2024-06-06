@@ -18,8 +18,9 @@
 6. Configure as credenciais do seu banco de dados no arquivo ``.env``;
 7. Rode o comando ``php artisan migrate``
 8. Rode o comando ``php artisan db:seed UserSeeder``
-9. Rode o comando ``php artisan db:seed AtivoSeeder``
-10. Rode o comando ``php artisan serve``
+9. Rode o comando ``php artisan db:seed SalaSeeder``
+10. Rode o comando ``php artisan db:seed AtivoSeeder``
+11. Rode o comando ``php artisan serve``
 
 
 
