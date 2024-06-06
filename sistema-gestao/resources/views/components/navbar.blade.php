@@ -42,7 +42,7 @@
                     <a class="nav-link text-light" href="">Ativos</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link text-light" href="#">Estoque</a>
+                    <a class="nav-link text-light" href="{{ route('estoque') }}">Estoque</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link text-light" href="#">Gráficos</a>

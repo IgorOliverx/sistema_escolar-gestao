@@ -1,13 +1,11 @@
 @extends('layouts.master')
 
 <style>
-
     .footer {
         width: 100%;
-        height: 330px;
         margin: 0;
-        bottom: 0;
-        padding: 0;
+        height: 330px;
+        position: relative; /* Change from fixed to relative */
     }
 
     .social {
@@ -40,10 +38,15 @@
         background-color: #C80101;
     }
 
-    .principal .titulo p {
+    .principal .endereco,
+    .contato,
+    .titulo p {
         font-family: "Archivo Black", sans-serif;
         font-weight: 400;
         font-style: normal;
+    }
+
+    .principal .titulo p {
         font-size: 21px;
     }
 

@@ -20,6 +20,11 @@ class DashboardController extends Controller
         return \view('dashboard.index');
     }
 
+    public function estoque():View
+    {
+        return \view('dashboard.estoque');
+    }
+
     public function painelBlocoA():View
     {
 
