@@ -57,13 +57,13 @@ class User extends Authenticatable
     /**
      * GATE ROLE IS_ADMIN
     */
- //   public function is_admin(): Attribute
- //   {
- //       return new Attribute(
- //           get: fn($value) => $value == 1 ? 'Yes' : 'No',
- //           set: fn($value) => $value == 'Yes' ? 1 : 0,
- //       );
- //   }
+  public function is_admin(): Attribute
+  {
+      return new Attribute(
+          get: fn($value) => $value == 1 ? 'Yes' : 'No',
+          set: fn($value) => $value == 'Yes' ? 1 : 0,
+      );
+  }
 
 
     /**

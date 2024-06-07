@@ -91,20 +91,23 @@
     </div>
 
 
+
+
     <div class="title-section">Solitação de manutenção</div>
     <div class="row d-flex justify-content-center align-items-center w-50 h-25">
         <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
             <div class="card-custom">
                 <div class="top-right-corner"></div>
-                <i class="fa-solid fa-desktop fa-3x mb-3 icon"></i>
                 <div class="title">Sala</div>
+                <i class="fa-solid fa-desktop fa-3x mb-3 icon"></i>
                 <div class="description"></div>
-                <a href="">
+                <a href="{{route('ativosManutencao')}}">
                     <button class="read-more">Ver Ativos</button>
                 </a>
             </div>
         </div>
     </div>
+
 
     <x-footer></x-footer>
     </body>

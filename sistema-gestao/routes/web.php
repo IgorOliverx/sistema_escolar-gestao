@@ -32,6 +32,10 @@ Route::middleware(['auth'])->group(function (){
 
     //Rota para colocar um ativo em manutencao
     Route::get('/painel/minha-sala/manutencao/{ativo}', [DashboardController::class, 'solicitarManutencao'])->name('manutencao');
+
+
+    //ROTA SOMENTE PARA O THIAGO
+    Route::get('/painel/ativos/manutencao', [DashboardController::class, 'ativosManutencao'])->name('ativosManutencao');
 });
 
 //Rotas de login
