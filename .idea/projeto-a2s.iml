@@ -120,6 +120,7 @@
       <excludeFolder url="file://$MODULE_DIR$/sistema-gestao/vendor/webmozart/assert" />
       <excludeFolder url="file://$MODULE_DIR$/sistema-gestao/vendor/laravel/sanctum" />
       <excludeFolder url="file://$MODULE_DIR$/sistema-gestao/vendor/lucascudo/laravel-pt-br-localization" />
+      <excludeFolder url="file://$MODULE_DIR$/sistema-gestao/vendor/mckenziearts/laravel-notify" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />

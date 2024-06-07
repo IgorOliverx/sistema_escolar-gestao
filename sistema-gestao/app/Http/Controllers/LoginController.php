@@ -21,8 +21,7 @@ class LoginController extends Controller
 
         $request->session()->regenerate();
 
-        $msg = 'Bem vindo'. Auth::user()->username;
-        session()->flash('msg', $msg);
+        notify()->success('Este é um web-app para facilitar o gerenciamento de ativos patrimoniais', 'Seja Bem-vindo(a), Professor(a)!');
 
         return redirect('/dashboard/');
     }
@@ -35,6 +34,8 @@ class LoginController extends Controller
 
         $request->session()->regenerateToken();
 
+
+        emotify('success', 'Obrigado por utilizar nosso sistema! Luigi, Ezequiel e Igor');
         return redirect('/');
     }
 }

@@ -28,6 +28,10 @@ Route::middleware(['auth'])->group(function (){
 
    //Rota para acessar sua salas
     Route::get('/painel/minha-sala/{sala}', [DashboardController::class, 'minhaSala'])->name('minhaSala');
+
+
+    //Rota para colocar um ativo em manutencao
+    Route::get('/painel/minha-sala/manutencao/{ativo}', [DashboardController::class, 'solicitarManutencao'])->name('manutencao');
 });
 
 //Rotas de login

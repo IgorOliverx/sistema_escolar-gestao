@@ -21,6 +21,8 @@ class AtivoFactory extends Factory
             'nome'=> 'Notebook DELL',
             'categoria_patrimonio' => 'INFORMÁTICA',
             'patrimonio' => rand(1000000, 9999999),
+            'status'=> 'Ativo',
+            'manutencao' => 0,
             'data_compra' => Carbon::now(),
             'id_sala' => 4,
         ];

@@ -125,14 +125,21 @@
                                 <th>Operações</th>
                             </tr>
                             </thead>
-                            <tbody id="room-content">
+                            <tbody id="room-contents">
                             @forelse($ativos as $ativo)
                                 <tr class="class-ativo">
                                     <td>{{ $ativo->nome }}</td>
                                     <td>{{ $ativo->patrimonio }}</td>
                                     <td>{{ $ativo->categoria_patrimonio }}</td>
                                     <td><span class="badge bg-success">Ativo</span></td>
-                                    <td><button class="btn btn-warning"><a href="{{route('')}}">Manutenção</a></button></td>
+                                    <td>
+                                        <button class="btn btn-warning">
+
+                                            <a href="{{route('manutencao', ['ativo' => $ativo->id])}}">Manutenção</a>
+
+
+                                        </button>
+                                    </td>
                                 </tr>
                             @empty
                                 <tr>
@@ -144,9 +151,5 @@
                     </div>
                 </div>
             </div>
-
-
-
-
     <script src="/js/modal.js"></script>
 @endsection

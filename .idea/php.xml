@@ -128,6 +128,7 @@
       <path value="$PROJECT_DIR$/sistema-gestao/vendor/laravel/sanctum" />
       <path value="$PROJECT_DIR$/sistema-gestao/vendor/lucascudo/laravel-pt-br-localization" />
       <path value="$PROJECT_DIR$/sistema-gestao/vendor/laravel/telescope" />
+      <path value="$PROJECT_DIR$/sistema-gestao/vendor/mckenziearts/laravel-notify" />
     </include_path>
   </component>
   <component name="PhpProjectSharedConfiguration" php_language_level="8.2" />

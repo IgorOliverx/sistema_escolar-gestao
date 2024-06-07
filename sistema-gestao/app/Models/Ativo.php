@@ -24,7 +24,9 @@ class Ativo extends Model
     protected $fillable = [
         'nome',
         'patrimonio',
-        'categoria_patrimonio'
+        'categoria_patrimonio',
+        'status',
+        'manutencao'
     ];
 
     /**
@@ -62,7 +64,6 @@ class Ativo extends Model
     {
         return $this->where('id', $id)->delete();
     }
-
 
     /**
      * RETORNA ATIVO PELO ID
@@ -104,6 +105,21 @@ class Ativo extends Model
 
     }
 
+    /**
+     * COLOCA O ATIVO EM MANUTENÇÃO
+     */
+    public function colocarEmManutencao(string $id)
+    {
+        return $this->where('id', $id)->update(['manutencao' => 1]);
+    }
+
+    /**
+     * DEFINE O STATUS COMO INATIVO
+    */
+    public function definirComoInativo(string $id)
+    {
+        return $this->where('id', $id)->update(['status' => 'Inativo']);
+    }
 
     /**
      * CHAVE ESTRANGEIRA

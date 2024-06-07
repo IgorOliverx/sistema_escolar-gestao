@@ -25,6 +25,17 @@ class AtivoSeeder extends Seeder
             'categoria_patrimonio' => 'INFORMÁTICA',
             'patrimonio' => rand(1000000, 9999999),
             'data_compra' => Carbon::now(),
+            'status' => 'Ativo',
+            'manutencao' => 0,
+            'id_sala' => 3
+        ]);
+        DB::table('ativos')->insert([
+            'nome' => 'Computador Dell',
+            'categoria_patrimonio' => 'INFORMÁTICA',
+            'patrimonio' => rand(1000000, 9999999),
+            'data_compra' => Carbon::now(),
+            'status' => 'Ativo',
+            'manutencao' => 0,
             'id_sala' => 3,
         ]);
         DB::table('ativos')->insert([
@@ -32,6 +43,8 @@ class AtivoSeeder extends Seeder
             'categoria_patrimonio' => 'INFORMÁTICA',
             'patrimonio' => rand(1000000, 9999999),
             'data_compra' => Carbon::now(),
+            'status' => 'Ativo',
+            'manutencao' => 0,
             'id_sala' => 3,
         ]);
         DB::table('ativos')->insert([
@@ -39,6 +52,8 @@ class AtivoSeeder extends Seeder
             'categoria_patrimonio' => 'INFORMÁTICA',
             'patrimonio' => rand(1000000, 9999999),
             'data_compra' => Carbon::now(),
+            'status' => 'Ativo',
+            'manutencao' => 0,
             'id_sala' => 3,
         ]);
         DB::table('ativos')->insert([
@@ -46,6 +61,8 @@ class AtivoSeeder extends Seeder
             'categoria_patrimonio' => 'INFORMÁTICA',
             'patrimonio' => rand(1000000, 9999999),
             'data_compra' => Carbon::now(),
+            'status' => 'Ativo',
+            'manutencao' => 0,
             'id_sala' => 3,
         ]);
         DB::table('ativos')->insert([
@@ -53,6 +70,8 @@ class AtivoSeeder extends Seeder
             'categoria_patrimonio' => 'INFORMÁTICA',
             'patrimonio' => rand(1000000, 9999999),
             'data_compra' => Carbon::now(),
+            'status' => 'Ativo',
+            'manutencao' => 0,
             'id_sala' => 3,
         ]);
         DB::table('ativos')->insert([
@@ -60,6 +79,8 @@ class AtivoSeeder extends Seeder
             'categoria_patrimonio' => 'INFORMÁTICA',
             'patrimonio' => rand(1000000, 9999999),
             'data_compra' => Carbon::now(),
+            'status' => 'Ativo',
+            'manutencao' => 0,
             'id_sala' => 3,
         ]);
         DB::table('ativos')->insert([
@@ -67,6 +88,8 @@ class AtivoSeeder extends Seeder
             'categoria_patrimonio' => 'INFORMÁTICA',
             'patrimonio' => rand(1000000, 9999999),
             'data_compra' => Carbon::now(),
+            'status' => 'Ativo',
+            'manutencao' => 0,
             'id_sala' => 3,
         ]);
         DB::table('ativos')->insert([
@@ -74,6 +97,8 @@ class AtivoSeeder extends Seeder
             'categoria_patrimonio' => 'INFORMÁTICA',
             'patrimonio' => rand(1000000, 9999999),
             'data_compra' => Carbon::now(),
+            'status' => 'Ativo',
+            'manutencao' => 0,
             'id_sala' => 3,
         ]);
         DB::table('ativos')->insert([
@@ -81,6 +106,8 @@ class AtivoSeeder extends Seeder
             'categoria_patrimonio' => 'INFORMÁTICA',
             'patrimonio' => rand(1000000, 9999999),
             'data_compra' => Carbon::now(),
+            'status' => 'Ativo',
+            'manutencao' => 0,
             'id_sala' => 3,
         ]);
         DB::table('ativos')->insert([
@@ -88,6 +115,8 @@ class AtivoSeeder extends Seeder
             'categoria_patrimonio' => 'INFORMÁTICA',
             'patrimonio' => rand(1000000, 9999999),
             'data_compra' => Carbon::now(),
+            'status' => 'Ativo',
+            'manutencao' => 0,
             'id_sala' => 3,
         ]);
         DB::table('ativos')->insert([
@@ -95,6 +124,8 @@ class AtivoSeeder extends Seeder
             'categoria_patrimonio' => 'INFORMÁTICA',
             'patrimonio' => rand(1000000, 9999999),
             'data_compra' => Carbon::now(),
+            'status' => 'Ativo',
+            'manutencao' => 0,
             'id_sala' => 3,
         ]);
         DB::table('ativos')->insert([
@@ -102,13 +133,8 @@ class AtivoSeeder extends Seeder
             'categoria_patrimonio' => 'INFORMÁTICA',
             'patrimonio' => rand(1000000, 9999999),
             'data_compra' => Carbon::now(),
-            'id_sala' => 3,
-        ]);
-        DB::table('ativos')->insert([
-            'nome' => 'Computador Dell',
-            'categoria_patrimonio' => 'INFORMÁTICA',
-            'patrimonio' => rand(1000000, 9999999),
-            'data_compra' => Carbon::now(),
+            'status' => 'Ativo',
+            'manutencao' => 0,
             'id_sala' => 3,
         ]);
 
@@ -120,6 +146,8 @@ class AtivoSeeder extends Seeder
             'categoria_patrimonio' => 'INFORMÁTICA',
             'patrimonio' => rand(1000000, 9999999),
             'data_compra' => Carbon::now(),
+            'status' => 'Ativo',
+            'manutencao' => 0,
             'id_sala' => 4,
         ]);
         DB::table('ativos')->insert([
@@ -127,6 +155,8 @@ class AtivoSeeder extends Seeder
             'categoria_patrimonio' => 'INFORMÁTICA',
             'patrimonio' => rand(1000000, 9999999),
             'data_compra' => Carbon::now(),
+            'status' => 'Ativo',
+            'manutencao' => 0,
             'id_sala' => 4,
         ]);
         DB::table('ativos')->insert([
@@ -134,6 +164,8 @@ class AtivoSeeder extends Seeder
             'categoria_patrimonio' => 'INFORMÁTICA',
             'patrimonio' => rand(1000000, 9999999),
             'data_compra' => Carbon::now(),
+            'status' => 'Ativo',
+            'manutencao' => 0,
             'id_sala' => 4,
         ]);
         DB::table('ativos')->insert([
@@ -141,6 +173,8 @@ class AtivoSeeder extends Seeder
             'categoria_patrimonio' => 'INFORMÁTICA',
             'patrimonio' => rand(1000000, 9999999),
             'data_compra' => Carbon::now(),
+            'status' => 'Ativo',
+            'manutencao' => 0,
             'id_sala' => 4,
         ]);
         DB::table('ativos')->insert([
@@ -148,6 +182,8 @@ class AtivoSeeder extends Seeder
             'categoria_patrimonio' => 'INFORMÁTICA',
             'patrimonio' => rand(1000000, 9999999),
             'data_compra' => Carbon::now(),
+            'status' => 'Ativo',
+            'manutencao' => 0,
             'id_sala' => 4,
         ]);
         DB::table('ativos')->insert([
@@ -155,6 +191,8 @@ class AtivoSeeder extends Seeder
             'categoria_patrimonio' => 'INFORMÁTICA',
             'patrimonio' => rand(1000000, 9999999),
             'data_compra' => Carbon::now(),
+            'status' => 'Ativo',
+            'manutencao' => 0,
             'id_sala' => 4,
         ]);
         DB::table('ativos')->insert([
@@ -162,6 +200,8 @@ class AtivoSeeder extends Seeder
             'categoria_patrimonio' => 'INFORMÁTICA',
             'patrimonio' => rand(1000000, 9999999),
             'data_compra' => Carbon::now(),
+            'status' => 'Ativo',
+            'manutencao' => 0,
             'id_sala' => 4,
         ]);
         DB::table('ativos')->insert([
@@ -169,6 +209,8 @@ class AtivoSeeder extends Seeder
             'categoria_patrimonio' => 'INFORMÁTICA',
             'patrimonio' => rand(1000000, 9999999),
             'data_compra' => Carbon::now(),
+            'status' => 'Ativo',
+            'manutencao' => 0,
             'id_sala' => 4,
         ]);
         DB::table('ativos')->insert([
@@ -176,6 +218,8 @@ class AtivoSeeder extends Seeder
             'categoria_patrimonio' => 'INFORMÁTICA',
             'patrimonio' => rand(1000000, 9999999),
             'data_compra' => Carbon::now(),
+            'status' => 'Ativo',
+            'manutencao' => 0,
             'id_sala' => 4,
         ]);
         DB::table('ativos')->insert([
@@ -183,6 +227,8 @@ class AtivoSeeder extends Seeder
             'categoria_patrimonio' => 'INFORMÁTICA',
             'patrimonio' => rand(1000000, 9999999),
             'data_compra' => Carbon::now(),
+            'status' => 'Ativo',
+            'manutencao' => 0,
             'id_sala' => 4,
         ]);
         DB::table('ativos')->insert([
@@ -190,6 +236,8 @@ class AtivoSeeder extends Seeder
             'categoria_patrimonio' => 'INFORMÁTICA',
             'patrimonio' => rand(1000000, 9999999),
             'data_compra' => Carbon::now(),
+            'status' => 'Ativo',
+            'manutencao' => 0,
             'id_sala' => 4,
         ]);
         DB::table('ativos')->insert([
@@ -197,96 +245,128 @@ class AtivoSeeder extends Seeder
             'categoria_patrimonio' => 'INFORMÁTICA',
             'patrimonio' => rand(1000000, 9999999),
             'data_compra' => Carbon::now(),
+            'status' => 'Ativo',
+            'manutencao' => 0,
             'id_sala' => 4,
         ]);        DB::table('ativos')->insert([
             'nome' => 'Computador Dell',
             'categoria_patrimonio' => 'INFORMÁTICA',
             'patrimonio' => rand(1000000, 9999999),
             'data_compra' => Carbon::now(),
+            'status' => 'Ativo',
+            'manutencao' => 0,
             'id_sala' => 4,
         ]);        DB::table('ativos')->insert([
             'nome' => 'Computador Dell',
             'categoria_patrimonio' => 'INFORMÁTICA',
             'patrimonio' => rand(1000000, 9999999),
             'data_compra' => Carbon::now(),
+            'status' => 'Ativo',
+            'manutencao' => 0,
             'id_sala' => 4,
         ]);        DB::table('ativos')->insert([
             'nome' => 'Computador Dell',
             'categoria_patrimonio' => 'INFORMÁTICA',
             'patrimonio' => rand(1000000, 9999999),
             'data_compra' => Carbon::now(),
+            'status' => 'Ativo',
+            'manutencao' => 0,
             'id_sala' => 4,
         ]);        DB::table('ativos')->insert([
             'nome' => 'Computador Dell',
             'categoria_patrimonio' => 'INFORMÁTICA',
             'patrimonio' => rand(1000000, 9999999),
             'data_compra' => Carbon::now(),
+            'status' => 'Ativo',
+            'manutencao' => 0,
             'id_sala' => 4,
         ]);        DB::table('ativos')->insert([
             'nome' => 'Computador Dell',
             'categoria_patrimonio' => 'INFORMÁTICA',
             'patrimonio' => rand(1000000, 9999999),
             'data_compra' => Carbon::now(),
+            'status' => 'Ativo',
+            'manutencao' => 0,
             'id_sala' => 4,
         ]);        DB::table('ativos')->insert([
             'nome' => 'Computador Dell',
             'categoria_patrimonio' => 'INFORMÁTICA',
             'patrimonio' => rand(1000000, 9999999),
             'data_compra' => Carbon::now(),
+            'status' => 'Ativo',
+            'manutencao' => 0,
             'id_sala' => 4,
         ]);        DB::table('ativos')->insert([
             'nome' => 'Computador Dell',
             'categoria_patrimonio' => 'INFORMÁTICA',
             'patrimonio' => rand(1000000, 9999999),
             'data_compra' => Carbon::now(),
+            'status' => 'Ativo',
+            'manutencao' => 0,
             'id_sala' => 4,
         ]);        DB::table('ativos')->insert([
             'nome' => 'Computador Dell',
             'categoria_patrimonio' => 'INFORMÁTICA',
             'patrimonio' => rand(1000000, 9999999),
             'data_compra' => Carbon::now(),
+            'status' => 'Ativo',
+            'manutencao' => 0,
             'id_sala' => 4,
         ]);        DB::table('ativos')->insert([
             'nome' => 'Computador Dell',
             'categoria_patrimonio' => 'INFORMÁTICA',
             'patrimonio' => rand(1000000, 9999999),
             'data_compra' => Carbon::now(),
+            'status' => 'Ativo',
+            'manutencao' => 0,
             'id_sala' => 4,
         ]);        DB::table('ativos')->insert([
             'nome' => 'Computador Dell',
             'categoria_patrimonio' => 'INFORMÁTICA',
             'patrimonio' => rand(1000000, 9999999),
             'data_compra' => Carbon::now(),
+            'status' => 'Ativo',
+            'manutencao' => 0,
             'id_sala' => 4,
         ]);        DB::table('ativos')->insert([
             'nome' => 'Computador Dell',
             'categoria_patrimonio' => 'INFORMÁTICA',
             'patrimonio' => rand(1000000, 9999999),
             'data_compra' => Carbon::now(),
+            'status' => 'Ativo',
+            'manutencao' => 0,
             'id_sala' => 4,
         ]);        DB::table('ativos')->insert([
             'nome' => 'Computador Dell',
             'categoria_patrimonio' => 'INFORMÁTICA',
             'patrimonio' => rand(1000000, 9999999),
             'data_compra' => Carbon::now(),
+            'status' => 'Ativo',
+            'manutencao' => 0,
             'id_sala' => 4,
         ]);        DB::table('ativos')->insert([
             'nome' => 'Computador Dell',
             'categoria_patrimonio' => 'INFORMÁTICA',
             'patrimonio' => rand(1000000, 9999999),
             'data_compra' => Carbon::now(),
+            'status' => 'Ativo',
+            'manutencao' => 0,
             'id_sala' => 4,
         ]);        DB::table('ativos')->insert([
             'nome' => 'Computador Dell',
             'categoria_patrimonio' => 'INFORMÁTICA',
             'patrimonio' => rand(1000000, 9999999),
             'data_compra' => Carbon::now(),
+            'status' => 'Ativo',
+            'manutencao' => 0,
             'id_sala' => 4,
         ]);        DB::table('ativos')->insert([
             'nome' => 'Computador Dell',
             'categoria_patrimonio' => 'INFORMÁTICA',
             'patrimonio' => rand(1000000, 9999999),
             'data_compra' => Carbon::now(),
+            'status' => 'Ativo',
+            'manutencao' => 0,
             'id_sala' => 4,
         ]);
 
@@ -298,102 +378,136 @@ class AtivoSeeder extends Seeder
             'categoria_patrimonio' => 'INFORMÁTICA',
             'patrimonio' => rand(1000000, 9999999),
             'data_compra' => Carbon::now(),
+            'status' => 'Ativo',
+            'manutencao' => 0,
             'id_sala' => 1,
         ]);        DB::table('ativos')->insert([
             'nome' => 'Computador Dell',
             'categoria_patrimonio' => 'INFORMÁTICA',
             'patrimonio' => rand(1000000, 9999999),
             'data_compra' => Carbon::now(),
+            'status' => 'Ativo',
+            'manutencao' => 0,
             'id_sala' => 1,
         ]);        DB::table('ativos')->insert([
             'nome' => 'Computador Dell',
             'categoria_patrimonio' => 'INFORMÁTICA',
             'patrimonio' => rand(1000000, 9999999),
             'data_compra' => Carbon::now(),
+            'status' => 'Ativo',
+            'manutencao' => 0,
             'id_sala' => 1,
         ]);        DB::table('ativos')->insert([
             'nome' => 'Computador Dell',
             'categoria_patrimonio' => 'INFORMÁTICA',
             'patrimonio' => rand(1000000, 9999999),
             'data_compra' => Carbon::now(),
+            'status' => 'Ativo',
+            'manutencao' => 0,
             'id_sala' => 1,
         ]);        DB::table('ativos')->insert([
             'nome' => 'Computador Dell',
             'categoria_patrimonio' => 'INFORMÁTICA',
             'patrimonio' => rand(1000000, 9999999),
             'data_compra' => Carbon::now(),
+            'status' => 'Ativo',
+            'manutencao' => 0,
             'id_sala' => 1,
         ]);        DB::table('ativos')->insert([
             'nome' => 'Computador Dell',
             'categoria_patrimonio' => 'INFORMÁTICA',
             'patrimonio' => rand(1000000, 9999999),
             'data_compra' => Carbon::now(),
+            'status' => 'Ativo',
+            'manutencao' => 0,
             'id_sala' => 1,
         ]);        DB::table('ativos')->insert([
             'nome' => 'Computador Dell',
             'categoria_patrimonio' => 'INFORMÁTICA',
             'patrimonio' => rand(1000000, 9999999),
             'data_compra' => Carbon::now(),
+            'status' => 'Ativo',
+            'manutencao' => 0,
             'id_sala' => 1,
         ]);        DB::table('ativos')->insert([
             'nome' => 'Computador Dell',
             'categoria_patrimonio' => 'INFORMÁTICA',
             'patrimonio' => rand(1000000, 9999999),
             'data_compra' => Carbon::now(),
+            'status' => 'Ativo',
+            'manutencao' => 0,
             'id_sala' => 1,
         ]);        DB::table('ativos')->insert([
             'nome' => 'Computador Dell',
             'categoria_patrimonio' => 'INFORMÁTICA',
             'patrimonio' => rand(1000000, 9999999),
             'data_compra' => Carbon::now(),
+            'status' => 'Ativo',
+            'manutencao' => 0,
             'id_sala' => 1,
         ]);        DB::table('ativos')->insert([
             'nome' => 'Computador Dell',
             'categoria_patrimonio' => 'INFORMÁTICA',
             'patrimonio' => rand(1000000, 9999999),
             'data_compra' => Carbon::now(),
+            'status' => 'Ativo',
+            'manutencao' => 0,
             'id_sala' => 1,
         ]);        DB::table('ativos')->insert([
             'nome' => 'Computador Dell',
             'categoria_patrimonio' => 'INFORMÁTICA',
             'patrimonio' => rand(1000000, 9999999),
             'data_compra' => Carbon::now(),
+            'status' => 'Ativo',
+            'manutencao' => 0,
             'id_sala' => 1,
         ]);        DB::table('ativos')->insert([
             'nome' => 'Computador Dell',
             'categoria_patrimonio' => 'INFORMÁTICA',
             'patrimonio' => rand(1000000, 9999999),
             'data_compra' => Carbon::now(),
+            'status' => 'Ativo',
+            'manutencao' => 0,
             'id_sala' => 1,
         ]);        DB::table('ativos')->insert([
             'nome' => 'Computador Dell',
             'categoria_patrimonio' => 'INFORMÁTICA',
             'patrimonio' => rand(1000000, 9999999),
             'data_compra' => Carbon::now(),
+            'status' => 'Ativo',
+            'manutencao' => 0,
             'id_sala' => 1,
         ]);        DB::table('ativos')->insert([
             'nome' => 'Computador Dell',
             'categoria_patrimonio' => 'INFORMÁTICA',
             'patrimonio' => rand(1000000, 9999999),
             'data_compra' => Carbon::now(),
+            'status' => 'Ativo',
+            'manutencao' => 0,
             'id_sala' => 1,
         ]);        DB::table('ativos')->insert([
             'nome' => 'Computador Dell',
             'categoria_patrimonio' => 'INFORMÁTICA',
             'patrimonio' => rand(1000000, 9999999),
             'data_compra' => Carbon::now(),
+            'status' => 'Ativo',
+            'manutencao' => 0,
             'id_sala' => 1,
         ]);        DB::table('ativos')->insert([
             'nome' => 'Computador Dell',
             'categoria_patrimonio' => 'INFORMÁTICA',
             'patrimonio' => rand(1000000, 9999999),
             'data_compra' => Carbon::now(),
+            'status' => 'Ativo',
+            'manutencao' => 0,
             'id_sala' => 1,
         ]);        DB::table('ativos')->insert([
             'nome' => 'Computador Dell',
             'categoria_patrimonio' => 'INFORMÁTICA',
             'patrimonio' => rand(1000000, 9999999),
             'data_compra' => Carbon::now(),
+            'status' => 'Ativo',
+            'manutencao' => 0,
             'id_sala' => 1,
         ]);
 
@@ -405,42 +519,56 @@ class AtivoSeeder extends Seeder
             'categoria_patrimonio' => 'INFORMÁTICA',
             'patrimonio' => rand(1000000, 9999999),
             'data_compra' => Carbon::now(),
+            'status' => 'Ativo',
+            'manutencao' => 0,
             'id_sala' => 5,
         ]);        DB::table('ativos')->insert([
             'nome' => 'Impressora 3D',
             'categoria_patrimonio' => 'INFORMÁTICA',
             'patrimonio' => rand(1000000, 9999999),
             'data_compra' => Carbon::now(),
+            'status' => 'Ativo',
+            'manutencao' => 0,
             'id_sala' => 5,
         ]);        DB::table('ativos')->insert([
             'nome' => 'Impressora 3D',
             'categoria_patrimonio' => 'INFORMÁTICA',
             'patrimonio' => rand(1000000, 9999999),
             'data_compra' => Carbon::now(),
+            'status' => 'Ativo',
+            'manutencao' => 0,
             'id_sala' => 5,
         ]);        DB::table('ativos')->insert([
             'nome' => 'Impressora 3D',
             'categoria_patrimonio' => 'INFORMÁTICA',
             'patrimonio' => rand(1000000, 9999999),
             'data_compra' => Carbon::now(),
+            'status' => 'Ativo',
+            'manutencao' => 0,
             'id_sala' => 5,
         ]);        DB::table('ativos')->insert([
             'nome' => 'Impressora 3D',
             'categoria_patrimonio' => 'INFORMÁTICA',
             'patrimonio' => rand(1000000, 9999999),
             'data_compra' => Carbon::now(),
+            'status' => 'Ativo',
+            'manutencao' => 0,
             'id_sala' => 5,
         ]);        DB::table('ativos')->insert([
             'nome' => 'Impressora 3D',
             'categoria_patrimonio' => 'INFORMÁTICA',
             'patrimonio' => rand(1000000, 9999999),
             'data_compra' => Carbon::now(),
+            'status' => 'Ativo',
+            'manutencao' => 0,
             'id_sala' => 5,
         ]);        DB::table('ativos')->insert([
             'nome' => 'Impressora 3D',
             'categoria_patrimonio' => 'INFORMÁTICA',
             'patrimonio' => rand(1000000, 9999999),
             'data_compra' => Carbon::now(),
+            'status' => 'Ativo',
+            'manutencao' => 0,
             'id_sala' => 5,
         ]);
 

@@ -62,11 +62,17 @@ class DashboardController extends Controller
         return \view('dashboard.sua-sala', ['ativos' => $ativos]);
     }
 
-    public function solicitarManutencao()
+    public function solicitarManutencao(string $id)
     {
-        //quando clicar no botao
-        //mudar o campo precisa de manutenção
+        try{
+        $this->ativo->colocarEmManutencao($id);
         //enviar email pro thiago
         //emitir pdf
+        notify()->success('Um relatório foi gerado e o ativo está sob manutenção', 'Ativo Em Manutenção');
+        return back();
+
+        }catch (\Exception $error){
+
+        }
     }
 }

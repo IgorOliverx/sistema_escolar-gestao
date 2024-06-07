@@ -16,6 +16,8 @@ return new class extends Migration
             $table->string('nome');
             $table->string('categoria_patrimonio');
             $table->date('data_compra');
+            $table->string('status');
+            $table->boolean('manutencao');
             $table->unsignedBigInteger('patrimonio')->unique();
             $table->unsignedBigInteger('id_sala');
 

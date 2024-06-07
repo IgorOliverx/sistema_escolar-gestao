@@ -43,7 +43,7 @@
                     </a>
                 </div>
             </div>
-            <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
+            <div class="col-lg-3 col-md-6 d-flex align-items-stretch z-0">
                 <div class="card-custom">
                     <div class="top-right-corner"></div>
                     <i class="fa-solid fa-gear fa-3x mb-3 icon"></i>
