@@ -315,11 +315,12 @@ textarea{
     text-decoration: none;
 }
 
-.more-info span {
+.more-info button {
     position: relative;
+    border: none;
 }
 
-.more-info span::before {
+.more-info button::before {
     height: 0.16em;
     position: fixed;
     width: 100%;
@@ -333,7 +334,7 @@ textarea{
     color: white;
 }
 
-.card:hover .more-info span::before {
+.card:hover .more-info button::before {
     background-color: white;
 }
 
@@ -425,3 +426,6 @@ textarea{
     transform: rotate(45deg);
     margin: 10px auto 0;
 }
+
+
+

@@ -61,4 +61,12 @@ class DashboardController extends Controller
         $ativos = $this->ativo->retornaAtivoSala($sala);
         return \view('dashboard.sua-sala', ['ativos' => $ativos]);
     }
+
+    public function solicitarManutencao()
+    {
+        //quando clicar no botao
+        //mudar o campo precisa de manutenção
+        //enviar email pro thiago
+        //emitir pdf
+    }
 }

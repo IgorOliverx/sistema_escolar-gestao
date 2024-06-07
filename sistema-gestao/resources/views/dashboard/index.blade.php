@@ -4,6 +4,7 @@
     <x-navbar></x-navbar>
     <body>
 
+    <h1 style="font-size: 48px">Seja bem vindo {{\Illuminate\Support\Facades\Auth::user()->nome}}</h1>
 
     <div class="container mt-5 container-custom">
         <div class="title-section">Blocos</div>
@@ -87,8 +88,22 @@
             </div>
             @endforeach
         </div>
+    </div>
 
 
+    <div class="title-section">Solitação de manutenção</div>
+    <div class="row d-flex justify-content-center align-items-center w-50 h-25">
+        <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
+            <div class="card-custom">
+                <div class="top-right-corner"></div>
+                <i class="fa-solid fa-desktop fa-3x mb-3 icon"></i>
+                <div class="title">Sala</div>
+                <div class="description"></div>
+                <a href="">
+                    <button class="read-more">Ver Ativos</button>
+                </a>
+            </div>
+        </div>
     </div>
 
     <x-footer></x-footer>
