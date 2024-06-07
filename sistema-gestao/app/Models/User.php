@@ -55,16 +55,6 @@ class User extends Authenticatable
 
 
     /**
-     * Cada Professor pode ter várias salas
-     * @return HasMany
-     */
-    public function sala(): HasMany
-    {
-      return $this->hasMany(Sala::class);
-    }
-
-
-    /**
      * GATE ROLE IS_ADMIN
     */
  //   public function is_admin(): Attribute
@@ -76,11 +66,30 @@ class User extends Authenticatable
  //   }
 
 
-    public function retornarSala(string $id)
+    /**
+     * Retorna as salas da qual o User logado é responsável
+    */
+    public function retornarSalaUserLogado()
     {
-        return $this->with('sala')
-            ->where('id', $id)
-             ->first();
+        $idUserLogado = Auth::user()->id;
+
+        $collection = $this->with('sala')
+            ->where('id', $idUserLogado)
+            ->first();
+        return $collection->sala;
+    }
+
+
+    /**
+     * CHAVE ESTRANGEIRA
+     * Cada Professor pode ter várias salas
+     * @return HasMany
+     */
+    public function sala(): HasMany
+    {
+        return $this->hasMany(Sala::class);
     }
 
 }
+
+

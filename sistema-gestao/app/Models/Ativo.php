@@ -7,6 +7,7 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\Relations\HasOne;
+use Illuminate\Support\Facades\Auth;
 use Laravel\SerializableClosure\UnsignedSerializableClosure;
 use PhpParser\Node\Stmt\Return_;
 
@@ -102,18 +103,6 @@ class Ativo extends Model
             })->get();
 
     }
-
-    /**
-     * RETORNA ATIVO POR USUÁRIO->SALA
-    */
-    public function retornaAtivoUser(string $sala)
-    {
-        //preciso buscar quais salas esse user é dono
-       // return
-        //deepois retornar os ativos dessa sala
-    }
-
-
 
 
     /**

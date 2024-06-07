@@ -18,27 +18,10 @@ class DashboardController extends Controller
         $this->user = new User();
     }
 
-    public function index(): View
+    public function index()
     {
-//     $idUserLogado = Auth::user()->id;
-
-//     //Retorno uma coleção da entidade de usuários e as chaves que foram carregadas
-//  //   $usuario = $this->user->retornarSalas($idUserLogado);
-//   //  $sala = $usuario->first();
-//   //  $teste = $sala->sala;
-
-//     $teste =  $this->user->with('sala')
-//           ->where('id', $idUserLogado)
-//               ->get();
-
-//       foreach ($teste as $item) {
-//           $a = $item->sala;
-//           foreach ($a as $b){
-//             dd($b->numero_sala);
-//           }
-//     }
-
-      return view('dashboard.index');
+        $salas = $this->user->retornarSalaUserLogado();
+      return view('dashboard.index', ['salas' => $salas]);
 
     }
 

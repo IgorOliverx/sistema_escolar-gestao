@@ -162,21 +162,25 @@
             </div>
         </div>
 
-        <div class="title-section">Sua Sala</div>
+
+        <div class="title-section">Sua(s) Sala(s)</div>
         <div class="row">
-            <div class="d-flex align-items-center">
+            @foreach($salas as $sala)
+            <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
                 <div class="card-custom">
                     <div class="top-right-corner"></div>
-                    <i class="fa-solid fa-chalkboard-user fa-3x mb-3 icon"></i>
-                    <div class="title">Sua Sala Responsável</div>
-                    <div class="description"></div>
-                    <!-- inserir rota da sala do usuário -->
+                    <i class="fa-solid fa-desktop fa-3x mb-3 icon"></i>
+                    <div class="title">Sala</div>
+                    <div class="description">{{$sala->numero_sala}}</div>
                     <a href="">
-                        <button class="read-more">Ver Sala</button>
+                        <button class="read-more">Ver Ativos</button>
                     </a>
                 </div>
             </div>
+            @endforeach
         </div>
+
+
     </div>
 
     <x-footer></x-footer>
