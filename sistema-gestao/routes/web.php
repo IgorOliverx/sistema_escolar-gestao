@@ -11,6 +11,7 @@ Route::get('/', [IndexController::class, 'index'])->name('/');
 
 Route::middleware(['auth'])->group(function (){
    Route::resource('/dashboard', DashboardController::class);
+    Route::get('/painel/estoque', [DashboardController::class, 'estoque'])->name('estoque');
    Route::get('/painel/blocoA', [DashboardController::class, 'painelBlocoA'])->name('painelBlocosA');
    Route::get('/painel/blocoB', [DashboardController::class, 'painelBlocoB'])->name('painelBlocosB');
    Route::get('/painel/blocoC', [DashboardController::class, 'painelBlocoC'])->name('painelBlocosC');

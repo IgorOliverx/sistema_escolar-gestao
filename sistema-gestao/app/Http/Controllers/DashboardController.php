@@ -20,25 +20,25 @@ class DashboardController extends Controller
 
     public function index(): View
     {
-      $idUserLogado = Auth::user()->id;
+//     $idUserLogado = Auth::user()->id;
 
-      //Retorno uma coleção da entidade de usuários e as chaves que foram carregadas
-   //   $usuario = $this->user->retornarSalas($idUserLogado);
-    //  $sala = $usuario->first();
-    //  $teste = $sala->sala;
+//     //Retorno uma coleção da entidade de usuários e as chaves que foram carregadas
+//  //   $usuario = $this->user->retornarSalas($idUserLogado);
+//   //  $sala = $usuario->first();
+//   //  $teste = $sala->sala;
 
-      $teste =  $this->user->with('sala')
-            ->where('id', $idUserLogado)
-                ->get();
+//     $teste =  $this->user->with('sala')
+//           ->where('id', $idUserLogado)
+//               ->get();
 
-        foreach ($teste as $item) {
-            $a = $item->sala;
-            foreach ($a as $b){
-              dd($b->numero_sala);
-            }
-      }
+//       foreach ($teste as $item) {
+//           $a = $item->sala;
+//           foreach ($a as $b){
+//             dd($b->numero_sala);
+//           }
+//     }
 
-      return view('dashboard.index', ['salas' => $sala]);
+      return view('dashboard.index');
 
     }
 
@@ -47,8 +47,7 @@ class DashboardController extends Controller
 
         $ativosBlocoA = $this->ativo->retornaAtivoBloco('A');
 
-
-        return view('dashboard.painelBlocos', ['ativosBlocoA' => $ativosBlocoA]);
+        return view('dashboard.painelBlocos');
     }
 
     public function painelBlocoB():View
@@ -67,5 +66,10 @@ class DashboardController extends Controller
     {
         $ativosBlocoD = $this->ativo->retornaAtivoBloco('D');
         return \view('dashboard.painelBlocoD');
+    }
+
+    public function estoque(): View
+    {
+        return \view('dashboard.estoque');
     }
 }

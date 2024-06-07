@@ -1,7 +1,4 @@
-import InputmaskEs6 from "./dist/inputmask.es6.js";
-
-
-
+//Script principal da pagina de ativos por sala
 const linksSala = document.querySelectorAll('.room-link');
 const conteudoSala = document.getElementById('room-content');
 const tituloSala = document.getElementById('room-title');
