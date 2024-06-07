@@ -55,4 +55,10 @@ class DashboardController extends Controller
     {
         return \view('dashboard.estoque');
     }
+
+    public function minhaSala(string $sala): View
+    {
+        $ativos = $this->ativo->retornaAtivoSala($sala);
+        return \view('dashboard.sua-sala', ['ativos' => $ativos]);
+    }
 }

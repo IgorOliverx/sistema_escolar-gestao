@@ -207,13 +207,6 @@ class AtivoController extends Controller
     public function  retornaAtivoSala(String $sala): JsonResponse
     {
         try{
-            //Arrumar este metodo no Model
-            //if(!$this->ativo->salaExiste($sala)){
-             //   return response()->json([
-            //        'message' => false,
-           //         'error' => 'A sala informada não existe'
-          //      ], 400);
-         //   }
             $ativoSalas = $this->ativo->retornaAtivoSala($sala);
             return response()->json([
                 'status' => true,

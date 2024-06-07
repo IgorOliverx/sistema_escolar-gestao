@@ -1,30 +1,7 @@
 @extends('layouts.master')
 
-<style>
-    .navbar-nav .nav-item:not(:last-child) {
-        margin-right: 20px;
-    }
-
-    .nav-item a {
-        font-family: "Archivo Black", sans-serif;
-        font-weight: 400;
-        font-style: normal;
-    }
-
-    .icons-container {
-        display: flex;
-        align-items: center;
-    }
-
-    .icons-container .navbar-nav {
-        width: auto;
-        display: flex;
-        gap: 20px;
-    }
-</style>
-
-<nav class="navbar navbar-expand-lg" style="background-color: #e30707">
-    <div class="container-fluid">
+<nav class="navbar navbar-expand-lg overflow-hidden" style="background-color: #e30707">
+    <div class="container-fluid overflow-hidden">
         <a class="navbar-brand" href="{{ route('dashboard.index') }}">
             <img src="/images/logo_senai_branco.png" alt="Logo-Senai" width="180px" height="50px">
         </a>
@@ -50,11 +27,25 @@
             </ul>
             <div class="icons-container">
                 <ul class="navbar-nav">
+
+                    @if(!\Illuminate\Support\Facades\Auth::check())
+                        <li class="nav-item">
+                            <a class="nav-link" href="#"><i class="fa-solid fa-user fa-2x" style="color: #ffffff;"></i></a>
+                        </li>
+                    @endif
+                    @if(\Illuminate\Support\Facades\Auth::check())
+                            <li class="nav-item">
+                                <form action="{{route('logout')}}" method="post">
+                                    @csrf
+                                <a class="nav-link" href="{{route('logout')}}" onclick="event.preventDefault(); this.closest('form').submit()">
+                                    <i class="bi bi-box-arrow-left fa-2x" style="color: #ffffff"></i>
+                                </a>
+                                </form>
+
+                            </li>
+                    @endif
                     <li class="nav-item">
-                        <a class="nav-link" href="#"><i class="fa-solid fa-user fa-2x mb-3" style="color: #ffffff;"></i></a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#"><i class="fa-solid fa-inbox fa-2x mb-3" style="color: #ffffff;"></i></a>
+                        <a class="nav-link" href="#"><i class="fa-solid fa-inbox fa-2x" style="color: #ffffff;"></i></a>
                     </li>
                 </ul>
             </div>

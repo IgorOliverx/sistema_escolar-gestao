@@ -252,3 +252,176 @@ textarea{
     max-height: calc(100vh - 140px);
 }
 
+
+#content .card-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-content: flex-end;
+}
+
+
+.card {
+    height: 8em;
+    width: 15em;
+    background-color: white;
+    margin: auto;
+    border-radius: 1em;
+    overflow: hidden;
+    position: relative;
+    padding: 2em;
+    z-index: 0;
+    transition: transform 0.5s;
+    /* Adicionado para manter a transição suave */
+    display: flex;
+    /* Adicionado para usar flexbox */
+    justify-content: center;
+    /* Adicionado para centralizar horizontalmente */
+    align-items: center;
+    /* Adicionado para centralizar verticalmente */
+}
+
+.card:hover {
+    transform: scale(1);
+    /* Adicionado para manter o tamanho constante */
+}
+
+.circle {
+    position: absolute;
+    height: 5em;
+    width: 5em;
+    top: -2.5em;
+    right: -2.5em;
+    border-radius: 50%;
+    background-color: #e30707;
+    transition: transform 0.5s;
+    z-index: -1;
+}
+
+.card:hover .circle {
+    transform: scale(7);
+}
+
+.more-info {
+    font-size: 0.8em;
+    position: absolute;
+    bottom: 1em;
+    left: 1em;
+    color: #000;
+    background: none;
+    border: none;
+    cursor: pointer;
+    transition: color 0.5s;
+    text-decoration: none;
+}
+
+.more-info span {
+    position: relative;
+}
+
+.more-info span::before {
+    height: 0.16em;
+    position: fixed;
+    width: 100%;
+    background-color: #6C3082;
+    bottom: 0;
+    left: 0;
+    transition: background-color 0.3s;
+}
+
+.card:hover .more-info {
+    color: white;
+}
+
+.card:hover .more-info span::before {
+    background-color: white;
+}
+
+.heading {
+    z-index: 20;
+    font-weight: bold;
+    font-family: 'Poppins', sans-serif;
+    transition: color 0.5s;
+    font-size: 1.4em;
+}
+
+.card:hover .heading {
+    color: white;
+}
+
+.card-custom {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 100%;
+    max-width: 300px;
+    height: 390px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    text-align: center;
+    padding: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    position: relative;
+    margin: 15px auto;
+    background-color: white;
+}
+
+.card-custom .icon {
+    font-size: 50px;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.card-custom .title,
+.card-custom .read-more {
+    font-family: "Archivo Black", sans-serif;
+    font-size: 24px;
+    font-weight: 400;
+    color: #000;
+    margin-bottom: 10px;
+}
+
+.card-custom .description {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+.card-custom .read-more {
+    background-color: red;
+    color: #fff;
+    font-size: 17px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    text-transform: uppercase;
+}
+
+.card-custom .top-right-corner {
+    position: absolute;
+    top: 10px;
+    right: 0px;
+    background-color: red;
+    width: 45px;
+    height: 8px;
+}
+
+.title-section {
+    text-align: center;
+    margin-bottom: 20px;
+    font-family: "Archivo Black", sans-serif;
+    font-size: 36px;
+    color: #000;
+    position: relative;
+}
+
+.title-section::after {
+    content: '';
+    display: block;
+    width: 24px;
+    height: 24px;
+    border: 2px solid red;
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
+    margin: 10px auto 0;
+}

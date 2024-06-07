@@ -1,4 +1,5 @@
-//Script principal da pagina de ativos por sala
+
+//Script principal
 const linksSala = document.querySelectorAll('.room-link');
 const conteudoSala = document.getElementById('room-content');
 const tituloSala = document.getElementById('room-title');
