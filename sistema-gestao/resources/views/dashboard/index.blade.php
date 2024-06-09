@@ -70,7 +70,7 @@
                     <div class="top-right-corner"></div>
                     <i class="fa-solid fa-layer-group fa-3x mb-3 icon"></i>
                     <div class="title">Estoque</div>
-                    <div class="description"></div>
+                    <div class="description">Visão detalhada do estoque atual da escola. Registro detalhado apresenta todos os itens disponíveis em nosso estoque.</div>
                     <a href="{{ route('estoque') }}">
                         <button class="read-more">Ver Estoque</button>
                     </a>
@@ -85,26 +85,17 @@
                 <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
                     <div class="card-custom">
                         <div class="top-right-corner"></div>
-                        <i class="fa-solid fa-desktop fa-3x mb-3 icon"></i>
-                        <div class="title">Sala</div>
-                        <div class="description">{{$sala->numero_sala}}</div>
+                        <i class="fa-solid fa-chalkboard-user fa-3x mb-3 icon"></i>
+                        <div class="title">Sala {{$sala->numero_sala}}</div>
+                        <div class="description">Aqui há ferramentas e recursos para facilitar o seu papel como responsável dos ativos patrimoniais de sua sala.</div>
+                        <!-- inserir rota da sala do usuário -->
                         <a href="{{route("minhaSala", ['sala' => $sala->numero_sala])}}">
-                            <button class="read-more">Ver Ativos</button>
+                            <button class="read-more">Ver Sala</button>
                         </a>
                     </div>
                 </div>
-            <div class="d-flex align-items-center">
-                <div class="card-custom">
-                    <div class="top-right-corner"></div>
-                    <i class="fa-solid fa-desktop fa-3x mb-3 icon"></i>
-                    <div class="title">Sala</div>
-                    <div class="description">{{$sala->numero_sala}}</div>
-                    <a href="{{route("minhaSala", ['sala' => $sala->numero_sala])}}">
-                        <button class="read-more">Ver Ativos</button>
-                    </a>
-                </div>
-            </div>
             @endforeach
+
         </div>
     </div>
 
@@ -112,8 +103,8 @@
     @if(Gate::denies('manage-tasks'))
 
     @else
-        <div class="title-section">Solictações de Manutenção</div>
-        <div class="row d-flex justify-content-center align-items-center w-50 h-25">
+        <div class="title-section">Solicitações de Manutenção</div>
+        <div class="d-flex align-items-center">
             <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
                 <div class="card-custom">
                     <div class="top-right-corner"></div>
@@ -128,7 +119,8 @@
         </div>
     @endif
 
-    <br><br>
+
+    <br>
     <x-noticias></x-noticias>
 
     <x-footer></x-footer>
