@@ -13,7 +13,7 @@ document.addEventListener('DOMContentLoaded', () => {
             link.classList.add('active');
 
             try {
-                const request = await fetch(`http://localhost:8000/api/ativos/blocos/${selectedRoom}`);
+                const request = await fetch(`http://localhost:8000/api/ativos/manutencao/sala/${selectedRoom}`);
                 const response = await request.json();
                 console.log(response); // Verifique se a resposta está correta
 
@@ -41,7 +41,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     });
                 } else {
                     // Caso não haja dados, exibe uma mensagem na tabela
-                    conteudoSala.innerHTML = '<tr><td colspan="5">Nenhum ativo encontrado.</td></tr>';
+                    conteudoSala.innerHTML = '<tr><td colspan="5">Nenhum ativo em manutenção.</td></tr>';
                 }
             } catch (error) {
                 console.error('Erro:', error);

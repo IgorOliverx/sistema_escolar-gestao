@@ -35,7 +35,7 @@
         justify-content: center;
         align-items: center;
         height: 190px;
-        background-color: #C80101;
+        background-color: #af0909;
     }
 
     .principal .endereco,
@@ -81,16 +81,31 @@
 </style>
 
 <div class="footer">
+    <div class="container-fluid gap-4 w-100 h-10 bg-body-secondary d-flex justify-content-center align-items-center pl-5 pr-5" >
+        <p>FALE CONOSCO</p>
+        <p>TRABALHE CONOSCO</p>
+        <p>POLÍTICA DE PRIVACIDADE</p>
+        <p>A LGPD NO SENAI</p>
+    </div>
     <div class="social">
         <div class="social-icons">
             <a href="https://www.instagram.com/">
-                <i class="fa-brands fa-instagram fa-3x mb-3" style="color: #ffffff;"></i>
+                <i class="fa-brands fa-instagram fa-2x mb-3" style="color: #ffffff;"></i>
             </a>
             <a href="https://www.youtube.com/">
-                <i class="fa-brands fa-youtube fa-3x mb-3" style="color: #ffffff;"></i>
+                <i class="fa-brands fa-youtube fa-2x mb-3" style="color: #ffffff;"></i>
             </a>
             <a href="https://www.facebook.com/">
-                <i class="fa-brands fa-facebook fa-3x mb-3" style="color: #ffffff;"></i>
+                <i class="fa-brands fa-facebook fa-2x mb-3" style="color: #ffffff;"></i>
+            </a>
+            <a href="https://www.facebook.com/">
+                <i class="fa-brands fa-linkedin fa-2x mb-3" style="color: #ffffff"></i>
+            </a>
+            <a href="https://www.facebook.com/">
+                <i class="fa-brands fa-whatsapp fa-2x mb-3" style="color: #ffffff"></i>
+            </a>
+            <a href="https://www.facebook.com/">
+                <i class="fa-brands fa-twitter fa-2x mb-3" style="color: #ffffff"></i>
             </a>
         </div>
     </div>
@@ -107,22 +122,12 @@
             <div class="titulo">
                 <p>Central de Relacionamento</p>
             </div>
-            (XX) XXXXX-XXXX (Telefone/Whatsapp)
+            (11) 3322-0050 (Telefone/WhatsApp)
             <br>
-            XXXXXXXXXXXXXXX (Email)
+            0800-055-1000 (Interior de SP, somente telefone fixo)
         </div>
     </div>
     <div class="membros">
-        <div class="membros-icons">
-            <a href="https://github.com/IgorOliverx">
-                <i class="fa-brands fa-github fa-3x mb-3" style="color: #ffffff;"></i>
-            </a>
-            <a href="https://github.com/LuigiSousaa">
-                <i class="fa-brands fa-github fa-3x mb-3" style="color: #ffffff;"></i>
-            </a>
-            <a href="https://github.com/Ezequielzz">
-                <i class="fa-brands fa-github fa-3x mb-3" style="color: #ffffff;"></i>
-            </a>
-        </div>
+            <p class="text-white">Copyright 2024 © Todos os direitos reservados.</p>
     </div>
 </div>

@@ -25,6 +25,9 @@
                     <a class="nav-link text-light" href="#">Gráficos</a>
                 </li>
             </ul>
+
+
+            {{--Implementar lógica para que "icons-container" nao seja exibido na login--}}
             <div class="icons-container">
                 <ul class="navbar-nav">
 
@@ -34,15 +37,14 @@
                         </li>
                     @endif
                     @if(\Illuminate\Support\Facades\Auth::check())
-                            <li class="nav-item">
-                                <form action="{{route('logout')}}" method="post">
-                                    @csrf
+                        <li class="nav-item">
+                            <form action="{{route('logout')}}" method="post">
+                                @csrf
                                 <a class="nav-link" href="{{route('logout')}}" onclick="event.preventDefault(); this.closest('form').submit()">
                                     <i class="bi bi-box-arrow-left fa-2x" style="color: #ffffff"></i>
                                 </a>
-                                </form>
-
-                            </li>
+                            </form>
+                        </li>
                     @endif
                     <li class="nav-item">
                         <a class="nav-link" href="#"><i class="fa-solid fa-inbox fa-2x" style="color: #ffffff;"></i></a>

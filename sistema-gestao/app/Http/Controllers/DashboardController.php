@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Ativo;
+use App\Models\Sala;
 use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -12,10 +13,12 @@ class DashboardController extends Controller
 {
     public readonly Ativo $ativo;
     public readonly User $user;
+    public readonly Sala $sala;
     public function __construct()
     {
         $this->ativo = new Ativo();
         $this->user = new User();
+        $this->sala = new Sala();
     }
 
     public function index()
@@ -35,8 +38,9 @@ class DashboardController extends Controller
 
     public function painelBlocoB():View
     {
+        $professorResponsavel = $this->sala->retornaResponsavel();
         $ativosBlocoB = $this->ativo->retornaAtivoBloco('B');
-        return \view('dashboard.painelBlocoB');
+        return \view('dashboard.painelBlocoB', ['responsavel' => $professorResponsavel]);
     }
 
     public function painelBlocoC():View
@@ -74,5 +78,11 @@ class DashboardController extends Controller
         }catch (\Exception $error){
 
         }
+    }
+
+    public function ativosManutencao($sala)
+    {
+        $ativos = $this->ativo->retornaAtivosManutencao($sala);
+        return \view('dashboard.todos-blocos', ['ativos' => $ativos]);
     }
 }

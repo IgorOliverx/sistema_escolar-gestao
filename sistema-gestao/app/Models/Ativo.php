@@ -71,7 +71,6 @@ class Ativo extends Model
     public function retornarAtivo(string $id)
     {
         return $this->where('id', $id)->first();
-
     }
 
     /**
@@ -87,10 +86,13 @@ class Ativo extends Model
     */
     public function retornaAtivoSala(string $sala): Collection|array
     {
-        return Ativo::with('sala')
-            ->whereHas('sala', function($query) use ($sala) {
-                $query->where('numero_sala', '=',  $sala);
-            })->get();
+       return Ativo::with('sala')
+        ->whereHas('sala', function($query) use ($sala) {
+           $query->where('numero_sala', '=',  $sala);
+        })->get();
+
+
+
     }
 
     /**
@@ -119,6 +121,20 @@ class Ativo extends Model
     public function definirComoInativo(string $id)
     {
         return $this->where('id', $id)->update(['status' => 'Inativo']);
+    }
+
+
+    /**
+     * RETORNA ATIVOS EM MANUTENÇÃO
+    */
+    public function retornaAtivosManutencao(string $sala): Collection|array
+    {
+        return Ativo::with('sala')
+            ->whereHas('sala', function($query) use ($sala) {
+                $query->where('numero_sala', '=',  $sala);
+            })
+            ->where('manutencao', 1)
+            ->get();
     }
 
     /**

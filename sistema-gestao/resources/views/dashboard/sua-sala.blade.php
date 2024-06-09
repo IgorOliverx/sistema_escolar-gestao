@@ -52,7 +52,7 @@
                     <button class="btn btn-warning">Manutenção...</button>
                 </div>
             </div>
-            <div class="table-responsive" id="table-responsive">
+            <div class="ta  ble-responsive" id="table-responsive">
 
                 <div class="table-responsive">
                     <table class="table table-striped">
@@ -90,7 +90,7 @@
                         <span>Solicitar</span>
                         <i class="fa-solid fa-arrow-right"></i>
                     </button>
-                    <h1 class="heading">Solicitar Novo Ativo</h1>
+                    <h1 class="heading">Solicitar Recursos</h1>
                 </div>
 
                 <div class="card">
@@ -133,12 +133,7 @@
                                     <td>{{ $ativo->categoria_patrimonio }}</td>
                                     <td><span class="badge bg-success">Ativo</span></td>
                                     <td>
-                                        <button class="btn btn-warning">
-
-                                            <a href="{{route('manutencao', ['ativo' => $ativo->id])}}">Manutenção</a>
-
-
-                                        </button>
+                                            <a class="btn btn-warning text-blue-500" href="{{route('manutencao', ['ativo' => $ativo->id])}}">Manutenção</a>
                                     </td>
                                 </tr>
                             @empty

@@ -7,5 +7,6 @@ use Illuminate\Support\Facades\Route;
 //Route::middleware(['auth'])->group(function (){
     Route::resource('/ativos', AtivoController::class);
     Route::get('/ativos/blocos/{sala}', [AtivoController::class, 'retornaAtivoSala']);
+        Route::get('/ativos/manutencao/sala/{sala}', [AtivoController::class, 'retornaManutencao']);
 
 //});

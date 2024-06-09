@@ -35,7 +35,10 @@ Route::middleware(['auth'])->group(function (){
 
 
     //ROTA SOMENTE PARA O THIAGO
-    Route::get('/painel/ativos/manutencao', [DashboardController::class, 'ativosManutencao'])->name('ativosManutencao');
+    Route::get('/painel/ativos/manutencao/{sala}', [DashboardController::class, 'ativosManutencao'])->name('ativosManutencao');
+
+
+
 });
 
 //Rotas de login
@@ -46,3 +49,5 @@ Route::post('/login', [LoginController::class, 'store'])->name('autenticar');
 //Rota para logout
 Route::post('/logout', [LoginController::class, 'destroy'])->name('logout');
 
+//Rota de teste
+Route::get('/teste', [\App\Models\Sala::class, 'retornaResponsavel']);

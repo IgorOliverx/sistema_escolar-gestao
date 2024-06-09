@@ -6,7 +6,7 @@
     <div class="main-content" id="main-content">
         <div class="sidebar" id="sidebar">
             <h3>Ativos - Bloco C</h3>
-            <a href="#" class="room-link active" data-room="15C"><i class="fa-solid fa-users"></i> Sala 15-C</a>
+            <a href="#" class="room-link " data-room="15C"><i class="fa-solid fa-users"></i> Sala 15-C</a>
             <a href="#" class="room-link" data-room="19C"><i class="fa-solid fa-users"></i> Sala 19-C</a>
         </div>
         <div class="content" id="content">

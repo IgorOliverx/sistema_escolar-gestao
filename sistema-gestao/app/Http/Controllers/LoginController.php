@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Http\Requests\LoginRequest;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Validation\ValidationException;
 use Illuminate\View\View;
 
 class LoginController extends Controller
@@ -15,18 +16,22 @@ class LoginController extends Controller
 
     }
 
+    /**
+     * @throws ValidationException
+     */
     public function store(LoginRequest $request): \Illuminate\Foundation\Application|\Illuminate\Routing\Redirector|\Illuminate\Contracts\Foundation\Application|\Illuminate\Http\RedirectResponse
     {
         $request->authenticate();
 
         $request->session()->regenerate();
 
-        notify()->success('Este é um web-app para facilitar o gerenciamento de ativos patrimoniais', 'Seja Bem-vindo(a), Professor(a)!');
+        $userLogado = Auth::user()->nome;
+        notify()->success('Este é um web-app para facilitar o gerenciamento de ativos patrimoniais', 'Seja Bem-vindo(a), '. $userLogado);
 
         return redirect('/dashboard/');
     }
 
-    public function destroy(Request $request)
+    public function destroy(Request $request): \Illuminate\Foundation\Application|\Illuminate\Routing\Redirector|\Illuminate\Contracts\Foundation\Application|\Illuminate\Http\RedirectResponse
     {
         Auth::guard('web')->logout();
 

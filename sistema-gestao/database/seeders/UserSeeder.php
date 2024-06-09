@@ -28,7 +28,7 @@ class UserSeeder extends Seeder
             'username' => '123.456.789-10',
             'password' => Hash::make('senai@2024'),
             'ultimo_login' => Carbon::now(),
-            'is_admin' => true,
+            'is_admin' => false,
         ]);
 
         DB::table('users')->insert([
@@ -59,7 +59,7 @@ class UserSeeder extends Seeder
             'username' => '478.460.858-32',
             'password' => Hash::make('senai@2024'),
             'ultimo_login' => Carbon::now(),
-            'is_admin' => false,
+            'is_admin' => true,
         ]);
     }
 }

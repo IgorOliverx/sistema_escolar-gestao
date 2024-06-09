@@ -21,6 +21,18 @@ class Sala extends Model
     ];
 
 
+
+    public function retornaResponsavel(string $sala)
+    {
+         //pegar o numero_sala
+        //pesquisar pelo user que bate com o user)_id de acordo com o numero sala
+        return $this->with('user')
+           ->where('numero_sala', '=', $sala)
+            ->get();
+
+    }
+
+
     /**
      * Cada sala só pode ter um professor
      * @return BelongsTo
