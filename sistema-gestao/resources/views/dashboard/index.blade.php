@@ -75,7 +75,7 @@
         <div class="title-section">Sua(s) Sala(s)</div>
         <div class="row">
             @foreach($salas as $sala)
-            <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
+            <div class="d-flex align-items-center">
                 <div class="card-custom">
                     <div class="top-right-corner"></div>
                     <i class="fa-solid fa-desktop fa-3x mb-3 icon"></i>
