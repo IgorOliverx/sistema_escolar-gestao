@@ -16,6 +16,6 @@ class   AtivoSeeder extends Seeder
     public function run(): void
     {
             Ativo::factory(300)->create();
-            
+
     }
 }

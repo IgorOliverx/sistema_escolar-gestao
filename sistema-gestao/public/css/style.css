@@ -74,7 +74,7 @@
     transition: 0.5s;
 }
 
-.realty-card-data .price-tag{
+.realty-card-data .price-tag {
     top: -10%;
 }
 
@@ -108,48 +108,49 @@
     filter: invert(1);
 }
 
-.card{
+.card {
     transition: 0.3s;
     cursor: pointer;
 }
 
-.card:hover{
+.card:hover {
     transform: scale(1.05);
 }
 
-.card:hover .realty-card-data{
+.card:hover .realty-card-data {
     transform: scale(1.05);
 }
 
-.card:hover .realty-card-data-info{
+.card:hover .realty-card-data-info {
     box-shadow: 0px 0px 30px white;
 }
-.collapse-btn img{
+
+.collapse-btn img {
     transition: 0.3s;
 }
 
-.collapse-btn:not(:has(+ .show)) img{
+.collapse-btn:not(:has(+ .show)) img {
     transform: rotate(180deg);
 }
 
-.w-30{
+.w-30 {
     width: 30% !important;
 }
 
-.w-70{
+.w-70 {
     width: 70% !important;
 }
 
-.view-realty-data img{
+.view-realty-data img {
     height: 50px;
     object-fit: cover;
 }
 
-textarea{
+textarea {
     height: 200px !important;
 }
 
-#card-custom{
+#card-custom {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -169,7 +170,7 @@ textarea{
     /* Ensure cards have a white background */
 }
 
-#card-custom .icon{
+#card-custom .icon {
     font-size: 50px;
     color: #333;
     margin-bottom: 15px;
@@ -192,6 +193,9 @@ textarea{
 }
 
 #card-custom .read-more {
+    font-family: "Archivo Black", sans-serif;
+    font-size: 24px;
+    font-weight: 400;
     background-color: red;
     color: #fff;
     font-size: 17px;
@@ -215,13 +219,19 @@ textarea{
 }
 
 @keyframes anm {
-    from{}to{scale: 1.1}
+    from {}
+
+    to {
+        scale: 1.1
+    }
 }
+
 #main-content {
     display: flex;
     flex: 1;
     overflow: hidden;
 }
+
 #sidebar {
     min-width: 250px;
     max-width: 250px;
@@ -231,22 +241,29 @@ textarea{
     box-sizing: border-box;
     height: 100vh;
 }
+
 #sidebar a {
+    font-family: "Archivo Black", sans-serif;
+    font-size: 15px;
+    font-weight: 200;
     color: white;
     text-decoration: none;
     display: block;
     padding: 10px 0;
     cursor: pointer;
 }
+
 #sidebar a:hover {
     background: #cd1b1b;
 }
+
 #content {
     flex: 1;
     padding: 20px;
     box-sizing: border-box;
     overflow-y: auto;
 }
+
 #table-responsive {
     overflow-y: auto;
     max-height: calc(100vh - 140px);
@@ -426,6 +443,3 @@ textarea{
     transform: rotate(45deg);
     margin: 10px auto 0;
 }
-
-
-

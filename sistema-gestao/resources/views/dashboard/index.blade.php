@@ -1,4 +1,3 @@
-@php use Illuminate\Support\Facades\Gate; @endphp
 @extends('layouts.master')
 
 @section('content')
@@ -94,6 +93,17 @@
                         </a>
                     </div>
                 </div>
+            <div class="d-flex align-items-center">
+                <div class="card-custom">
+                    <div class="top-right-corner"></div>
+                    <i class="fa-solid fa-desktop fa-3x mb-3 icon"></i>
+                    <div class="title">Sala</div>
+                    <div class="description">{{$sala->numero_sala}}</div>
+                    <a href="{{route("minhaSala", ['sala' => $sala->numero_sala])}}">
+                        <button class="read-more">Ver Ativos</button>
+                    </a>
+                </div>
+            </div>
             @endforeach
         </div>
     </div>
