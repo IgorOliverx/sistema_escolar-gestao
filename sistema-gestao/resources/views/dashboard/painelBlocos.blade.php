@@ -27,7 +27,16 @@
         height: 100vh;
     }
 
+    .sidebar h3 {
+        font-family: "Archivo Black", sans-serif;
+        font-size: 20px;
+        font-weight: 200;
+    }
+
     .sidebar a {
+        font-family: "Archivo Black", sans-serif;
+        font-size: 15px;
+        font-weight: 200;
         color: white;
         text-decoration: none;
         display: block;
@@ -46,6 +55,28 @@
         overflow-y: auto;
     }
 
+    .content h2 {
+        font-family: "Archivo Black", sans-serif;
+        font-size: 22px;
+        font-weight: 400;
+    }
+
+    th {
+        font-family: "Archivo Black", sans-serif;
+        font-size: 15px;
+        font-weight: 200;
+    }
+
+    .btn {
+        font-family: "Archivo Black", sans-serif;
+        font-size: 13px;
+        margin-right: 5px;
+    }
+
+    .card-container {
+        margin-top: 15px;
+    }
+
     .content .card-container {
         display: flex;
         flex-direction: row;
@@ -55,7 +86,7 @@
 
     .table-responsive {
         overflow-y: auto;
-        max-height: calc(100vh - 140px);
+        max-height: 400px; /* Ajuste a altura máxima da tabela conforme necessário */
     }
 
     .card {
@@ -69,18 +100,13 @@
         padding: 2em;
         z-index: 0;
         transition: transform 0.5s;
-        /* Adicionado para manter a transição suave */
         display: flex;
-        /* Adicionado para usar flexbox */
         justify-content: center;
-        /* Adicionado para centralizar horizontalmente */
         align-items: center;
-        /* Adicionado para centralizar verticalmente */
     }
 
     .card:hover {
         transform: scale(1);
-        /* Adicionado para manter o tamanho constante */
     }
 
     .circle {
@@ -145,7 +171,17 @@
     .card:hover .heading {
         color: white;
     }
+
+    button {
+        border: none;
+    }
+
+    #room-content {
+        max-height: 380px; /* Ajuste a altura máxima do conteúdo conforme necessário */
+        overflow-y: auto;
+    }
 </style>
+
 
 <div class="main-content">
     <div class="sidebar">
@@ -182,7 +218,146 @@
                 </thead>
 
                 <tbody id="room-content">
-
+                    <tr>
+                        <td>Computador Dell</td>
+                        <td>123456</td>
+                        <td>Eletrônicos</td>
+                        <td>Funcionando</td>
+                        <td><button><i class="fa-solid fa-pen"></i></button> <button><i class="fa-solid fa-trash"></i></button></td>
+                    </tr>
+                    <tr>
+                        <td>Projetor Epson</td>
+                        <td>234567</td>
+                        <td>Eletrônicos</td>
+                        <td>Necessita Reparos</td>
+                        <td><button><i class="fa-solid fa-pen"></i></button> <button><i class="fa-solid fa-trash"></i></button></td>
+                    </tr>
+                    <tr>
+                        <td>Cadeira Ergonômica</td>
+                        <td>345678</td>
+                        <td>Móveis</td>
+                        <td>Funcionando</td>
+                        <td><button><i class="fa-solid fa-pen"></i></button> <button><i class="fa-solid fa-trash"></i></button></td>
+                    </tr>
+                    <tr>
+                        <td>Monitor LG</td>
+                        <td>456789</td>
+                        <td>Eletrônicos</td>
+                        <td>Funcionando</td>
+                        <td><button><i class="fa-solid fa-pen"></i></button> <button><i class="fa-solid fa-trash"></i></button></td>
+                    </tr>
+                    <tr>
+                        <td>Ar-condicionado Samsung</td>
+                        <td>567890</td>
+                        <td>Eletrodomésticos</td>
+                        <td>Funcionando</td>
+                        <td><button><i class="fa-solid fa-pen"></i></button> <button><i class="fa-solid fa-trash"></i></button></td>
+                    </tr>
+                    <tr>
+                        <td>Impressora HP</td>
+                        <td>678901</td>
+                        <td>Eletrônicos</td>
+                        <td>Necessita Reparos</td>
+                        <td><button><i class="fa-solid fa-pen"></i></button> <button><i class="fa-solid fa-trash"></i></button></td>
+                    </tr>
+                    <tr>
+                        <td>Mesa de Reunião</td>
+                        <td>789012</td>
+                        <td>Móveis</td>
+                        <td>Funcionando</td>
+                        <td><button><i class="fa-solid fa-pen"></i></button> <button><i class="fa-solid fa-trash"></i></button></td>
+                    </tr>
+                    <tr>
+                        <td>Telefone Cisco</td>
+                        <td>890123</td>
+                        <td>Eletrônicos</td>
+                        <td>Funcionando</td>
+                        <td><button><i class="fa-solid fa-pen"></i></button> <button><i class="fa-solid fa-trash"></i></button></td>
+                    </tr>
+                    <tr>
+                        <td>Armário de Arquivo</td>
+                        <td>901234</td>
+                        <td>Móveis</td>
+                        <td>Funcionando</td>
+                        <td><button><i class="fa-solid fa-pen"></i></button> <button><i class="fa-solid fa-trash"></i></button></td>
+                    </tr>
+                    <tr>
+                        <td>Laptop Lenovo</td>
+                        <td>012345</td>
+                        <td>Eletrônicos</td>
+                        <td>Necessita Reparos</td>
+                        <td><button><i class="fa-solid fa-pen"></i></button> <button><i class="fa-solid fa-trash"></i></button></td>
+                    </tr>
+                    <tr>
+                        <td>Computador Dell</td>
+                        <td>123456</td>
+                        <td>Eletrônicos</td>
+                        <td>Funcionando</td>
+                        <td><button><i class="fa-solid fa-pen"></i></button> <button><i class="fa-solid fa-trash"></i></button></td>
+                    </tr>
+                    <tr>
+                        <td>Projetor Epson</td>
+                        <td>234567</td>
+                        <td>Eletrônicos</td>
+                        <td>Necessita Reparos</td>
+                        <td><button><i class="fa-solid fa-pen"></i></button> <button><i class="fa-solid fa-trash"></i></button></td>
+                    </tr>
+                    <tr>
+                        <td>Cadeira Ergonômica</td>
+                        <td>345678</td>
+                        <td>Móveis</td>
+                        <td>Funcionando</td>
+                        <td><button><i class="fa-solid fa-pen"></i></button> <button><i class="fa-solid fa-trash"></i></button></td>
+                    </tr>
+                    <tr>
+                        <td>Monitor LG</td>
+                        <td>456789</td>
+                        <td>Eletrônicos</td>
+                        <td>Funcionando</td>
+                        <td><button><i class="fa-solid fa-pen"></i></button> <button><i class="fa-solid fa-trash"></i></button></td>
+                    </tr>
+                    <tr>
+                        <td>Ar-condicionado Samsung</td>
+                        <td>567890</td>
+                        <td>Eletrodomésticos</td>
+                        <td>Funcionando</td>
+                        <td><button><i class="fa-solid fa-pen"></i></button> <button><i class="fa-solid fa-trash"></i></button></td>
+                    </tr>
+                    <tr>
+                        <td>Impressora HP</td>
+                        <td>678901</td>
+                        <td>Eletrônicos</td>
+                        <td>Necessita Reparos</td>
+                        <td><button><i class="fa-solid fa-pen"></i></button> <button><i class="fa-solid fa-trash"></i></button></td>
+                    </tr>
+                    <tr>
+                        <td>Mesa de Reunião</td>
+                        <td>789012</td>
+                        <td>Móveis</td>
+                        <td>Funcionando</td>
+                        <td><button><i class="fa-solid fa-pen"></i></button> <button><i class="fa-solid fa-trash"></i></button></td>
+                    </tr>
+                    <tr>
+                        <td>Telefone Cisco</td>
+                        <td>890123</td>
+                        <td>Eletrônicos</td>
+                        <td>Funcionando</td>
+                        <td><button><i class="fa-solid fa-pen"></i></button> <button><i class="fa-solid fa-trash"></i></button></td>
+                    </tr>
+                    <tr>
+                        <td>Armário de Arquivo</td>
+                        <td>901234</td>
+                        <td>Móveis</td>
+                        <td>Funcionando</td>
+                        <td><button><i class="fa-solid fa-pen"></i></button> <button><i class="fa-solid fa-trash"></i></button></td>
+                    </tr>
+                    <tr>
+                        <td>Laptop Lenovo</td>
+                        <td>012345</td>
+                        <td>Eletrônicos</td>
+                        <td>Necessita Reparos</td>
+                        <td><button><i class="fa-solid fa-pen"></i></button> <button><i class="fa-solid fa-trash"></i></button></td>
+                    </tr>
                 </tbody>
 
 

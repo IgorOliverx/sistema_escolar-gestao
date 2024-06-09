@@ -10,6 +10,27 @@
          height: 100vh;
          overflow: hidden;
      }
+     h2 {
+        font-family: "Archivo Black", sans-serif;
+        font-size: 25px;
+        font-weight: 400;
+     }
+
+     th {
+        font-family: "Archivo Black", sans-serif;
+        font-size: 15px;
+        font-weight: 200;
+     }
+
+     button {
+        border: none;
+     }
+
+     .btn {
+        font-family: "Archivo Black", sans-serif;
+        font-size: 13px;
+        font-weight: 200;
+     }
 
      .main-content {
          flex: 1;
@@ -53,7 +74,7 @@
                      <td>Armazém A</td>
                      <td>2023-06-01</td>
                      <td><span class="badge bg-success">Disponível</span></td>
-                     <td><button class="btn btn-danger">Excluir</button></td>
+                     <td><button><i class="fa-solid fa-pen"></i></button> <button><i class="fa-solid fa-trash"></i></button></td>
                  </tr>
              </tbody>
          </table>

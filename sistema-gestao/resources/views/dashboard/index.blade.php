@@ -154,7 +154,7 @@
                     <div class="top-right-corner"></div>
                     <i class="fa-solid fa-layer-group fa-3x mb-3 icon"></i>
                     <div class="title">Estoque</div>
-                    <div class="description"></div>
+                    <div class="description">Visão detalhada do estoque atual da escola. Registro detalhado apresenta todos os itens disponíveis em nosso estoque.</div>
                     <a href="{{ route('estoque') }}">
                         <button class="read-more">Ver Estoque</button>
                     </a>
@@ -169,7 +169,7 @@
                     <div class="top-right-corner"></div>
                     <i class="fa-solid fa-chalkboard-user fa-3x mb-3 icon"></i>
                     <div class="title">Sua Sala Responsável</div>
-                    <div class="description"></div>
+                    <div class="description">Aqui há ferramentas e recursos para facilitar o seu papel como responsável dos ativos patrimoniais de sua sala.</div>
                     <!-- inserir rota da sala do usuário -->
                     <a href="">
                         <button class="read-more">Ver Sala</button>
