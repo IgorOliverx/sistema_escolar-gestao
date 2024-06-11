@@ -19,6 +19,7 @@ return new class extends Migration
             $table->string('nome');
             $table->string('password');
             $table->string('ultimo_login');
+            $table->string('email')->unique();
             $table->boolean('is_admin');
         });
 

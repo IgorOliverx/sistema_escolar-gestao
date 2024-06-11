@@ -76,7 +76,8 @@ class DashboardController extends Controller
         return back();
 
         }catch (\Exception $error){
-
+            notify()->error('Erro ao solicitar manutenção', 'Erro');
+            return back();
         }
     }
 

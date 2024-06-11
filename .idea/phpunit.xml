@@ -3,7 +3,8 @@
   <component name="PHPUnit">
     <option name="directories">
       <list>
-        <option value="$PROJECT_DIR$/sistema-gestao/tests" />
+        <option value="$PROJECT_DIR$/sistema-gestao/tests/Unit" />
+        <option value="$PROJECT_DIR$/sistema-gestao/tests/Feature" />
       </list>
     </option>
   </component>

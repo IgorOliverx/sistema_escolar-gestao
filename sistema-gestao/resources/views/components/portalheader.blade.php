@@ -22,10 +22,8 @@
                 <li class="nav-item">
                     <div class="circle d-flex justify-content-center align-items-center" style="width: 40px; height: 40px; border-radius: 20px; background-color: white"> <i class="fa-solid fa-question" style="color: #000000;"></i></div>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">
-                        <input type="checkbox" checked data-toggle="toggle" data-onstyle="success" data-offstyle="danger">
-                    </a>
+                <li class="nav-item" >
+                    <x-buttonToggle></x-buttonToggle>
                 </li>
             </ul>
         </div>

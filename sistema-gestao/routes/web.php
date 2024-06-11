@@ -4,10 +4,15 @@
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\IndexController;
 use App\Http\Controllers\LoginController;
+use App\Http\Controllers\MailController;
 use Illuminate\Support\Facades\Route;
 
 //Rota index Não-logada
 Route::get('/', [IndexController::class, 'index'])->name('/');
+
+Route::fallback(function (){
+    return view('404');
+});
 
 
 /**
@@ -51,3 +56,11 @@ Route::post('/logout', [LoginController::class, 'destroy'])->name('logout');
 
 //Rota de teste
 Route::get('/teste', [\App\Models\Sala::class, 'retornaResponsavel']);
+
+
+Route::get('/funciona', function (){
+
+    $mail = \Illuminate\Support\Facades\Mail::to('luigienricossilva@gmail.com')->send(new \App\Mail\Mailfun);
+
+});
+
