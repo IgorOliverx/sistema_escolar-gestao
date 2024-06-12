@@ -21,6 +21,7 @@ return new class extends Migration
             $table->string('ultimo_login');
             $table->string('email')->unique();
             $table->boolean('is_admin');
+            $table->string('photo');
         });
 
         Schema::create('salas', function (Blueprint $table) {

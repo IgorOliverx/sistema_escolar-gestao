@@ -15,7 +15,6 @@ document.addEventListener('DOMContentLoaded', () => {
             try {
                 const request = await fetch(`http://localhost:8000/api/ativos/blocos/${selectedRoom}`);
                 const response = await request.json();
-                console.log(response); // Verifique se a resposta está correta
 
                 // Limpa o conteúdo anterior da tabela
                 conteudoSala.innerHTML = '';
@@ -32,8 +31,9 @@ document.addEventListener('DOMContentLoaded', () => {
                             <td>${ativo.nome}</td>
                             <td>${ativo.patrimonio}</td>
                             <td>${ativo.categoria_patrimonio}</td>
-                            <td>${ativo.status}</td>
-                            <td>Operações</td>
+                            <td class="badge ${ativo.manutencao > 0 ? 'bg-warning text-black' : 'bg-success text-white'}" style="width: 100px;">
+                            ${ativo.manutencao > 0 ? 'Manutenção' : 'Ativo'}
+                            </td>
                         `;
 
                         // Adiciona a nova linha à tabela

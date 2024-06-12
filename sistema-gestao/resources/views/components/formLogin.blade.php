@@ -10,7 +10,7 @@
             @csrf
             <h2 style="font-family:'Roboto', sans-serif; font-weight: 400;">Login</h2>
             <label for="username">Usuário</label>
-            <input type="text" name="username" id="username" class="form-control" placeholder="Insira seu CPF" maxlength="14" oninput="formCpf(this), checkInput(this)">
+            <input type="text" name="username" id="username" class="form-control" placeholder="Insira seu CPF" maxlength="14" oninput="formCpf(this)">
             @if($errors->has('username'))
                 <div class="alert alert-danger d-flex align-items-center position-relative" style="height: 20px">
                     <p class="mt-3">{{$errors->first('username')}}</p>

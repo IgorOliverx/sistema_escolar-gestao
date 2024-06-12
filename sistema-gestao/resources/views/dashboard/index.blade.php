@@ -1,11 +1,16 @@
 @extends('layouts.master')
 
 @section('content')
-    <x-navbar></x-navbar>
-    <body>
+<x-navbar>
+    
+</x-navbar>
 
-    <h2>EStou no {{\Illuminate\Support\Facades\Auth::user()->nome}}</h2>
-    <div class="container mt-5 container-custom" style="z-index: -1">
+<body>
+
+    <div class="container mt-5 container-custom">
+    <div class="name" style="color: black; display: flex; align-items: center;">
+           </div>
+
         <div class="title-section">Blocos</div>
 
         <div class="row">
@@ -35,6 +40,7 @@
                     </a>
                 </div>
             </div>
+
             <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
                 <div class="card-custom">
                     <div class="top-right-corner"></div>
@@ -82,18 +88,18 @@
         <div class="title-section">Sua(s) Sala(s)</div>
         <div class="row">
             @foreach($salas as $sala)
-                <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
-                    <div class="card-custom">
-                        <div class="top-right-corner"></div>
-                        <i class="fa-solid fa-chalkboard-user fa-3x mb-3 icon"></i>
-                        <div class="title">Sala {{$sala->numero_sala}}</div>
-                        <div class="description">Aqui há ferramentas e recursos para facilitar o seu papel como responsável dos ativos patrimoniais de sua sala.</div>
-                        <!-- inserir rota da sala do usuário -->
-                        <a href="{{route("minhaSala", ['sala' => $sala->numero_sala])}}">
-                            <button class="read-more">Ver Sala</button>
-                        </a>
-                    </div>
+            <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
+                <div class="card-custom">
+                    <div class="top-right-corner"></div>
+                    <i class="fa-solid fa-chalkboard-user fa-3x mb-3 icon"></i>
+                    <div class="title">Sala {{$sala->numero_sala}}</div>
+                    <div class="description">Aqui há ferramentas e recursos para facilitar o seu papel como responsável dos ativos patrimoniais de sua sala.</div>
+                    <!-- inserir rota da sala do usuário -->
+                    <a href="{{route("minhaSala", ['sala' => $sala->numero_sala])}}">
+                        <button class="read-more">Ver Sala</button>
+                    </a>
                 </div>
+            </div>
             @endforeach
 
         </div>
@@ -103,20 +109,20 @@
     @if(Gate::denies('manage-tasks'))
 
     @else
-        <div class="title-section">Solicitações de Manutenção</div>
-        <div class="d-flex align-items-center">
-            <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
-                <div class="card-custom">
-                    <div class="top-right-corner"></div>
-                    <div class="title">Ativos em manutenção</div>
-                    <i class="fa-solid fa-desktop fa-3x mb-3 icon"></i>
-                    <div class="description"></div>
-                    <a href="{{route('ativosManutencao', [$sala->numero_sala])}}">
-                        <button class="read-more">Ver Ativos</button>
-                    </a>
-                </div>
+    <div class="title-section">Solicitações de Manutenção</div>
+    <div class="d-flex align-items-center">
+        <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
+            <div class="card-custom">
+                <div class="top-right-corner"></div>
+                <div class="title">Ativos em manutenção</div>
+                <i class="fa-solid fa-desktop fa-3x mb-3 icon"></i>
+                <div class="description"></div>
+                <a href="{{route('ativosManutencao')}}">
+                    <button class="read-more">Ver Ativos</button>
+                </a>
             </div>
         </div>
+    </div>
     @endif
 
 
@@ -124,5 +130,5 @@
     <x-noticias></x-noticias>
 
     <x-footer></x-footer>
-    </body>
+</body>
 @endsection

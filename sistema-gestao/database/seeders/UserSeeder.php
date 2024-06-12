@@ -22,6 +22,7 @@ class UserSeeder extends Seeder
             'ultimo_login' => Carbon::now(),
             'email' => 'edujujunior@gmail.com',
             'is_admin' => false,
+            'image-foto' => '',
         ]);
 
         DB::table('users')->insert([

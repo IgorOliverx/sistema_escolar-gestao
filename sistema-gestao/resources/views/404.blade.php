@@ -112,54 +112,13 @@
         }
     </style>
     <body>
-
-    <nav class="navbar navbar-expand-lg pl-5 pr-5" style="background-color:darkred;">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="#">
-                <img src="images/Logo-senai-bw.png" alt="Logo-Senai preto e branco" width="150px" height="40px">
-                <a href="" class="navbar-brand ml-0" style="position: relative; bottom: -8px" >
-                    <p class="text-primary text-light">
-                        EDUCAÇÃO <br> ONLINE
-                    </p>
-                </a>
-            </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
-                <ul class="navbar-nav">
-                </ul>
-            </div>
-            {{--Implementar lógica para que "icons-container" nao seja exibido na login--}}
-            <div class="icons-container">
-                <ul class="navbar-nav">
-
-                    @if(!\Illuminate\Support\Facades\Auth::check())
-                        <li class="nav-item">
-                            <a style="cursor: pointer" class="nav-link" href="{{route('login')}}"><i class="fa-solid fa-user fa-2x" style="color: #ffffff;"></i></a>
-                        </li>
-                    @endif
-                    @if(\Illuminate\Support\Facades\Auth::check())
-                        <li class="nav-item">
-                            <form action="{{route('logout')}}" method="post">
-                                @csrf
-                                <a class="nav-link" href="{{route('logout')}}" onclick="event.preventDefault(); this.closest('form').submit()">
-                                    <i class="bi bi-box-arrow-left fa-2x" style="color: #ffffff"></i>
-                                </a>
-                            </form>
-                        </li>
-                    @endif
-                </ul>
-            </div>
-        </div>
-    </nav>
-    <main class="main" style="position: relative; top: -80px">
+    <main class="main" style="position: relative; margin: center;">
         <section class="section">
             <div class="left">
                 <img src="/images/eror.gif" alt="404 animado" width="200px" height="200px" style="position: relative; left: 5px">
                 <p>Página não encontrada</p>
                 <h4>Não conseguimos encontrar <br> a página que você está procurando.</h4>
-                <a href="#" class="btn">Home</a>
+                <a href="/dashboard" class="btn">Home</a>
             </div>
             <div class="right">
                 <img src="/images/Erro.png" alt="imagem de erro 404">

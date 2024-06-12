@@ -30,6 +30,7 @@ class User extends Authenticatable
         'email',
         'ultimo_login',
         'is_admin',
+        'photo',
     ];
 
     /**

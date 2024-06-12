@@ -22,7 +22,7 @@ class AppServiceProvider extends ServiceProvider
     public function boot(): void
     {
         Gate::define('manage-tasks', function(User $user){
-            return $user->is_admin == 'Yes';
+            return $user->is_admin == 1;
         });
     }
 }
