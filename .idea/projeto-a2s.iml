@@ -8,7 +8,6 @@
       <sourceFolder url="file://$MODULE_DIR$/sistema-gestao/tests" isTestSource="true" packagePrefix="Tests\" />
       <sourceFolder url="file://$MODULE_DIR$/spec" isTestSource="true" />
       <sourceFolder url="file://$MODULE_DIR$/tests" isTestSource="true" />
-      <sourceFolder url="file://$MODULE_DIR$/sistema-gestao/spec" isTestSource="true" />
       <sourceFolder url="file://$MODULE_DIR$/sistema-gestao/tests/Feature" isTestSource="true" />
       <sourceFolder url="file://$MODULE_DIR$/sistema-gestao/tests/Unit" isTestSource="true" />
       <excludeFolder url="file://$MODULE_DIR$/sistema-gestao/vendor/brick/math" />
@@ -122,6 +121,9 @@
       <excludeFolder url="file://$MODULE_DIR$/sistema-gestao/vendor/laravel/sanctum" />
       <excludeFolder url="file://$MODULE_DIR$/sistema-gestao/vendor/lucascudo/laravel-pt-br-localization" />
       <excludeFolder url="file://$MODULE_DIR$/sistema-gestao/vendor/mckenziearts/laravel-notify" />
+      <excludeFolder url="file://$MODULE_DIR$/sistema-gestao/vendor/symfony/http-client" />
+      <excludeFolder url="file://$MODULE_DIR$/sistema-gestao/vendor/symfony/http-client-contracts" />
+      <excludeFolder url="file://$MODULE_DIR$/sistema-gestao/vendor/symfony/mailgun-mailer" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />

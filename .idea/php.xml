@@ -129,6 +129,9 @@
       <path value="$PROJECT_DIR$/sistema-gestao/vendor/lucascudo/laravel-pt-br-localization" />
       <path value="$PROJECT_DIR$/sistema-gestao/vendor/laravel/telescope" />
       <path value="$PROJECT_DIR$/sistema-gestao/vendor/mckenziearts/laravel-notify" />
+      <path value="$PROJECT_DIR$/sistema-gestao/vendor/symfony/http-client" />
+      <path value="$PROJECT_DIR$/sistema-gestao/vendor/symfony/http-client-contracts" />
+      <path value="$PROJECT_DIR$/sistema-gestao/vendor/symfony/mailgun-mailer" />
     </include_path>
   </component>
   <component name="PhpProjectSharedConfiguration" php_language_level="8.2" />
