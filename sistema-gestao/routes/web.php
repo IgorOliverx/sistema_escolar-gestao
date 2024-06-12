@@ -55,7 +55,11 @@ Route::post('/login', [LoginController::class, 'store'])->name('autenticar');
 Route::post('/logout', [LoginController::class, 'destroy'])->name('logout');
 
 //Rota de teste
-Route::get('/teste', [\App\Models\Sala::class, 'retornaResponsavel']);
+Route::get('/devs', function (){
+    return view('copyright');
+});
+
+
 
 
 Route::get('/funciona', function (){

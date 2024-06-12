@@ -120,6 +120,132 @@
     @endif
 
 
+
+    <div class="circula2" >
+        <div class="acerta2">
+            <span></span>
+            <span></span>
+        </div>
+        <div class="circulos2">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+
+    </div>
+    <div class="circula">
+        <div class="acerta">
+            <span></span>
+            <span></span>
+        </div>
+        <div class="circulos">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+
+    </div>
+
+    <style>
+
+        .circula {
+            position: relative;
+            width: 140px;
+            height: 160px;
+            overflow: hidden;
+            top: 150px;
+            left:75%;
+        }
+
+
+        .circulos{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 15px;
+            width: 120px;
+            height: 100px;
+        }
+        .circulos span{
+            width:3px;
+            height: 3px;
+            background-color: red;
+
+        }
+        .acerta{
+            background-color: transparent;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 15px;
+            width: 120px;
+            height: 100px;
+            position: relative;
+            top: 80px;
+            left: 46px;
+        }
+        .acerta span{
+            width:3px;
+            height: 3px;
+            background-color: red;
+        }
+
+
+        .circula2 {
+            position: relative;
+            width: 140px;
+            height: 160px;
+            overflow: hidden;
+            top: 950px;
+            left:15%;
+        }
+
+
+        .circulos2{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 15px;
+            width: 120px;
+            height: 100px;
+        }
+        .circulos2 span{
+            width:3px;
+            height: 3px;
+            background-color: red;
+
+        }
+        .acerta2{
+            background-color: transparent;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 15px;
+            width: 120px;
+            height: 100px;
+            position: relative;
+            top: 80px;
+            left: -46px;
+        }
+        .acerta2 span{
+            width:3px;
+            height: 3px;
+            background-color: red;
+        }
+
+
+    </style>
+
+
+
     <br>
     <x-noticias></x-noticias>
     <x-footer></x-footer>

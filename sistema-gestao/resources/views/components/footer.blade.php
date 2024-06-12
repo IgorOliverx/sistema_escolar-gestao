@@ -94,7 +94,7 @@
 </style>
 
 <div class="footer">
-    <div id="foo-rdp" class="container-fluid" style="width: 100%; height: 35px;display: flex;justify-content: center;align-items: center;gap: 40px; background-color:lightgray;">
+    <div id="foo-rdp" class="container-fluid" style="width: 100%; height: 35px;display: flex;justify-content: center;align-items: center;gap: 40px; background-color:#e5e9ea;">
         <p>FALE CONOSCO</p>
         <p>TRABALHE CONOSCO</p>
         <p>POLÍTICA DE PRIVACIDADE</p>
