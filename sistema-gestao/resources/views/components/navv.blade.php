@@ -18,12 +18,20 @@
         color: white;
         background-color: black;
         border: none;
-        border-radius: 15px;
+        border-radius: 5px;
         transition: 0.35s;
+        margin-right: 10px;
     }
 
     .nav-link button:hover {
         background-color: #1c1c1c;
+    }
+
+    button:hover{
+        animation: anm-bbb ease .5s forwards;
+    }
+    @keyframes anm-bbb {
+        from{}to{scale: 1.1}
     }
 </style>
 

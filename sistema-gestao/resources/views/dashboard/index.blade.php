@@ -100,9 +100,7 @@
     </div>
 
 
-    @if(Gate::denies('manage-tasks'))
-
-    @else
+    @if(Gate::allows('manage-tasks'))
         <div class="title-section">Solicitações de Manutenção</div>
         <div class="d-flex align-items-center">
             <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
@@ -117,12 +115,13 @@
                 </div>
             </div>
         </div>
+    @else
+
     @endif
 
 
     <br>
     <x-noticias></x-noticias>
-
     <x-footer></x-footer>
     </body>
 @endsection

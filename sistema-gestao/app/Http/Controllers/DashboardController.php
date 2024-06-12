@@ -38,9 +38,9 @@ class DashboardController extends Controller
 
     public function painelBlocoB():View
     {
-        $professorResponsavel = $this->sala->retornaResponsavel();
+     //   $professorResponsavel = $this->sala->retornaResponsavel();
         $ativosBlocoB = $this->ativo->retornaAtivoBloco('B');
-        return \view('dashboard.painelBlocoB', ['responsavel' => $professorResponsavel]);
+        return \view('dashboard.painelBlocoB');
     }
 
     public function painelBlocoC():View

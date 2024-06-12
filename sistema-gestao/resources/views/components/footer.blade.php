@@ -1,18 +1,20 @@
 @extends('layouts.master')
 
 <style>
+
     .footer {
         width: 100%;
-        margin: 0;
-        height: 330px;
+        height: 350px;
         position: relative; /* Change from fixed to relative */
+        bottom: 0;
+        background-color:#e30613 ;
     }
 
     .social {
         display: flex;
         justify-content: center;
         height: 70px;
-        background-color: #e30707;
+        background-color: #e30613 ;
     }
 
     .social .social-icons {
@@ -35,19 +37,27 @@
         justify-content: center;
         align-items: center;
         height: 190px;
-        background-color: #af0909;
+        background-color: #b91d32;
     }
 
     .principal .endereco,
     .contato,
     .titulo p {
-        font-family: "Archivo Black", sans-serif;
-        font-weight: 400;
-        font-style: normal;
+    font-family: "Abel", sans-serif;
+
     }
 
     .principal .titulo p {
         font-size: 21px;
+        text-transform: uppercase;
+        font-weight: bolder;
+
+    }
+    #foooo{
+        font-size: 16px;
+        font-family: "Abel", sans-serif;
+        margin-bottom: 0;
+        margin-top: 4px;
     }
 
     .principal div:not(:last-child) {
@@ -61,14 +71,17 @@
     .membros {
         display: flex;
         justify-content: center;
-        height: 70px;
+        height: 40px;
+        align-items: center;
         background-color: #e30707;
     }
 
-    .membros .membros-icons {
-        display: flex;
-        align-items: center;
-        margin-top: 15px;
+    #foo-rdp p{
+        margin: 0;
+        font-family: "Arial", sans-serif;
+        color: #2c2c2c;
+        font-size: 14px;
+        font-weight: 550;
     }
 
     .membros-icons a {
@@ -81,7 +94,7 @@
 </style>
 
 <div class="footer">
-    <div class="container-fluid gap-4 w-100 h-10 bg-body-secondary d-flex justify-content-center align-items-center pl-5 pr-5" >
+    <div id="foo-rdp" class="container-fluid" style="width: 100%; height: 35px;display: flex;justify-content: center;align-items: center;gap: 40px; background-color:lightgray;">
         <p>FALE CONOSCO</p>
         <p>TRABALHE CONOSCO</p>
         <p>POLÍTICA DE PRIVACIDADE</p>
@@ -128,6 +141,6 @@
         </div>
     </div>
     <div class="membros">
-            <p class="text-white">Copyright 2024 © Todos os direitos reservados.</p>
+            <p id="foooo" class="text-white">Copyright 2024 © Todos os direitos reservados.</p>
     </div>
 </div>

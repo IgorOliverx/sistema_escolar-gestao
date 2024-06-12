@@ -1,7 +1,7 @@
-<div class="container-fluid w-100" style="height: 700px;
+<div class="container-fluid w-100" style="height: auto;
 background-color:#1A1A1A; margin-bottom: 1px; display: flex; justify-content: center; flex-wrap: wrap;">
             <h2 class="font-weight-bolder text-uppercase" style="font-weight: bolder; color:red; width: 80%; text-align: center; height: 75px; padding-top: 10px">Notícias</h2>
-    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel" style="width: 65%; height: 40%; margin-bottom: 320px">
+    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel" style="width: 65%; height: 70%; margin-bottom: 320px">
         <div class="carousel-inner">
             <div class="carousel-item active">
                 <img class="d-block w-100" src="/images/carrosel1.jpg" width="975px" height="550px" alt="First slide">
