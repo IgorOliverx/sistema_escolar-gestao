@@ -1,5 +1,27 @@
 @extends('layouts.master')
 
+<style>
+    .nav-link {
+        font-family: "Archivo Black", sans-serif;
+        font-size: 40px;
+    }
+
+    .icons-container .nav-item {
+        display: flex;
+        align-items: center;
+    }
+
+    .icons-container .nav-link {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .icons-container .nav-link i {
+        vertical-align: middle;
+    }
+</style>
+
 <nav class="navbar navbar-expand-lg overflow-hidden" style="background-color: #e30707">
     <div class="container-fluid overflow-hidden">
         <a class="navbar-brand" href="{{ route('dashboard.index') }}">
@@ -32,19 +54,19 @@
                 <ul class="navbar-nav">
 
                     @if(!\Illuminate\Support\Facades\Auth::check())
-                        <li class="nav-item">
-                            <a class="nav-link" href="#"><i class="fa-solid fa-user fa-2x" style="color: #ffffff;"></i></a>
-                        </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#"><i class="fa-solid fa-user fa-2x" style="color: #ffffff;"></i></a>
+                    </li>
                     @endif
                     @if(\Illuminate\Support\Facades\Auth::check())
-                        <li class="nav-item">
-                            <form action="{{route('logout')}}" method="post">
-                                @csrf
-                                <a class="nav-link" href="{{route('logout')}}" onclick="event.preventDefault(); this.closest('form').submit()">
-                                    <i class="bi bi-box-arrow-left fa-2x" style="color: #ffffff"></i>
-                                </a>
-                            </form>
-                        </li>
+                    <li class="nav-item">
+                        <form action="{{route('logout')}}" method="post">
+                            @csrf
+                            <a class="nav-link" href="{{route('logout')}}" onclick="event.preventDefault(); this.closest('form').submit()">
+                                <i class="bi bi-box-arrow-left fa-2x" style="color: #ffffff"></i>
+                            </a>
+                        </form>
+                    </li>
                     @endif
                     <li class="nav-item">
                         <a class="nav-link" href="#"><i class="fa-solid fa-inbox fa-2x" style="color: #ffffff;"></i></a>

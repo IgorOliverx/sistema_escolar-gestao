@@ -1,6 +1,40 @@
 @extends('layouts.master')
 
 @section('content')
+<style>
+
+    h2,
+    h3 {
+        font-family: "Archivo Black", sans-serif;
+        font-size: 25px;
+        font-weight: 400;
+    }
+
+    th {
+        font-family: "Archivo Black", sans-serif;
+        font-size: 15px;
+        font-weight: 200;
+    }
+
+    .btn {
+        font-family: "Archivo Black", sans-serif;
+        font-size: 13px;
+        font-weight: 200;
+    }
+
+    .sidebar h3 {
+        font-family: "Archivo Black", sans-serif;
+        font-size: 20px;
+        font-weight: 200;
+    }
+
+    .content h2 {
+        font-family: "Archivo Black", sans-serif;
+        font-size: 30px;
+        font-weight: 200;
+    }
+    
+</style>
     <x-navbar></x-navbar>
 
     <div class="main-content" id="main-content">
