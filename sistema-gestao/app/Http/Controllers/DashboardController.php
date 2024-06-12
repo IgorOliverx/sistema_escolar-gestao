@@ -81,9 +81,8 @@ class DashboardController extends Controller
         }
     }
 
-    public function ativosManutencao($sala)
+    public function ativosManutencao()
     {
-        $ativos = $this->ativo->retornaAtivosManutencao($sala);
-        return \view('dashboard.todos-blocos', ['ativos' => $ativos]);
+        return \view('dashboard.todos-blocos');
     }
 }

@@ -40,7 +40,7 @@ Route::middleware(['auth'])->group(function (){
 
 
     //ROTA SOMENTE PARA O THIAGO
-    Route::get('/painel/ativos/manutencao/{sala}', [DashboardController::class, 'ativosManutencao'])->name('ativosManutencao');
+    Route::get('/painel/ativos/manutencao/', [DashboardController::class, 'ativosManutencao'])->name('ativosManutencao');
 
 
 

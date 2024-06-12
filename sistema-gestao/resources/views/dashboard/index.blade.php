@@ -63,7 +63,7 @@
             </div>
         </div>
 
-        <div class="title-section">Estoque</div>
+        <div class="title-section">Estoque</div>1
         <div class="row">
             <div class="d-flex align-items-center">
                 <div class="card-custom">
@@ -109,7 +109,7 @@
                     <div class="title">Ativos em manutenção</div>
                     <i class="fa-solid fa-desktop fa-3x mb-3 icon"></i>
                     <div class="description"></div>
-                    <a href="{{route('ativosManutencao', [$sala->numero_sala])}}">
+                    <a href="{{route('ativosManutencao')}}">
                         <button class="read-more">Ver Ativos</button>
                     </a>
                 </div>

@@ -15,15 +15,14 @@ document.addEventListener('DOMContentLoaded', () => {
             try {
                 const request = await fetch(`http://localhost:8000/api/ativos/manutencao/sala/${selectedRoom}`);
                 const response = await request.json();
-                console.log(response); // Verifique se a resposta está correta
 
                 // Limpa o conteúdo anterior da tabela
                 conteudoSala.innerHTML = '';
 
                 // Verifica se há dados a serem exibidos
-                if (response.status && response.dados.length > 0) {
+                if (response.ativo && response.ativo.length > 0) {
                     // Itera sobre os ativos e os adiciona à tabela
-                    response.dados.forEach(ativo => {
+                    response.ativo.forEach(ativo => {
                         // Cria uma nova linha na tabela
                         const newRow = document.createElement('tr');
 
@@ -32,7 +31,7 @@ document.addEventListener('DOMContentLoaded', () => {
                             <td>${ativo.nome}</td>
                             <td>${ativo.patrimonio}</td>
                             <td>${ativo.categoria_patrimonio}</td>
-                            <td>${ativo.status}</td>
+                            <td>${ativo.manutencao ? 'Em manutenção' : 'Operacional'}</td>
                             <td>Operações</td>
                         `;
 
