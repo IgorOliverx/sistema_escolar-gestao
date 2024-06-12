@@ -21,6 +21,41 @@
         display: flex;
         gap: 20px;
     }
+
+    /* Estilos para o menu hamburger */
+    .menu {
+        position: fixed;
+        right: -300px;
+        top: 0;
+        width: 300px;
+        height: 100%;
+        background-color: #fff;
+        box-shadow: -2px 0 5px rgba(0,0,0,0.5);
+        transition: right 0.3s ease;
+        z-index: 1050; /* Para garantir que fique sobre outros elementos */
+    }
+
+    .menu.open {
+        right: 0;
+    }
+
+    .menu-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 20px;
+        background-color: #e30707;
+        color: white;
+    }
+
+    .close {
+        cursor: pointer;
+        font-size: 24px;
+    }
+
+    .menu-content {
+        padding: 20px;
+    }
 </style>
 
 <nav class="navbar navbar-expand-lg" style="background-color: #e30707">
@@ -34,9 +69,7 @@
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav mx-auto">
                 <li class="nav-item">
-                    <a class="nav-link text-light" href="#">
-
-                    </a>
+                    <a class="nav-link text-light" href="#"></a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link text-light" href="">Ativos</a>
@@ -54,10 +87,32 @@
                         <a class="nav-link" href="#"><i class="fa-solid fa-user fa-2x mb-3" style="color: #ffffff;"></i></a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#"><i class="fa-solid fa-inbox fa-2x mb-3" style="color: #ffffff;"></i></a>
+                        <a class="nav-link" href="#" onclick="toggleMenu()"><i class="fa-solid fa-inbox fa-2x mb-3" style="color: #ffffff;"></i></a>
                     </li>
                 </ul>
             </div>
         </div>
     </div>
 </nav>
+
+<!-- Menu hamburger para emails -->
+<div id="menu" class="menu">
+    <div class="menu-header">
+        <span class="close" onclick="toggleMenu()">×</span>
+        <h2>Email</h2>
+    </div>
+    <div class="menu-content">
+        <form>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email">
+            <input type="submit" value="Enviar">
+        </form>
+    </div>
+</div>
+
+<script>
+    function toggleMenu() {
+        const menu = document.getElementById('menu');
+        menu.classList.toggle('open');
+    }
+</script>
