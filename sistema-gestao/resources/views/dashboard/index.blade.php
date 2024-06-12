@@ -4,7 +4,6 @@
     <x-navbar></x-navbar>
     <body>
 
-    <h2>EStou no {{\Illuminate\Support\Facades\Auth::user()->nome}}</h2>
     <div class="container mt-5 container-custom" style="z-index: -1">
         <div class="title-section">Blocos</div>
 
@@ -80,9 +79,9 @@
 
 
         <div class="title-section">Sua(s) Sala(s)</div>
-        <div class="row">
+        <div class="row justify-content-center">
             @foreach($salas as $sala)
-                <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
+                <div class="d-flex align-items-center col-md-4 mb-4">
                     <div class="card-custom">
                         <div class="top-right-corner"></div>
                         <i class="fa-solid fa-chalkboard-user fa-3x mb-3 icon"></i>
