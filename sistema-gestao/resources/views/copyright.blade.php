@@ -1,72 +1,5 @@
+
 <style>
-
-    ul {
-        position: relative;
-        margin: 0;
-        padding: 0;
-        display: flex;
-    }
-    ul li {
-        list-style: none;
-        width: 40px;
-        height: 40px;
-        margin: 0 15px;
-        background-color: #ccc;
-        transform: rotate(-30deg) skew(25deg);
-    }
-
-    ul li span {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background: #000;
-        transition: 0.5s;
-        display: flex !important;
-        align-items: center;
-        justify-content: center;
-        color: #fff;
-        font-size: 30px !important;
-    }
-
-    ul li:hover span {
-        box-shadow: -1px 1px 1px rgba(0, 0, 0, 0.1);
-    }
-    ul li:hover span:nth-child(5) {
-        transform: translate(40px, -40px);
-    }
-    ul li:hover span:nth-child(4) {
-        transform: translate(30px, -30px);
-        opacity: 0.8;
-    }
-    ul li:hover span:nth-child(3) {
-        transform: translate(20px, -20px);
-        opacity: 0.6;
-    }
-    ul li:hover span:nth-child(2) {
-        transform: translate(10px, -10px);
-        opacity: 0.4;
-    }
-    ul li:hover span:nth-child(1) {
-        transform: translate(0, 0);
-        opacity: 0.2;
-    }
-
-    ul li:nth-child(4) span {
-        background-color: #e4405f;
-    }
-
-    ul li:nth-child(3) span {
-        background-color: rgb(67, 67, 246);
-    }
-    ul li:nth-child(2) span {
-        background-color: rgb(212, 52, 52);
-    }
-    ul li:nth-child(1) span {
-        background-color: rgba(63, 176, 245, 0.744);
-    }
-
     * {
         margin: 0;
         padding: 0;
@@ -141,7 +74,7 @@
         justify-content: center;
     }
 
-    button {
+    a {
         margin: 12px 8px;
         width: 44px;
         height: 44px;
@@ -149,31 +82,33 @@
         border-radius: 50%;
         cursor: pointer;
         transition: opacity 0.4s;
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
 
-    button:hover {
+    a:hover {
         opacity: 0.8;
     }
 
-    button i {
+    a i {
         color: #fff;
         font-size: 1.4em;
     }
 
     /* Social media colors */
-    button.github {
+    a.github {
         background-color: #24292e;
     }
 
-    button.twitter {
+    a.twitter {
         background-color: #1da1f2;
     }
 
-    button.pinterest {
+    a.pinterest {
         background-color: #d3263a;
     }
 </style>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -181,9 +116,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
     <link rel="stylesheet" href="./style.css">
-    <title>Team profile cards</title>
+    <title>Devs</title>
 </head>
 <body>
 
@@ -191,48 +125,12 @@
     <div class="card-image">
         <img src="./images/profile1.png" alt="Profile image">
     </div>
-    <p class="name">Julie Watson</p>
-    <p>UX / UI developer</p>
+    <p class="name">Igor Oliveira</p>
+    <p>Back-End developer</p>
     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur delectus, mollitia tenetur libero quam recusandae alias in incidunt.</p>
     <div class="socials">
-        <ul>
-            <li>
-                <a href="">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                    <span class="fa fa-twitter" aria-hidden="true"></span>
-                </a>
-            </li>
-            <li>
-                <a href="">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                    <span class="fa fa-google-plus" aria-hidden="true"></span>
-                </a>
-            </li>
-            <li>
-                <a href="">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                    <span class="fa fa-linkedin" aria-hidden="true"></span>
-                </a>
-            </li>
-            <li>
-                <a href="">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                    <span class="fa fa-instagram" aria-hidden="true"></span>
-                </a>
-            </li>
-        </ul>
+        <a href="https://github.com/IgorOliverx" class="github"><i class="fab fa-github"></i></a>
+        <a href="https://www.linkedin.com/in/igor-oliveira-69a556246" class="twitter"><i class="fab fa-linkedin"></i></a>
     </div>
 </div>
 
@@ -240,12 +138,12 @@
     <div class="card-image">
         <img src="./images/profile2.jpg" alt="Profile image">
     </div>
-    <p class="name">Marc McKnew</p>
-    <p>Front-End developer</p>
+    <p class="name">Luigi Sousa</p>
+    <p>Mobile Developer</p>
     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur delectus, mollitia tenetur libero quam recusandae alias in incidunt.</p>
     <div class="socials">
-        <button class="github"><i class="fab fa-github"></i></button>
-        <button class="pinterest"><i class="fab fa-pinterest-p"></i></button>
+        <a href="https://github.com/LuigiSousaa" class="github"><i class="fab fa-github"></i></a>
+        <a href="https://br.linkedin.com/in/luigisousaa" class="twitter"><i class="fab fa-linkedin"></i></a>
     </div>
 </div>
 
@@ -253,12 +151,13 @@
     <div class="card-image">
         <img src="./images/profile3.jpg" alt="Profile image">
     </div>
-    <p class="name">Jenny McKnew</p>
-    <p>Back-End developer</p>
+    <p class="name">Ezequiel Samuel</p>
+    <p>Front-End developer</p>
     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur delectus, mollitia tenetur libero quam recusandae alias in incidunt.</p>
     <div class="socials">
-        <button class="github"><i class="fab fa-github"></i></button>
-        <button class="twitter"><i class="fab fa-twitter"></i></button>
+        <a href="https://github.com/Ezequielzz" class="github"><i class="fab fa-github"></i></a>
+        <a href="https://br.linkedin.com/in/ezequiel-samuel-681b32270" class="twitter"><i class="fab fa-linkedin"></i></a>
+
     </div>
 </div>
 

@@ -20,4 +20,14 @@ class Estoque extends Model
         'data_de_compra',
         'fornecedor'
     ];
+
+    public function retornarEstoque()
+    {
+        return $this->get();
+    }
+
+    public function cadastrarEstoque()
+    {
+        
+    }
 }

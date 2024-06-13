@@ -25,24 +25,74 @@
 
 
 
-## Dividindo responsabilidades.
+# Sistema de Gestão API
 
-### Aloisio boi bandido
+Este documento descreve a API do Sistema de Gestão.
 
- - Criar mascára para o campo de password e cpf na pagina de login.
-Como possibilidade, você pode usar o Jquery ou qualquer lib js que faça esse trabalho, ou vanilla bruto na mão.
+## Endpoints
 
- - Ajeitar a responsividade das telas
+### Ativos
 
- - Dar idéia de como criar a parte de estoque
+- `GET /api/ativos`: Retorna todos os ativos.
+- `POST /api/ativos`: Cadastra um novo ativo.
+- `PUT /api/ativos/{id}`: Atualiza o ativo com o ID especificado.
+- `DELETE /api/ativos/{id}`: Apaga o ativo com o ID especificado.
+- `GET /api/ativos/{id}`: Retorna o ativo com o ID especificado.
+- `GET /api/ativos/manutencao/sala/{sala}`: Retorna os ativos em manutenção na sala especificada.
+
+### Estoque
+
+- `GET /api/estoque`: Retorna todos os itens do estoque.
+- `POST /api/estoque`: Cadastra um novo item no estoque.
+
+## Exemplos de Requisições
+
+### GET /api/ativos
+
+Resposta:
+
+```json
+{
+  "ativo": [
+    {
+      "id": 41,
+      "nome": "Patrimonio",
+      "categoria_patrimonio": "INFORMÁTICA",
+      "data_compra": "2024-06-12",
+      "status": "Ativo",
+      "manutencao": 1,
+      "patrimonio": 1741080,
+      "id_sala": 4,
+      "sala": {
+        "id": 4,
+        "numero_sala": "10A",
+        "bloco_sala": "A",
+        "user_id": 2
+      }
+    },
+    ...
+  ]
+}
+```
+
+### POST/api/ativos
+```{
+"nome": "Novo Ativo",
+"patrimonio": 123456,
+"categoria_patrimonio": "INFORMÁTICA",
+"status": "Ativo",
+"manutencao": 0,
+"id_sala": 1
+}
+
+{
+  "id": 42,
+  "nome": "Novo Ativo",
+  "patrimonio": 123456,
+  "categoria_patrimonio": "INFORMÁTICA",
+  "status": "Ativo",
+  "manutencao": 0,
+  "id_sala": 1
+}```
 
 
-### Ezequiel
-
- - ElequizelZZ você é foda
-
-
-### Iguinho jobs
-
- - Terminar api de single-responsability
- - tentar usar somente uma pagina para todo o conteúdo de ativos (por blocos e por salas)
