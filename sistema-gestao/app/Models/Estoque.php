@@ -11,7 +11,7 @@ class Estoque extends Model
 
     public $timestamps = false;
 
-    protected $table = 'estoque';
+    protected $table = 'estoques';
 
     protected $fillable = [
         'nome',
@@ -26,8 +26,25 @@ class Estoque extends Model
         return $this->get();
     }
 
-    public function cadastrarEstoque()
+    public function cadastrarEstoque(array $data)
     {
-
+        return Estoque::create($data);
     }
+
+    public function atualizaEstoque($id, $obj)
+    {
+        return $this->where('id', $id)->update($obj);
+    }
+
+    public function deletarEstoque($id)
+    {
+        return $this->where('id', $id)->delete();
+    }
+
+    public function retornarEstoquePorId($id)
+    {
+        return $this->where('id', $id)->get();
+    }
+
+
 }

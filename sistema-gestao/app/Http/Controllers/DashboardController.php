@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Ativo;
+use App\Models\Estoque;
 use App\Models\Sala;
 use App\Models\User;
 use Illuminate\Http\Request;
@@ -14,11 +15,13 @@ class DashboardController extends Controller
     public readonly Ativo $ativo;
     public readonly User $user;
     public readonly Sala $sala;
+    public readonly Estoque $estoque;
     public function __construct()
     {
         $this->ativo = new Ativo();
         $this->user = new User();
         $this->sala = new Sala();
+        $this->estoque = new Estoque();
     }
 
     public function index()
@@ -57,7 +60,8 @@ class DashboardController extends Controller
 
     public function estoque(): View
     {
-        return \view('dashboard.estoque');
+        $estoque = $this->estoque->retornarEstoque();
+        return \view('dashboard.estoque', ['estoque' => $estoque]);
     }
 
     public function minhaSala(string $sala): View

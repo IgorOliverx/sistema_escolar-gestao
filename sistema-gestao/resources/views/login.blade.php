@@ -1,6 +1,11 @@
 @extends('layouts.master')
 
 @section('content')
+    <style>
+        *{
+            overflow: hidden;
+        }
+    </style>
     <div id="vanta-canvas" style="
     width: 100vw;
     height: 100vh;

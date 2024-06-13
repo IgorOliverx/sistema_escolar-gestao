@@ -62,20 +62,28 @@
                     <th>Quantidade</th>
                     <th>Localização</th>
                     <th>Data de Adição</th>
+                    <th>Fornecedor</th>
                     <th>Estado</th>
                     <th>Ação</th>
                 </tr>
                 </thead>
                 <tbody id="stock-content">
-                <!-- Conteúdo inicial do estoque -->
-                <tr>
-                    <td>Item Exemplo 1</td>
-                    <td>50</td>
-                    <td>Armazém A</td>
-                    <td>2023-06-01</td>
-                    <td><span class="badge bg-success">Disponível</span></td>
-                    <td><button><i class="fa-solid fa-pen"></i></button> <button><i class="fa-solid fa-trash"></i></button></td>
-                </tr>
+                @forelse($estoque as $e)
+                    <tr>
+                        <td>{{$e->nome}}</td>
+                        <td>{{$e->quantidade}}</td>
+                        <td>{{$e->departamento}}</td>
+                        <td>{{$e->data_de_compra}}</td>
+                        <td>{{$e->fornecedor}}</td>
+                        <td><span class="badge bg-success">Disponível</span></td>
+                        <td><button><i class="fa-solid fa-pen"></i></button> <button><i class="fa-solid fa-trash"></i></button></td>
+                    </tr>
+                @empty
+                    <tr>
+                        <td colspan="6">Nenhum item encontrado</td>
+                    </tr>
+                @endforelse
+
                 </tbody>
             </table>
         </div>

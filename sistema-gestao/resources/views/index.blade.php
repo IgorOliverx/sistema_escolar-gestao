@@ -3,6 +3,9 @@
 
 @section('content')
     <style>
+        *{
+            overflow: hidden;
+        }
         .content {
             font-family: Arial, sans-serif;
         }

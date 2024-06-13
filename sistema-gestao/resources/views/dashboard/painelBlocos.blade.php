@@ -15,9 +15,7 @@
             <div class="d-flex justify-content-between align-items-center mb-4">
                 <h2>Sala<h2 id="room-title"></h2></h2>
                 <div>
-                    <button class="btn btn-primary"><Nov></Nov>o Ativo</button>
-                    <button class="btn btn-secondary">Alguma Opção</button>
-                    <button class="btn btn-secondary">Alguma Opção</button>
+
                 </div>
             </div>
             <div class="table-responsive" id="table-responsive">

@@ -91,8 +91,6 @@ class Ativo extends Model
            $query->where('numero_sala', '=',  $sala);
         })->get();
 
-
-
     }
 
     /**
@@ -100,7 +98,7 @@ class Ativo extends Model
     */
     public function retornaAtivoBloco(string $bloco): Collection|array
     {
-        return Ativo::with('sala')
+        return Ativo::with(['sala', 'sala.user'])
             ->whereHas('sala', function($query) use ($bloco) {
                 $query->where('bloco_sala', '=',  $bloco);
             })->get();
