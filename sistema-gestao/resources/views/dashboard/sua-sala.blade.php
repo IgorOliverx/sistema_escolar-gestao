@@ -2,6 +2,7 @@
 
 @section('content')
 <style>
+    /* Estilos existentes */
     .text {
         margin-top: 0;
         font-size: 1.1em;
@@ -19,19 +20,16 @@
         background-color: rgba(0, 0, 0, 0.4);
     }
 
-    .modal .content {
+    .modal-content {
         background-color: #ffffff;
-        margin: 15% auto;
+        margin: 5% auto;
         padding: 20px;
         border-radius: 5px;
         width: 50%;
-        height: 500px;
-        overflow: scroll;
-
+        max-width: 600px;
         display: flex;
         flex-direction: column;
         align-items: center;
-
         color: black;
     }
 
@@ -62,7 +60,7 @@
 
     .content h2 {
         font-family: "Archivo Black", sans-serif;
-        font-size: 30px;
+        font-size: 27px;
         font-weight: 200;
     }
 
@@ -72,7 +70,74 @@
         font-weight: 200;
     }
 
+    /* Estilos do formulário */
+    .form-container {
+        width: 100%;
+    }
+
+    .form-container h2 {
+        margin-bottom: 20px;
+    }
+
+    .form-group {
+        margin-bottom: 15px;
+        width: 100%;
+    }
+
+    .form-group label {
+        display: block;
+        font-weight: bold;
+        margin-bottom: 5px;
+    }
+
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+        width: 100%;
+        padding: 10px;
+        border-radius: 5px;
+        border: 1px solid #ccc;
+    }
+
+    .form-group textarea {
+        resize: vertical;
+    }
+
+    .form-actions {
+        text-align: right;
+        width: 100%;
+    }
+
+    .form-actions button {
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        background-color: #28a745;
+        color: #ffffff;
+        font-weight: bold;
+        cursor: pointer;
+    }
+
+    .form-actions button:hover {
+        background-color: #218838;
+    }
+
+    /* Estilos do botão de fechar */
+    .close {
+        color: #aaa;
+        float: right;
+        font-size: 28px;
+        font-weight: bold;
+    }
+
+    .close:hover,
+    .close:focus {
+        color: black;
+        text-decoration: none;
+        cursor: pointer;
+    }
 </style>
+
 <x-navbar></x-navbar>
 
 <div class="main-content" id="main-content">
@@ -83,46 +148,37 @@
     <div class="content" id="content">
         <div class="d-flex justify-content-between align-items-center mb-4">
             <h2>Sala<h2 id="room-title"></h2>
-            </h2>
-            <div>
-                <button class="btn btn-success">Solicitar Novo Ativo</button>
-                <button class="btn btn-danger">Solicitar Remoção de Ativo</button>
-                <button class="btn btn-warning">Manutenção...</button>
-            </div>
         </div>
-        <div class="ta  ble-responsive" id="table-responsive">
-
-            <div class="table-responsive">
-                <table class="table table-striped">
-                    <thead>
-                        <tr>
-                            <th>Nome</th>
-                            <th>Número Patrimonial</th>
-                            <th>Categoria</th>
-                            <th>Estado</th>
-                        </tr>
-                    </thead>
-
+        <div class="table-responsive" id="table-responsive">
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th>Nome</th>
+                        <th>Número Patrimonial</th>
+                        <th>Categoria</th>
+                        <th>Estado</th>
+                    </tr>
+                </thead>
+                <tbody id="room-content">
                     @forelse($ativos as $ativo)
-                    <tbody id="room-content">
-                        <tr>
-                            <td>{{ $ativo->nome }}</td>
-                            <td>{{ $ativo->patrimonio }}</td>
-                            <td>{{ $ativo->categoria_patrimonio }}</td>
-                            <td><span class="badge bg-success">Ativo</span></td>
-                        </tr>
-                    </tbody>
+                    <tr>
+                        <td>{{ $ativo->nome }}</td>
+                        <td>{{ $ativo->patrimonio }}</td>
+                        <td>{{ $ativo->categoria_patrimonio }}</td>
+                        <td><span class="badge bg-success">Ativo</span></td>
+                    </tr>
                     @empty
-                    <h3 class="text">Nenhum patrimônio encontrado</h2>
-                        @endforelse
-                </table>
-
-
-            </div>
+                    <tr>
+                        <td colspan="4" class="text-center">Nenhum patrimônio encontrado</td>
+                    </tr>
+                    @endforelse
+                </tbody>
+            </table>
         </div>
+
         <div class="card-container">
 
-            <div class="card">
+            <div class="card" onclick="showForm('request-modal')">
                 <div class="circle"></div>
                 <button class="more-info">
                     <span>Solicitar</span>
@@ -131,7 +187,7 @@
                 <h1 class="heading">Solicitar Recursos</h1>
             </div>
 
-            <div class="card">
+            <div class="card" onclick="showForm('removal-modal')">
                 <div class="circle"></div>
                 <button class="more-info">
                     <span>Solicitar</span>
@@ -139,7 +195,7 @@
                 </button>
                 <h1 class="heading">Solicitar Remoção Ativo</h1>
             </div>
-            <div class="card">
+            <div class="card" onclick="showForm('maintenance-modal')">
                 <div class="circle"></div>
                 <button class="more-info">
                     <span class="modalBtn">Solicitar</span>
@@ -149,40 +205,122 @@
             </div>
         </div>
 
-        <div class="modal">
-            <div class="content">
-                <input type="text" placeholder="Digite o número do patrimonio" id="search-ativo">
-                <div class="table-responsive">
-                    <table class="table table-striped">
-                        <thead>
-                            <tr>
-                                <th>Nome</th>
-                                <th>Número Patrimonial</th>
-                                <th>Categoria</th>
-                                <th>Estado</th>
-                                <th>Operações</th>
-                            </tr>
-                        </thead>
-                        <tbody id="room-contents">
-                            @forelse($ativos as $ativo)
-                            <tr class="class-ativo">
-                                <td>{{ $ativo->nome }}</td>
-                                <td>{{ $ativo->patrimonio }}</td>
-                                <td>{{ $ativo->categoria_patrimonio }}</td>
-                                <td><span class="badge bg-success">Ativo</span></td>
-                                <td>
-                                    <a class="btn btn-warning text-blue-500" href="{{route('manutencao', ['ativo' => $ativo->id])}}">Manutenção</a>
-                                </td>
-                            </tr>
-                            @empty
-                            <tr>
-                                <td colspan="4" class="text-center">Nenhum patrimônio encontrado</td>
-                            </tr>
-                            @endforelse
-                        </tbody>
-                    </table>
+        <!-- Modal para Solicitar Novo Ativo -->
+        <div id="request-modal" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="closeForm('request-modal')">&times;</span>
+                <div class="form-container">
+                    <h2>Solicitar Novo Ativo</h2>
+                    <form action="{{ route('ativos.store') }}" method="POST">
+                        @csrf
+                        <div class="form-group">
+                            <label for="nome">Nome do Ativo</label>
+                            <input type="text" id="nome" name="nome" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="descricao">Descrição</label>
+                            <textarea id="descricao" name="descricao" rows="4" required></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label for="quantidade">Quantidade</label>
+                            <input type="number" id="quantidade" name="quantidade" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="categoria">Categoria</label>
+                            <select id="categoria" name="categoria" required>
+                                <option value="eletronico">Eletrônico</option>
+                                <option value="movel">Móvel</option>
+                                <option value="utensilio">Utensílio</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="departamento">Departamento</label>
+                            <input type="text" id="departamento" name="departamento" required>
+                        </div>
+                        <div class="form-actions">
+                            <button type="submit">Enviar</button>
+                        </div>
+                    </form>
                 </div>
             </div>
         </div>
-        <script src="/js/modal.js"></script>
-        @endsection
+
+        <!-- Modal para Solicitar Remoção de Ativo -->
+        <div id="removal-modal" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="closeForm('removal-modal')">&times;</span>
+                <div class="form-container">
+                    <h2>Solicitar Remoção de Ativo</h2>
+                    <form action="" method="POST">
+                        @csrf
+                        <div class="form-group">
+                            <label for="nome">Nome do Ativo</label>
+                            <input type="text" id="nome-remocao" name="nome" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="numero">Número Patrimonial</label>
+                            <input type="text" id="numero-remocao" name="numero" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="motivo">Motivo da Remoção</label>
+                            <textarea id="motivo" name="motivo" rows="4" required></textarea>
+                        </div>
+                        <div class="form-actions">
+                            <button type="submit">Enviar</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <!-- Modal para Solicitar Manutenção de Ativo -->
+        <div id="maintenance-modal" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="closeForm('maintenance-modal')">&times;</span>
+                <div class="form-container">
+                    <h2>Solicitar Manutenção de Ativo</h2>
+                    <form action="" method="POST">
+                        @csrf
+                        <div class="form-group">
+                            <label for="nome">Nome do Ativo</label>
+                            <input type="text" id="nome-manutencao" name="nome" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="numero">Número Patrimonial</label>
+                            <input type="text" id="numero-manutencao" name="numero" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="problema">Descrição do Problema</label>
+                            <textarea id="problema" name="problema" rows="4" required></textarea>
+                        </div>
+                        <div class="form-actions">
+                            <button type="submit">Enviar</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<script>
+    function showForm(modalId) {
+        document.getElementById(modalId).style.display = 'block';
+    }
+
+    function closeForm(modalId) {
+        document.getElementById(modalId).style.display = 'none';
+    }
+
+    window.onclick = function(event) {
+        const modals = ['request-modal', 'removal-modal', 'maintenance-modal'];
+        modals.forEach(modalId => {
+            if (event.target == document.getElementById(modalId)) {
+                closeForm(modalId);
+            }
+        });
+    }
+</script>
+
+@endsection

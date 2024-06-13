@@ -2,7 +2,6 @@
 
 @section('content')
 <style>
-
     h2,
     h3 {
         font-family: "Archivo Black", sans-serif;
@@ -30,10 +29,9 @@
 
     .content h2 {
         font-family: "Archivo Black", sans-serif;
-        font-size: 30px;
+        font-size: 27px;
         font-weight: 200;
     }
-    
 </style>
     <x-navbar></x-navbar>
 
@@ -45,12 +43,7 @@
         </div>
         <div class="content" id="content">
             <div class="d-flex justify-content-between align-items-center mb-4">
-                <h2>Sala<h2 id="room-title"></h2></h2>
-                <div>
-                    <button class="btn btn-primary">Novo Ativo</button>
-                    <button class="btn btn-secondary">Alguma Opção</button>
-                    <button class="btn btn-secondary">Alguma Opção</button>
-                </div>
+                <h2>Sala<h2 id="room-title"></h2>
             </div>
             <div class="table-responsive" id="table-responsive">
 

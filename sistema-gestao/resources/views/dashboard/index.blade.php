@@ -62,7 +62,7 @@
             </div>
         </div>
 
-        <div class="title-section">Estoque</div>1
+        <div class="title-section">Estoque</div>
         <div class="row">
             <div class="d-flex align-items-center">
                 <div class="card-custom">
