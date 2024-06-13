@@ -28,6 +28,6 @@ class Estoque extends Model
 
     public function cadastrarEstoque()
     {
-        
+
     }
 }
