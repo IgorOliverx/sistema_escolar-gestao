@@ -25,7 +25,7 @@ class AtivoController extends Controller
      */
     public function index(): JsonResponse
     {
-        try{
+        try {
             $todosAtivos = $this->ativo->retornarAtivos();
 
             return response()->json([
@@ -33,7 +33,7 @@ class AtivoController extends Controller
                 'data' => $todosAtivos,
             ], 200);
 
-        }catch(\Exception $e){
+        } catch (\Exception $e) {
 
             return response()->json([
                 'message' => false,
@@ -54,22 +54,20 @@ class AtivoController extends Controller
      */
     public function show(string $id)
     {
-        try{
-            if(!$this->ativo->idExiste($id))
-            {
+        try {
+            if (!$this->ativo->idExiste($id)) {
                 return response()->json([
                     'message' => false,
                     'error' => 'O ID informado não consta na base de dados.',
                 ], 400);
             }
 
-           $ativo = $this->ativo->retornarAtivo($id);
+            $ativo = $this->ativo->retornarAtivo($id);
             return response()->json([
                 'status' => true,
                 'message' => $ativo
             ], 200);
-        }
-        catch(\Exception $e){
+        } catch (\Exception $e) {
             return response()->json([
                 'message' => false,
                 'error' => 'Ocorreu um erro inesperado',
@@ -87,7 +85,7 @@ class AtivoController extends Controller
      */
     public function store(Request $request): JsonResponse
     {
-       if(Gate::denies('manage-tasks')){
+        if (Gate::denies('manage-tasks')) {
             abort(403, 'Acesso Negado');
         }
         try {
@@ -133,9 +131,9 @@ class AtivoController extends Controller
      */
     public function update(Request $request, string $id): JsonResponse
     {
-       if(Gate::denies('manage-tasks')){
-          abort(403, 'Acesso Negado');
-       }
+        if (Gate::denies('manage-tasks')) {
+            abort(403, 'Acesso Negado');
+        }
         try {
             $data = $request->validate([
                 'nome' => ['string', 'required', 'max:255'],
@@ -178,13 +176,12 @@ class AtivoController extends Controller
      */
     public function destroy(string $id)
     {
-        if(Gate::denies('manage-tasks')){
-          abort(403, 'Acesso Negado');
+        if (Gate::denies('manage-tasks')) {
+            abort(403, 'Acesso Negado');
         }
-        try{
+        try {
 
-            if(!$this->ativo->idExiste($id))
-            {
+            if (!$this->ativo->idExiste($id)) {
                 return response()->json([
                     'message' => false,
                     'error' => 'O ID informado não consta na base de dados.',
@@ -197,7 +194,7 @@ class AtivoController extends Controller
                 'message' => 'Ativo apagado com sucesso!'
             ], 200);
 
-        }catch(\Exception $e){
+        } catch (\Exception $e) {
             return response()->json([
                 'message' => false,
                 'error' => 'Ocorreu um erro inesperado',
@@ -210,19 +207,19 @@ class AtivoController extends Controller
     /**
      * Listar ativos individuais
      */
-    public function  retornaAtivoSala(String $sala): JsonResponse
+    public function retornaAtivoSala(string $sala): JsonResponse
     {
-        try{
+        try {
             $ativoSalas = $this->ativo->retornaAtivoSala($sala);
             return response()->json([
                 'status' => true,
                 'dados' => $ativoSalas,
             ], 200);
 
-        }catch(\Exception $e){
+        } catch (\Exception $e) {
             return response()->json([
                 'status' => false,
-                'error' =>  $e->getMessage(),
+                'error' => $e->getMessage(),
             ], 500);
 
         }
@@ -234,16 +231,16 @@ class AtivoController extends Controller
      */
     public function retornaManutencao(string $sala)
     {
-        if(!Gate::denies('manage-tasks')){
+        if (!Gate::denies('manage-tasks')) {
             abort(403, 'Acesso Negado');
         }
-        try{
+        try {
             $ativosEmManutencao = $this->ativo->retornaAtivosManutencao($sala);
 
             return response()->json([
                 'ativo' => $ativosEmManutencao,
             ], 200);
-        }catch (\Exception $er){
+        } catch (\Exception $er) {
             return response()->json([
                 'message' => $er->getMessage(),
             ], 400);
