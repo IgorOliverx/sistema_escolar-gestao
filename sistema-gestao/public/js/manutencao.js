@@ -13,7 +13,7 @@ document.addEventListener('DOMContentLoaded', () => {
             link.classList.add('active');
 
             try {
-                const request = await fetch(`http://localhost:8000/api/ativos/manutencao/sala/${selectedRoom}`);
+                const request = await fetch(`https://seashell-app-8qdtr.ondigitalocean.app/api/ativos/manutencao/sala/${selectedRoom}`);
                 const response = await request.json();
 
                 // Limpa o conteúdo anterior da tabela

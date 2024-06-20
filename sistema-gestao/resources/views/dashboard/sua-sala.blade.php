@@ -75,6 +75,119 @@
         font-weight: 200;
     }
 
+    .menu-lateral{
+        width: 250px;
+        height: 88vh;
+        background-color: #9f0730;
+        border-radius: 20px;
+        margin: 20px 0 0 15px;
+    }
+    .menu-lateral .article{
+        width: 100%;
+        height: auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 40px;
+        margin-bottom: 30px;
+        flex-wrap: wrap;
+    }
+
+    .menu-lateral .article .nome-fessor{
+        color: #eaeaea;
+        font-weight: 600;
+        font-size: 18px;
+        width: 100%;
+        text-align: center;
+        font-family: "Roboto", sans-serif;
+        margin-top: 35px;
+    }
+
+    .menu-lateral .lateral {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+
+
+    .menu-lateral .lateral .opcao{
+        width: 100%;
+        height: 50px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0 90px 0 40px ;
+        margin-top: 5px;
+        cursor: pointer;
+    }
+    .menu-lateral .lateral .opcao span {
+        color: #eaeaea;
+        font-family: "Roboto", sans-serif;
+        font-weight: 600;
+        font-size: 14px;
+        margin-top: 2.5px;
+    }
+    .menu-lateral .ux-ui {
+        position: relative;
+        top: 250px;
+        width: 80%;
+        height: 180px;
+        margin: auto;
+        background: rgb(36,0,19);
+        background: -moz-linear-gradient(38deg, rgba(36,0,19,1) 0%, rgba(121,9,31,1) 53%, rgba(255,0,102,1) 100%);
+        background: -webkit-linear-gradient(38deg, rgba(36,0,19,1) 0%, rgba(121,9,31,1) 53%, rgba(255,0,102,1) 100%);
+        background: linear-gradient(38deg, rgba(36,0,19,1) 0%, rgba(121,9,31,1) 53%, rgba(255,0,102,1) 100%);
+        filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#240013",endColorstr="#ff0066",GradientType=1);
+        border-radius: 20px;
+    }
+    .menu-lateral .ux-ui .log-ux{
+        position: relative;
+        left: 80%;
+        width: 40px;
+        top: 15px;
+        height: 22px;
+    }
+    .menu-lateral .ux-ui svg:nth-child(2){
+        position: relative;
+        top: 25px;
+        width: 120px;
+        height: 35px;
+        left: -10px;
+    }
+    .menu-lateral .ux-ui h5{
+        color: #eaeaea;
+        font-family: "Roboto", sans-serif;
+        font-weight: 600;
+        font-size: 12px;
+        margin-left: 20px;
+        margin-top: 40px;
+    }
+
+    .menu-lateral .ux-ui p{
+        color: #dadada;
+        font-family: "Abel", sans-serif;
+        font-size: 9px;
+        width: 80%;
+        margin: auto;
+
+    }
+
+    .cursor:hover{
+        animation: cursor ease forwards;
+    }
+
+
+    @keyframes cursor {
+        0%{
+
+        }100%{
+             border-left: 8px solid red;
+         }
+    }
+
+
 </style>
 <x-navbar></x-navbar>
 

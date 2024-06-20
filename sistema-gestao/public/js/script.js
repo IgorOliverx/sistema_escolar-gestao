@@ -13,7 +13,7 @@ document.addEventListener('DOMContentLoaded', () => {
             link.classList.add('active');
 
             try {
-                const request = await fetch(`http://localhost:8000/api/ativos/blocos/${selectedRoom}`);
+                const request = await fetch(`https://seashell-app-8qdtr.ondigitalocean.app/api/ativos/blocos/${selectedRoom}`);
                 const response = await request.json();
                 console.log(response); // Verifique se a resposta está correta
 
