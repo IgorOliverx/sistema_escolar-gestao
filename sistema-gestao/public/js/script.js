@@ -21,6 +21,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 conteudoSala.innerHTML = '';
 
                 // Verifica se há dados a serem exibidos
+
                 if (response.status && response.dados.length > 0) {
                     // Itera sobre os ativos e os adiciona à tabela
                     response.dados.forEach(ativo => {

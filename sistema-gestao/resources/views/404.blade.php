@@ -18,6 +18,7 @@
             position: fixed;
             width: 100%;
             padding: 40px 60px;
+            overflow: hidden;
         }
         .navigation{
             display: flex;
@@ -113,10 +114,10 @@
     </style>
     <body>
 
-    <nav class="navbar navbar-expand-lg pl-5 pr-5" style="background-color:darkred;">
-        <div class="container-fluid">
+    <nav class="navbar navbar-expand-lg pl-5 pr-5" style="background-color:darkred; overflow:hidden;">
+        <div class="container-fluid" style="overflow:hidden;">
             <a class="navbar-brand" href="#">
-                <img src="images/Logo-senai-bw.png" alt="Logo-Senai preto e branco" width="150px" height="40px">
+                <img src="/images/logo_senai_branco.png" alt="Logo-Senai preto e branco" width="150px" height="40px">
                 <a href="" class="navbar-brand ml-0" style="position: relative; bottom: -8px" >
                     <p class="text-primary text-light">
                         EDUCAÇÃO <br> ONLINE
@@ -130,17 +131,17 @@
                 <ul class="navbar-nav">
                 </ul>
             </div>
-            {{--Implementar lógica para que "icons-container" nao seja exibido na login--}}
-            <div class="icons-container">
-                <ul class="navbar-nav">
+
+            <div class="icons-container" style="overflow: hidden">
+                <ul class="navbar-nav" style="overflow:hidden;">
 
                     @if(!\Illuminate\Support\Facades\Auth::check())
-                        <li class="nav-item">
+                        <li class="nav-item" style="overflow:hidden;">
                             <a style="cursor: pointer" class="nav-link" href="{{route('login')}}"><i class="fa-solid fa-user fa-2x" style="color: #ffffff;"></i></a>
                         </li>
                     @endif
                     @if(\Illuminate\Support\Facades\Auth::check())
-                        <li class="nav-item">
+                        <li class="nav-item" style="overflow:hidden;">
                             <form action="{{route('logout')}}" method="post">
                                 @csrf
                                 <a class="nav-link" href="{{route('logout')}}" onclick="event.preventDefault(); this.closest('form').submit()">
@@ -153,16 +154,16 @@
             </div>
         </div>
     </nav>
-    <main class="main" style="position: relative; top: -80px">
-        <section class="section">
-            <div class="left">
-                <img src="/images/eror.gif" alt="404 animado" width="200px" height="200px" style="position: relative; left: 5px">
+    <main class="main" style="position: relative; top: -80px; overflow:hidden;">
+        <section class="section" style="overflow:hidden;">
+            <div class="left" style="overflow:hidden;">
+                <img src="/images/eror.gif" alt="404 animado" width="200px" height="200px" style="position: relative; left: 5px; overflow:hidden;">
                 <p>Página não encontrada</p>
                 <h4>Não conseguimos encontrar <br> a página que você está procurando.</h4>
-                <a href="#" class="btn">Home</a>
+                <a href="/dashboard" class="btn">Home</a>
             </div>
-            <div class="right">
-                <img src="/images/Erro.png" alt="imagem de erro 404">
+            <div class="right" style="overflow:hidden;">
+                <img src="/images/Erro.png" alt="imagem de erro 404" style="overflow:hidden;">
                 <div class="shadow"></div>
             </div>
         </section>
