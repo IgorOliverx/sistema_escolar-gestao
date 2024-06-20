@@ -33,18 +33,18 @@
         font-size: 30px;
         font-weight: 200;
     }
-    
+
 </style>
 <x-navbar></x-navbar>
 <div class="main-content" id="main-content">
     <div class="sidebar" id="sidebar">
-        <h3>Ativos - Bloco B</h3>
+        <h3 style="overflow: hidden">Ativos - Bloco B</h3>
         <a href="#" class="room-link" data-room="13B"><i class="fa-solid fa-users"></i> Sala 13-B</a>
         <a href="#" class="room-link" data-room="7B"><i class="fa-solid fa-users"></i> Sala 7-B</a>
     </div>
     <div class="content" id="content">
         <div class="d-flex justify-content-between align-items-center mb-4">
-            <h2>Sala<h2 id="room-title"></h2>
+            <h2 style="overflow: hidden"><h2 id="room-title" style="overflow: hidden"></h2>
             </h2>
 
         </div>

@@ -67,7 +67,8 @@ class DashboardController extends Controller
     public function minhaSala(string $sala): View
     {
         $ativos = $this->ativo->retornaAtivoSala($sala);
-        return \view('dashboard.sua-sala', ['ativos' => $ativos]);
+        $user = Auth::user()->nome;
+        return \view('dashboard.sua-sala', ['ativos' => $ativos, 'nomeProfessor' => $user]);
     }
 
     public function solicitarManutencao(string $id)

@@ -1,5 +1,3 @@
-
-
 <nav class="navbar navbar-expand-lg pl-5 pr-5">
     <div class="container-fluid">
         <a class="navbar-brand" href="#">

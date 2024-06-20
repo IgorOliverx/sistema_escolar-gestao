@@ -1,10 +1,12 @@
 const switchModal = () => {
+    const body = document.querySelector('body');
     const modal = document.querySelector('.modal');
     const visibilidade = modal.style.display;
     if(visibilidade == 'block'){
         modal.style.display = 'none'
     }else{
         modal.style.display = 'block'
+        modal.style.overflow = 'hidden'
     }
 }
 const btn = document.querySelector('.modalBtn')
@@ -20,7 +22,7 @@ window.onclick = function(event) {
 
 document.addEventListener("DOMContentLoaded", () => {
     let inputElement = document.getElementById('search-ativo');
-    let tableRows = document.querySelectorAll("#room-content tr.class-ativo");
+    let tableRows = document.querySelectorAll("#room-contents tr.class-ativo");
 
     inputElement.addEventListener("input", (e) => {
         let inputed = e.target.value.toLowerCase();

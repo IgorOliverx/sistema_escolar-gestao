@@ -11,7 +11,7 @@
     height: 100vh;
     overflow: hidden;
     ">
-        <nav class="navbar navbar-expand-lg pl-5 pr-5">
+        <nav class="navbar pl-5 pr-5">
             <div class="container-fluid">
                 <a class="navbar-brand" href="/">
                     <img src="images/Logo-senai-bw.png" alt="Logo-Senai preto e branco" width="150px" height="40px" id="img-logo">
@@ -21,9 +21,6 @@
                         </p>
                     </a>
                 </a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
                 <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
                     <ul class="navbar-nav">
                     </ul>
@@ -86,7 +83,7 @@
                   color: 0xff0000,
                   backgroundColor: 0x0
               });
-              logoImage.src = '/images/LogoSenai.png';
+              logoImage.src = 'images/LogoSenai.png';
           }else {
               background.setOptions({
                   color: 0xfc0056,

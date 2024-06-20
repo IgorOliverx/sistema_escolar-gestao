@@ -33,24 +33,19 @@
         font-size: 30px;
         font-weight: 200;
     }
-    
+
 </style>
     <x-navbar></x-navbar>
 
     <div class="main-content" id="main-content">
         <div class="sidebar" id="sidebar">
-            <h3>Ativos - Bloco C</h3>
+            <h3 style="overflow: hidden">Ativos - Bloco C</h3>
             <a href="#" class="room-link " data-room="15C"><i class="fa-solid fa-users"></i> Sala 15-C</a>
             <a href="#" class="room-link" data-room="19C"><i class="fa-solid fa-users"></i> Sala 19-C</a>
         </div>
         <div class="content" id="content">
             <div class="d-flex justify-content-between align-items-center mb-4">
-                <h2>Sala<h2 id="room-title"></h2></h2>
-                <div>
-                    <button class="btn btn-primary">Novo Ativo</button>
-                    <button class="btn btn-secondary">Alguma Opção</button>
-                    <button class="btn btn-secondary">Alguma Opção</button>
-                </div>
+                <h2><h2 style="overflow: hidden" id="room-title"></h2></h2>
             </div>
             <div class="table-responsive" id="table-responsive">
 
