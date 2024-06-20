@@ -14,8 +14,8 @@
         <nav class="navbar pl-5 pr-5">
             <div class="container-fluid">
                 <a class="navbar-brand" href="/">
-                    <img src="images/Logo-senai-bw.png" alt="Logo-Senai preto e branco" width="150px" height="40px" id="img-logo">
-                    <a href="" class="navbar-brand ml-0" style="position: relative; bottom: -8px" >
+                    <img src="images/logo-senai-bw.png" alt="Logo-Senai preto e branco" width="150px" height="40px" id="img-logo">
+                    <a href="" class="navbar-brand ml-0" style="position: relative; bottom: -8px; left: -740px" >
                         <p class="text-primary text-light">
                             EDUCAÇÃO <br> ONLINE
                         </p>
@@ -89,7 +89,7 @@
                   color: 0xfc0056,
                   backgroundColor: 0x7d2a2a
               });
-              logoImage.src =  'images/Logo-senai-bw.png'
+              logoImage.src =  'images/logo-senai-bw.png'
           }
       });
     </script>
