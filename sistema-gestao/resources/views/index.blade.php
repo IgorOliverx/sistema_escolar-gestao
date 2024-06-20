@@ -80,7 +80,7 @@
 
         /* Styles for the header section to match the provided image */
         .custom-header {
-            background-color: #FF303A;
+            background-color: #C71F37;
             height: 500px;
             display: flex;
             align-items: center;
