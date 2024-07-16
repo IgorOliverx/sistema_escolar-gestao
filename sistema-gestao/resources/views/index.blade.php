@@ -2,172 +2,167 @@
 
 
 @section('content')
-    <style>
-        *{
-            overflow: hidden;
-        }
-        .content {
-            font-family: Arial, sans-serif;
-        }
+<style>
+    .custom-header {
+        background-color: #FF303A;
+        height: 500px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0 50px;
+    }
 
-        .header {
-            background-color: #e30707;
-            padding: 20px;
-            text-align: center;
-            color: white;
-        }
+    .custom-header h2 {
+        overflow-y: hidden;
+        color: white;
+        font-family: "Archivo Black", sans-serif;
+        font-size: 40px;
+        font-weight: 400;
+        margin-bottom: 20px;
+    }
 
-        .btn-container {
-            text-align: center;
-            margin-top: 20px;
-        }
+    .custom-header .btn-container {
+        display: flex;
+        gap: 15px;
+    }
 
-        .btn-container .login {
-            width: 220px;
-            height: 60px;
-            font-family: "Archivo Black", sans-serif;
-            font-size: 21px;
-            font-weight: 400;
-            padding: 10px 20px;
-            border: none;
-            border-radius: 5px;
-            background-color: black;
-            color: white;
-            cursor: pointer;
-        }
+    .custom-header img {
+        width: 500px;
+        height: 350px;
+    }
 
-        .btn-container .saberMais {
-            width: 220px;
-            height: 60px;
-            font-family: "Archivo Black", sans-serif;
-            font-size: 21px;
-            font-weight: 400;
-            padding: 10px 20px;
-            border: none;
-            border-radius: 5px;
-            background-color: white;
-            color: black;
-            cursor: pointer;
-        }
+    .infos {
+        margin-top: 50px;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
 
-        .section {
-            padding: 40px;
-        }
+    .infos .infosTitulo h3 {
+        overflow-y: hidden;
+        display: flex;
+        text-align: center;
+        font-size: 35px;
+        font-family: "Poppins", sans-serif;
+        font-weight: 700;
+        font-style: normal;
+    }
 
-        .section h2,
-        h4 {
-            font-family: "Archivo Black", sans-serif;
-            font-size: 30px;
-            font-weight: 400;
-            text-align: center;
-            margin-bottom: 30px;
-        }
+    .infosIcon {
+        margin-top: 50px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        width: 1450px;
+    }
 
-        .columns {
-            display: flex;
-            justify-content: space-around;
-        }
+    .teste {
+        text-align: center;
+    }
 
-        .column {
-            width: 45%;
-        }
+    .teste h4 {
+        overflow-y: hidden;
+        font-family: "Poppins", sans-serif;
+        font-weight: 600;
+        font-style: normal;
+    }
 
-        .column h3 {
-            font-family: "Archivo Black", sans-serif;
-            font-size: 27px;
-            font-weight: 400;
-        }
+    .container {
+        display: flex;
+    }
 
-        /* Styles for the header section to match the provided image */
-        .custom-header {
-            background-color: #FF303A;
-            height: 500px;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            padding: 0 50px;
-        }
+    .image-container {
+        flex: 1;
+        background-color: #eaf4f4;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 20px;
+    }
 
-        .custom-header h2 {
-            color: white;
-            font-family: "Archivo Black", sans-serif;
-            font-size: 40px;
-            font-weight: 400;
-            margin-bottom: 20px;
-        }
+    .image-container img {
+        max-width: 100%;
+        height: auto;
+    }
 
-        .custom-header .btn-container {
-            display: flex;
-            gap: 15px;
-        }
+    .text-container {
+        flex: 2;
+    }
 
-        .custom-header .btn-container button {
-            margin: 0;
-        }
+    .text-container h1 {
+        font-size: 24px;
+        margin-bottom: 20px;
+        color: #333;
+    }
 
-        .custom-header img {
-            width: 500px;
-            height: 350px;
-        }
+    .text-container p {
+        font-size: 16px;
+        line-height: 1.6;
+        color: #666;
+        margin-bottom: 20px;
+    }
 
-        ul,
-        p {
-            font-family: Arial, Helvetica, sans-serif;
-            font-size: 17px;
-        }
+    .text-container button {
+        padding: 10px 20px;
+        background-color: #4caf50;
+        color: #fff;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        font-size: 16px;
+    }
 
-        body {
-            overflow-x: hidden;
-        }
-    </style>
+    .text-container button:hover {
+        background-color: #45a049;
+    }
+</style>
 
-    <x-navv></x-navv>
+<x-navv></x-navv>
 
-    <div class="custom-header">
-        <div>
-            <h2>Bem-vindo ao sistema de <br> gerenciamento de estoque e <br> ativos patrimoniais do SENAI 505</h2>
-            <div class="btn-container">
-                <a href="{{ route('login') }}">
-                    <button class="login">Login</button>
-                </a>
-                <a href="">
-                    <button class="saberMais">Saber Mais</button>
-                </a>
-            </div>
-        </div>
-        <div>
-            <img src="/images/welcome.jpg" alt="Imagem de boas-vindas">
+<div class="custom-header">
+    <div>
+        <h2>Bem-vindo ao sistema de <br> gerenciamento de estoque e <br> ativos patrimoniais do SENAI 505</h2>
+        <div class="btn-container">
+            <a href="{{ route('login') }}">
+                Login
+            </a>
+            <a href="">
+                Saber Mais
+            </a>
         </div>
     </div>
-
-    <div class="content">
-        <div class="section">
-            <h2>Gerenciamento de ativos</h2>
-            <div class="columns">
-                <div class="column">
-                    <h3>O que é?</h3>
-                    <p>
-                        O serviço de gerenciamento de ativos da escola é uma plataforma digital projetada para auxiliar na administração eficiente dos recursos educacionais, especificamente de laboratórios e salas de aula. Este sistema permite que usuários autorizados acessem informações detalhadas sobre todos os ativos, incluindo equipamentos e materiais.
-                    </p>
-                </div>
-                <div class="column">
-                    <h3>Como funciona?</h3>
-                    <p>
-                        O serviço de gerenciamento de ativos da escola funciona de maneira simples e eficiente. Usuários autorizados acessam uma plataforma digital onde podem cadastrar novos ativos ou atualizar as informações de ativos já cadastrados.
-                    </p>
-                    <ul>
-                        <li>Nome dos Responsáveis: Professores ou outros funcionários que utilizam o local.</li>
-                        <li>Localização: Identificação precisa do local onde os ativos são armazenados ou utilizados.</li>
-                        <li>Tipo de Ativo: Categorias como sala de aula, laboratório, equipamentos.</li>
-                    </ul>
-                </div>
-            </div>
+    <div>
+        <img src="/images/welcome.jpg" alt="Imagem de boas-vindas">
+    </div>
+</div>
+<div class="infos">
+    <div class="infosTitulo">
+        <h3>Gerencie os ativos patrimoniais <br> e estoque em único sistema</h3>
+    </div>
+    <div class="infosIcon">
+        <div class="teste">
+            <div class="icon1"><i class="fa-solid fa-layer-group fa-3x mb-3 icon" style="color: #e30707;"></i></div>
+            <h4>Gestão <br> Patrimonial</h4>
         </div>
-
-        <div class="section">
-            <h2>Gerenciamento do estoque escolar</h2>
-            <h4>Em processo de desenvolvimento...</h4>
+        <div class="teste">
+            <div class="icon2"><i class="fa-solid fa-users fa-3x mb-3 icon" style="color: #e30707;"></i></div>
+            <h4>Membros <br> da Unidade</h4>
+        </div>
+        <div class="teste">
+            <div class="icon3"><i class="fa-solid fa-city fa-3x mb-3 icon" style="color: #e30707;"></i></div>
+            <h4>Sua <br> Unidade</h4>
         </div>
     </div>
+</div>
+<div class="container">
+    <div class="image-container">
+        <img src="phone-illustration.png" alt="">
+    </div>
+    <div class="text-container">
+        <h1>How to design your site footer like we did</h1>
+        <p>Our site footer design blends usability and style. We showcase a signature brand element, provide quick access to key links, and ensure mobile responsiveness. Ensure your footer is both visually appealing and functional. Sign up for our newsletter to receive the latest updates on our projects and services. From custom footers to entire site revamps, our team has the expertise to make your vision a reality.</p>
+        <button>Learn More</button>
+    </div>
+</div>
 
 @endsection
