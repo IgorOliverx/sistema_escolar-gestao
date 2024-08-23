@@ -26,13 +26,6 @@
     .nav-link button:hover {
         background-color: #1c1c1c;
     }
-
-    button:hover{
-        animation: anm-bbb ease .5s forwards;
-    }
-    @keyframes anm-bbb {
-        from{}to{scale: 1.1}
-    }
 </style>
 
 <nav class="navbar navbar-expand-lg" style="background-color: #e30707">

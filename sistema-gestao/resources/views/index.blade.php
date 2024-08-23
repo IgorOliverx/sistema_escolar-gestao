@@ -2,167 +2,156 @@
 
 
 @section('content')
-<style>
-    .custom-header {
-        background-color: #FF303A;
-        height: 500px;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        padding: 0 50px;
-    }
+    <style>
+        .custom-header {
+            background-color: #FF303A;
+            height: 500px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 50px;
+        }
 
-    .custom-header h2 {
-        overflow-y: hidden;
-        color: white;
-        font-family: "Archivo Black", sans-serif;
-        font-size: 40px;
-        font-weight: 400;
-        margin-bottom: 20px;
-    }
+        .custom-header h2 {
+            overflow-y: hidden;
+            color: white;
+            font-family: "Archivo Black", sans-serif;
+            font-size: 40px;
+            font-weight: 400;
+            margin-bottom: 20px;
+        }
 
-    .custom-header .btn-container {
-        display: flex;
-        gap: 15px;
-    }
+        .custom-header .btn-container {
+            display: flex;
+            gap: 15px;
+        }
 
-    .custom-header img {
-        width: 500px;
-        height: 350px;
-    }
+        .custom-header img {
+            width: 500px;
+            height: 350px;
+        }
 
-    .infos {
-        margin-top: 50px;
-        display: flex;
-        align-items: center;
-        flex-direction: column;
-    }
+        .infos {
+            margin-top: 50px;
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+        }
 
-    .infos .infosTitulo h3 {
-        overflow-y: hidden;
-        display: flex;
-        text-align: center;
-        font-size: 35px;
-        font-family: "Poppins", sans-serif;
-        font-weight: 700;
-        font-style: normal;
-    }
+        .infos .infosTitulo h3 {
+            overflow-y: hidden;
+            display: flex;
+            text-align: center;
+            font-size: 35px;
+            font-family: "Poppins", sans-serif;
+            font-weight: 700;
+            font-style: normal;
+        }
 
-    .infosIcon {
-        margin-top: 50px;
-        display: flex;
-        flex-direction: row;
-        justify-content: space-around;
-        width: 1450px;
-    }
+        .infosIcon {
+            margin-top: 50px;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            width: 1450px;
+        }
 
-    .teste {
-        text-align: center;
-    }
+        .teste {
+            text-align: center;
+        }
 
-    .teste h4 {
-        overflow-y: hidden;
-        font-family: "Poppins", sans-serif;
-        font-weight: 600;
-        font-style: normal;
-    }
+        .teste h4 {
+            overflow-y: hidden;
+            font-family: "Poppins", sans-serif;
+            font-weight: 600;
+            font-style: normal;
+        }
 
-    .container {
-        display: flex;
-    }
+        .container {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 70px;
+        }
 
-    .image-container {
-        flex: 1;
-        background-color: #eaf4f4;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        padding: 20px;
-    }
+        .imgContainer {
+            width: 500px;
+            margin-right: 30px;
+        }
 
-    .image-container img {
-        max-width: 100%;
-        height: auto;
-    }
+        .textContainer {
+            width: 800px;
+            display: flex;
+            flex-direction: column;
+        }
 
-    .text-container {
-        flex: 2;
-    }
+        .title {
+            font-size: 40px;
+            font-weight: 700;
+        }
 
-    .text-container h1 {
-        font-size: 24px;
-        margin-bottom: 20px;
-        color: #333;
-    }
+        .btn button {
+            width: 120px;
+            height: 40px;
+            background-color: #ff0000;
+            border: 2px solid rgb(196, 2, 2);
+            color: white;
+        }
+    </style>
 
-    .text-container p {
-        font-size: 16px;
-        line-height: 1.6;
-        color: #666;
-        margin-bottom: 20px;
-    }
+    <x-navv></x-navv>
 
-    .text-container button {
-        padding: 10px 20px;
-        background-color: #4caf50;
-        color: #fff;
-        border: none;
-        border-radius: 4px;
-        cursor: pointer;
-        font-size: 16px;
-    }
-
-    .text-container button:hover {
-        background-color: #45a049;
-    }
-</style>
-
-<x-navv></x-navv>
-
-<div class="custom-header">
-    <div>
-        <h2>Bem-vindo ao sistema de <br> gerenciamento de estoque e <br> ativos patrimoniais do SENAI 505</h2>
-        <div class="btn-container">
-            <a href="{{ route('login') }}">
-                Login
-            </a>
-            <a href="">
-                Saber Mais
-            </a>
+    <div class="custom-header">
+        <div>
+            <h2>Bem-vindo ao sistema de <br> gerenciamento de estoque e <br> ativos patrimoniais do SENAI 505</h2>
+            <div class="btn-container">
+                <a href="{{ route('login') }}">
+                    Login
+                </a>
+                <a href="">
+                    Saber Mais
+                </a>
+            </div>
+        </div>
+        <div>
+            <img src="/images/welcome.jpg" alt="Imagem de boas-vindas">
         </div>
     </div>
-    <div>
-        <img src="/images/welcome.jpg" alt="Imagem de boas-vindas">
-    </div>
-</div>
-<div class="infos">
-    <div class="infosTitulo">
-        <h3>Gerencie os ativos patrimoniais <br> e estoque em único sistema</h3>
-    </div>
-    <div class="infosIcon">
-        <div class="teste">
-            <div class="icon1"><i class="fa-solid fa-layer-group fa-3x mb-3 icon" style="color: #e30707;"></i></div>
-            <h4>Gestão <br> Patrimonial</h4>
+    <div class="infos">
+        <div class="infosTitulo">
+            <h3>Gerencie os ativos patrimoniais <br> e estoque em único sistema</h3>
         </div>
-        <div class="teste">
-            <div class="icon2"><i class="fa-solid fa-users fa-3x mb-3 icon" style="color: #e30707;"></i></div>
-            <h4>Membros <br> da Unidade</h4>
-        </div>
-        <div class="teste">
-            <div class="icon3"><i class="fa-solid fa-city fa-3x mb-3 icon" style="color: #e30707;"></i></div>
-            <h4>Sua <br> Unidade</h4>
+        <div class="infosIcon">
+            <div class="teste">
+                <div class="icon1"><i class="fa-solid fa-layer-group fa-3x mb-3 icon" style="color: #e30707;"></i></div>
+                <h4>Gestão <br> Patrimonial</h4>
+            </div>
+            <div class="teste">
+                <div class="icon2"><i class="fa-solid fa-users fa-3x mb-3 icon" style="color: #e30707;"></i></div>
+                <h4>Membros <br> da Unidade</h4>
+            </div>
+            <div class="teste">
+                <div class="icon3"><i class="fa-solid fa-city fa-3x mb-3 icon" style="color: #e30707;"></i></div>
+                <h4>Sua <br> Unidade</h4>
+            </div>
         </div>
     </div>
-</div>
-<div class="container">
-    <div class="image-container">
-        <img src="phone-illustration.png" alt="">
+    <div class="container">
+        <div class="imgContainer">
+            <img src="/images/welcome.jpg" alt="">
+        </div>
+        <div class="textContainer">
+            <div class="title">Lorem ipsum dolor sit amet</div>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi fugiat modi itaque voluptatem non quidem possimus
+            reprehenderit, eius repellendus eveniet sequi natus eaque minus ipsa velit, porro totam. Dignissimos, qui.
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi fugiat modi itaque voluptatem non quidem possimus
+            reprehenderit, eius repellendus eveniet sequi natus eaque minus ipsa velit, porro totam. Dignissimos, qui.
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi fugiat modi itaque voluptatem non quidem possimus
+            reprehenderit, eius repellendus eveniet sequi natus eaque minus ipsa velit, porro totam. Dignissimos, qui.
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi fugiat modi itaque voluptatem non quidem possimus
+            reprehenderit, eius repellendus eveniet sequi natus eaque minus ipsa velit, porro totam. Dignissimos, qui.
+            <div class="btn">
+                <button>Teste</button>
+            </div>
+        </div>
     </div>
-    <div class="text-container">
-        <h1>How to design your site footer like we did</h1>
-        <p>Our site footer design blends usability and style. We showcase a signature brand element, provide quick access to key links, and ensure mobile responsiveness. Ensure your footer is both visually appealing and functional. Sign up for our newsletter to receive the latest updates on our projects and services. From custom footers to entire site revamps, our team has the expertise to make your vision a reality.</p>
-        <button>Learn More</button>
-    </div>
-</div>
-
 @endsection
