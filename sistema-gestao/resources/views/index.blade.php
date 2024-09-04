@@ -137,7 +137,7 @@
     </div>
     <div class="container">
         <div class="imgContainer">
-            <img src="/images/welcome.jpg" alt="">
+            <img src="/images/Company-amico.svg" alt="">
         </div>
         <div class="textContainer">
             <div class="title">Lorem ipsum dolor sit amet</div>
