@@ -215,11 +215,6 @@ textarea {
     height: 8px;
 }
 
-.read-more:hover {
-    transition: 0.35s ease-in-out;
-    transform: scale(1.1);
-}
-
 @keyframes anm {
     from {}
 
@@ -421,15 +416,22 @@ textarea {
     position: absolute;
     top: 10px;
     right: 0px;
-    background-color: red;
+    background:rgb(221, 18, 18);
     width: 45px;
     height: 8px;
+    transition: 0.35s;
+}
+
+.card-custom:hover .top-right-corner{
+    background-color: red;
+    width: 55px;
 }
 
 .title-section {
     text-align: center;
     margin-bottom: 20px;
-    font-family: "Archivo Black", sans-serif;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 600;
     font-size: 36px;
     color: #000;
     position: relative;

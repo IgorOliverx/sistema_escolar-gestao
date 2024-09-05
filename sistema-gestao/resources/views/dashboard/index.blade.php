@@ -6,7 +6,6 @@
 
     <div class="container mt-5 container-custom" style="z-index: -1">
         <div class="title-section">Blocos</div>
-
         <div class="row">
             <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
                 <div class="card-custom">

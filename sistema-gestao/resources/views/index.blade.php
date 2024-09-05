@@ -47,7 +47,7 @@
             transition: 0.35s
         }
 
-        .btn-container #btn:hover {
+        .btn-container #btn1:hover {
             color: rgb(255, 255, 255);
             background-color: rgb(39, 39, 39);
         }

@@ -7,9 +7,11 @@
     }
 
     .nav-link {
-        font-family: "Archivo Black", sans-serif;
-        font-weight: 400;
-        font-style: normal;
+        font-family: "Montserrat", sans-serif;
+    }
+
+    .nav-link button {
+        font-weight: 600;
     }
 
     .nav-link button {
