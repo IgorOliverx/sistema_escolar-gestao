@@ -379,37 +379,60 @@ textarea {
     position: relative;
     margin: 15px auto;
     background-color: white;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.card-custom .icon {
-    font-size: 50px;
-    color: #333;
-    margin-bottom: 15px;
+.card-custom img {
+    height: 95px;
+    width: 95px;
+    align-self: center;
 }
 
-.card-custom .title,
-.card-custom .read-more {
-    font-family: "Archivo Black", sans-serif;
+.card-custom .title {
+    font-family: "Montserrat", sans-serif;
     font-size: 24px;
-    font-weight: 400;
+    font-weight: 500;
+    color: #000;
+    margin-bottom: 10px;
+}
+
+.card-custom .read-more {
+    font-family: "Montserrat", sans-serif;
+    font-size: 24px;
+    font-weight: 600;
     color: #000;
     margin-bottom: 10px;
 }
 
 .card-custom .description {
+    font-family: "Montserrat", sans-serif;
     font-size: 14px;
     color: #666;
     margin-bottom: 20px;
 }
 
 .card-custom .read-more {
-    background-color: red;
+    background-color: rgb(221, 18, 18);
     color: #fff;
     font-size: 17px;
+    margin-top: 7px;
     padding: 10px 20px;
-    border: none;
     border-radius: 5px;
     text-transform: uppercase;
+    transition: 0.35s;
+}
+
+.card-custom:hover .read-more{
+    background-color: red;
+}
+
+.card-custom .read-more:hover{
+    transform: scale(1.07);
+}
+
+.card-custom:hover{
+    transform: scale(1.05);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
 }
 
 .card-custom .top-right-corner {
@@ -424,7 +447,7 @@ textarea {
 
 .card-custom:hover .top-right-corner{
     background-color: red;
-    width: 55px;
+    width: 80px;
 }
 
 .title-section {
