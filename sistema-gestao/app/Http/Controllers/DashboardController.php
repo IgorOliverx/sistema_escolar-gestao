@@ -15,13 +15,13 @@ class DashboardController extends Controller
     public readonly Ativo $ativo;
     public readonly User $user;
     public readonly Sala $sala;
-    public readonly Estoque $estoque;
+    public readonly Estoque $gerenciaEstoque;
     public function __construct()
     {
         $this->ativo = new Ativo();
         $this->user = new User();
         $this->sala = new Sala();
-        $this->estoque = new Estoque();
+        $this->gerenciaEstoque = new Estoque();
     }
 
     public function index()
@@ -58,10 +58,14 @@ class DashboardController extends Controller
         return \view('dashboard.painelBlocoD');
     }
 
-    public function estoque(): View
+    public function estoque(): View {
+        return \view('dashboard.estoque');
+    }
+
+    public function gerenciaEstoque(): View
     {
-        $estoque = $this->estoque->retornarEstoque();
-        return \view('dashboard.estoque', ['estoque' => $estoque]);
+        $gerenciaEstoque = $this->gerenciaEstoque->retornarEstoque();
+        return \view('dashboard.GerenciaEstoque', ['gerenciaEstoque' => $gerenciaEstoque]);
     }
 
     public function minhaSala(string $sala): View

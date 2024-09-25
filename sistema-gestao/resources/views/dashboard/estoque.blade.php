@@ -4,89 +4,51 @@
     <x-navbar></x-navbar>
 
     <style>
-        body {
-            display: flex;
-            flex-direction: column;
-            height: 100vh;
-            overflow: hidden;
-        }
-        h2 {
-            font-family: "Archivo Black", sans-serif;
-            font-size: 25px;
-            font-weight: 400;
-        }
 
-        th {
-            font-family: "Archivo Black", sans-serif;
-            font-size: 15px;
-            font-weight: 200;
-        }
-
-        button {
-            border: none;
-        }
-
-        .btn {
-            font-family: "Archivo Black", sans-serif;
-            font-size: 13px;
-            font-weight: 200;
-        }
-
-        .main-content {
-            flex: 1;
-            padding: 20px;
-            box-sizing: border-box;
-            overflow-y: auto;
-        }
-
-        .table-responsive {
-            overflow-y: auto;
-            max-height: calc(100vh - 140px);
-        }
     </style>
-
-    <div class="main-content">
-        <div class="d-flex justify-content-between align-items-center mb-4">
-            <h2>Estoque</h2>
-            <div>
-                <button class="btn btn-success">Novo Item</button>
-                <button class="btn btn-danger">Realizar Baixa</button>
-                <button class="btn btn-warning">Manutenção...</button>
+    <div class="container mt-5 container-custom" style="">
+        <div class="title-section">Ações</div>
+        <div class="row" style="justify-content: center">
+            <div class="col-lg-3 col-md-6 d-flex align-items-stretch" style="margin-bottom: 25px">
+                <div class="card-custom">
+                    <div class="top-right-corner"></div>
+                    <img src="/images/add.svg" alt="">
+                    <div class="title">Adicionar</div>
+                    <div class="description">
+                        Inclua novos itens no estoque. Mantenha o inventário atualizado com as últimas adições e reposições.
+                    </div>
+                    <a href="{{ route('painelBlocosA') }}">
+                        <button class="read-more">Ver Estoque</button>
+                    </a>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
+                <div class="card-custom">
+                    <div class="top-right-corner"></div>
+                    <img src="/images/remove.png" alt="">
+                    <div class="title">Realizar Baixa</div>
+                    <div class="description">
+                        Registre a saída de itens do estoque. Controle e documente as baixas para manter um inventário
+                        preciso.
+                    </div>
+                    <a href="{{ route('painelBlocosB') }}">
+                        <button class="read-more">Ver Estoque</button>
+                    </a>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
+                <div class="card-custom">
+                    <div class="top-right-corner"></div>
+                    <img src="/images/config.png" alt="">
+                    <div class="title">Gerenciar Estoque</div>
+                    <div class="description">
+                        Gerencie a movimentação e o redirecionamento dos itens. Ajuste quantidades e otimize a distribuição
+                        dos recursos.
+                    </div>
+                    <a href="{{ route('gerenciaEstoque') }}">
+                        <button class="read-more">Ver Estoque</button>
+                    </a>
+                </div>
             </div>
         </div>
-        <div class="table-responsive">
-            <table class="table table-striped">
-                <thead>
-                <tr>
-                    <th>Nome do Item</th>
-                    <th>Quantidade</th>
-                    <th>Localização</th>
-                    <th>Data de Adição</th>
-                    <th>Fornecedor</th>
-                    <th>Estado</th>
-                    <th>Ação</th>
-                </tr>
-                </thead>
-                <tbody id="stock-content">
-                @forelse($estoque as $e)
-                    <tr>
-                        <td>{{$e->nome}}</td>
-                        <td>{{$e->quantidade}}</td>
-                        <td>{{$e->departamento}}</td>
-                        <td>{{$e->data_de_compra}}</td>
-                        <td>{{$e->fornecedor}}</td>
-                        <td><span class="badge bg-success">Disponível</span></td>
-                        <td><button><i class="fa-solid fa-pen"></i></button> <button><i class="fa-solid fa-trash"></i></button></td>
-                    </tr>
-                @empty
-                    <tr>
-                        <td colspan="6">Nenhum item encontrado</td>
-                    </tr>
-                @endforelse
-
-                </tbody>
-            </table>
-        </div>
-    </div>
-
-@endsection
+    @endsection

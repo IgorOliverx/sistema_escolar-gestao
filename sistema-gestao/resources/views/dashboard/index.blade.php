@@ -7,7 +7,7 @@
     <div class="container mt-5 container-custom" style="z-index: -1">
         <div class="title-section">Blocos</div>
         <div class="row">
-            <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
+            <div class="col-lg-3 col-md-6 d-flex align-items-stretch" style="margin-bottom: 25px">
                 <div class="card-custom">
                     <div class="top-right-corner"></div>
                     <img src="/images/ti.png" alt="">

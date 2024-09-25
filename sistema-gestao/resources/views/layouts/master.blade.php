@@ -73,6 +73,23 @@
                 width: 100vw;
                 height: 100vh;
             }
+
+            body::-webkit-scrollbar {
+                width: 7px;
+                transition: all 1s ease;
+            }
+
+            body::-webkit-scrollbar-track {
+                background: rgb(255, 255, 255);
+                border-radius: 50px;
+                transition: all 1s ease;
+            }
+
+            body::-webkit-scrollbar-thumb {
+                background-color: #b91d32;
+                border-radius: 13px;
+                transition: all 1s ease;
+            }
         </style>
         @yield('content')
 

@@ -23,6 +23,8 @@ Route::middleware(['auth'])->group(function (){
 
    //Rota para acessar o estoque
     Route::get('/painel/estoque', [DashboardController::class, 'estoque'])->name('estoque');
+    //Rota para acessar o estoque
+    Route::get('/painel/gerenciaEstoque', [DashboardController::class, 'gerenciaEstoque'])->name('gerenciaEstoque');
 
    //Rotas de acesso aos painéis dos blocos
    Route::get('/painel/blocoA', [DashboardController::class, 'painelBlocoA'])->name('painelBlocosA');

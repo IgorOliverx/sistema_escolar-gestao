@@ -422,12 +422,8 @@ textarea {
     transition: 0.35s;
 }
 
-.card-custom:hover .read-more{
-    background-color: red;
-}
-
 .card-custom .read-more:hover{
-    transform: scale(1.07);
+    background-color: red;
 }
 
 .card-custom:hover{
